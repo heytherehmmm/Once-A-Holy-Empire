@@ -13,7 +13,7 @@ country_event = {
 		ai_chance = { factor = 1}
 		add_timed_idea= { 
 			idea = democratic_kaiser_influence
-			days = 720
+			days = 1050
 		}
 	}
 	option = {
@@ -22,7 +22,7 @@ country_event = {
 		ai_chance = { factor = 1}
 		add_timed_idea= { 
 			idea = kaiser_influence
-			days = 720
+			days = 1050
 		}
 	}
 }
@@ -435,7 +435,7 @@ id = ohe.21
 }
 add_timed_idea= { 
 		idea = bohemian_communist_propaganda
-		days = 720 
+		days = 1050 
 		}
 	}
 	option = {
@@ -449,7 +449,7 @@ id = ohe.22
    }
    add_timed_idea= { 
 		idea = bohemian_communist_propaganda
-		days = 720 
+		days = 1050 
 		}
 	}
 }
