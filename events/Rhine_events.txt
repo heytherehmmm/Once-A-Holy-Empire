@@ -1,0 +1,24 @@
+add_namespace = trc
+
+##Event: Example Event. Put your event title here
+country_event = {
+	id = trc.1 #Event number
+	title = trc.1.title #Event title (Add in localization)
+	desc = trc.1.desc #Event description (Add in localization)
+	picture = GFX_report_event_king_speech #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = { 
+		name = trc.1.a
+		ai_chance = { factor = 1}
+		add_timed_idea= { 
+			idea = democratic_kaiser_influence
+			days = 720
+		}
+	}
+	option = {
+		name = trc.1.b
+		ai_chance = { factor = 1}
+		
+		# Do something else here
+	}
+}
