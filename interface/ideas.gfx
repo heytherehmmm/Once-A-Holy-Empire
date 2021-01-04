@@ -5621,4 +5621,8 @@ spriteTypes = {
 		name = "GFX_idea_BOH_democratic_empire"
 		texturefile = "gfx/interface/goals/GFX_BOH_a_democratic_empire-61329.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ALA_russian_prisoners"
+		texturefile = "gfx/interface/goals/ALA_russian_prisoners.dds"
+	}
 }

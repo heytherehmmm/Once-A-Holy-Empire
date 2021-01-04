@@ -1,0 +1,21 @@
+ideas = {
+	country = {
+		
+		ALA_politican_prisoners = {
+			picture = GFX_idea_ALA_russian_prisoners
+			allowed = {
+				always= yes
+			}
+			allowed_civil_war = {
+				always= yes
+			}
+			visible = {
+				always= yes
+			}
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+	}
+}
