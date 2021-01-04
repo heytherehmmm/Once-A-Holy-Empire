@@ -2790,6 +2790,7 @@ target = ITA
 		completion_reward = {
 			remove_ideas = BOH_reopening_our_economy 
 			add_ideas = BOH_fully_recovered
+			add_ideas = limited_conscription
 		}
 	}
 
