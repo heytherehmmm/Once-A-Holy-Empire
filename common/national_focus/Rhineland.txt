@@ -832,6 +832,10 @@ add_command_power= 50
 				add_state_core = 34
 				add_state_core = 807
 			}
+			set_autonomy = {
+				target = BEL
+				autonomy_state = autonomy_dominion
+			}
 		}
 	}
 
