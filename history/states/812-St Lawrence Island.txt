@@ -6,12 +6,6 @@ state={
 		owner = ALA
 		buildings = {
 			infrastructure = 2
-			air_base = 1
-			13091 = {
-				naval_base = 1
-
-			}
-
 		}
 		add_core_of = ALA
 

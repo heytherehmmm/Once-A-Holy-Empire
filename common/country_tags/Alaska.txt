@@ -1,1 +1,1 @@
-LOU = "countries/Alaska.txt"
+ALA = "countries/Alaska.txt"
