@@ -71,6 +71,18 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
+create_country_leader = {
+	name = "Evgeni Gegechkori"
+	desc = "Evgeni Gegechkori is a Georgian nobleman, politician, and Democratic revolutionary. Although he is rather radical in his political views, he has brought stability to Transcaucasia."
+	picture = "Evgeni_Gegechkori.dds"
+	expire = "1953.3.1"
+	ideology = moderatism
+	traits = {
+		
+	}
+}
+
 create_country_leader = {
 	name = "Mir Jafar Baghirov"
 	desc = ""
