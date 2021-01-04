@@ -533,6 +533,7 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.1
 				land_reinforce_rate = 0.15
+				recruitable_population = 0.05
 			}
 		}
 
