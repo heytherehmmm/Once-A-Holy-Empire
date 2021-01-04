@@ -17,5 +17,5 @@
  ALA_russia:0 "Alaskan Governorate"
  ALA_russia_DEF:0 "the Alaskan Governorate"
  ALA_russia_ADJ:0 "Alaskan"
- ALA_politican_prisoners:0 "Russian Political Prisoners"
- ALA_politican_prisoners_ADJ:0 "The Russian Empire sends their political prisoners to us for punishment. Over the decades, we've recieved funding to improve our prisons. As such, our prisons are some of the most secure in the world."
+ ALA_russian_prisoners:0 "Russian Political Prisoners"
+ ALA_russian_prisoners_desc:0 "The Russian Empire sends their political prisoners to us for punishment. Over the decades, we've recieved funding to improve our prisons. As such, our prisons are some of the most secure in the world."

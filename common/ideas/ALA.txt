@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		
-		ALA_politican_prisoners = {
+		ALA_russian_prisoners = {
 			picture = GFX_idea_ALA_russian_prisoners
 			allowed = {
 				always= yes

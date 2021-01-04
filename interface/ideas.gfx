@@ -5623,6 +5623,6 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_ALA_russian_prisoners"
-		texturefile = "gfx/interface/goals/ALA_russian_prisoners.dds"
+		texturefile = "gfx/interface/ideas/ALA_russian_prisoners.dds"
 	}
 }
