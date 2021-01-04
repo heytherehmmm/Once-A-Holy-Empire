@@ -1,4 +1,7 @@
-l_english:
+﻿l_english:
+ ALA:0 "Alaska"
+ ALA_DEF:0 "Alaska"
+ ALA_ADJ:0 "Alaskan"
  ALA_neutrality:0 "Alaska"
  ALA_neutrality_DEF:0 "Alaska"
  ALA_neutrality_ADJ:0 "Alaskan"

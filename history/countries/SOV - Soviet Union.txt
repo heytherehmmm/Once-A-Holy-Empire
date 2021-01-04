@@ -30,7 +30,7 @@ set_autonomy = {
 	freedom_level = 0.2
 }
 
-# COUNTRY NAMES
+# COUNTRY NAMES & COLORS
 set_cosmetic_tag = SOV_russia
 AZR = {
 	set_cosmetic_tag = AZR_russia
