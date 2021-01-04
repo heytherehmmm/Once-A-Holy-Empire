@@ -64,6 +64,9 @@ add_command_power= 50
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_rcc_victory }
+		completion_reward = {
+		add_ideas = { TRC_Military_Buildup }
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -78,10 +81,37 @@ add_command_power= 50
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_rndc_victory }
+        completion_reward = {
+		51 = {
+    add_extra_state_shared_building_slots = 1
+    add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+    }
+}
+	808 = {
+    add_extra_state_shared_building_slots = 1
+    add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+}
+}
+	42 = {
+    add_extra_state_shared_building_slots = 1
+    add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+}
+}
+}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	
 	#Focus for The Old is better
 	focus = {
 		id = TRC_the_old_is_better
@@ -164,6 +194,18 @@ add_command_power= 50
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_new_ties_to_the_netherlands }
+		completion_reward = {
+   		diplomatic_relation = {
+        country = HOL
+        relation = non_aggression_pact
+        active = yes
+        }
+		diplomatic_relation = {
+        country = HOL
+        relation = guarantee
+        active = yes
+		}
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -338,6 +380,18 @@ add_command_power= 50
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_dominate_the_rheinparlament }
+		completion_reward = {
+		diplomatic_relation = {
+        country = ENG
+        relation = non_aggression_pact
+        active = yes
+        }
+	    diplomatic_relation = {
+        country = ENG
+        relation = military_access
+        active = yes
+        }
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -366,6 +420,20 @@ add_command_power= 50
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_rndc_victory }
+		completion_reward = {
+		add_opinion_modifier = {
+        target = FRA
+        modifier = medium_increase
+        }
+				add_opinion_modifier = {
+        target = USA
+        modifier = medium_increase
+		}
+	    add_opinion_modifier = {
+        target = ENG
+        modifier = medium_increase
+		}
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -458,6 +526,12 @@ add_command_power= 50
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_draw_closer_to_the_west }
+		completion_reward = {
+		add_opinion_modifier = {
+        target = HOL
+        modifier = large_increase
+        }
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -685,7 +759,7 @@ add_command_power= 50
 		}
 	}
 
-	#Focus for The Flanders' Dockyarts
+	#Focus for The Flanders' Dockyards
 	focus = {
 		id = TRC_the_flanders_dockyarts
 		icon = GFX_goal_unknown
@@ -698,8 +772,15 @@ add_command_power= 50
 			factor = 1
 		}
 		completion_reward = {
-			is_coastal= yes
-		}
+		6 = {
+    add_extra_state_shared_building_slots = 4
+    add_building_construction = {
+        type = dockyard
+        level = 4
+        instant_build = yes
+    }
+}
+	}
 	}
 
 	#Focus for Our Navy
@@ -711,6 +792,9 @@ add_command_power= 50
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_armed_forces_of_the_rhine }
+		completion_reward = {
+	    navy_experience = 20
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -760,6 +844,9 @@ add_command_power= 50
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_new_prussian_standarts }
+		completion_reward = {
+		add_ideas = { TRC_New_Tactics }
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -831,10 +918,6 @@ add_command_power= 50
 				add_state_core = 6
 				add_state_core = 34
 				add_state_core = 807
-			}
-			set_autonomy = {
-				target = BEL
-				autonomy_state = autonomy_dominion
 			}
 		}
 	}
@@ -1008,6 +1091,9 @@ popularity = -0.1
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_rheinmarshals_victory }
+		completion_reward = {
+		add_ideas = { TRC_Military_Buildup }
+		}
 		ai_will_do = {
 			factor = 1
 		}
