@@ -1,0 +1,45 @@
+ideas = {
+
+	country = {
+
+		TRC_Military_Buildup = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_industrial_concern_1
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.2
+			}
+		}
+		    TRC_New_Tactics = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.05
+			}
+	}
+   }
+}
+  
