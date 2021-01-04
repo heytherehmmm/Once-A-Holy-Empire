@@ -24,7 +24,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 100
+		cost = 10
 
 		remove_effect = {
 			add_state_core = 50
@@ -61,7 +61,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 100
+		cost = 10
 
 		remove_effect = {
 			add_state_core = 85
@@ -100,7 +100,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 100
+		cost = 10
 
 		remove_effect = {
 			add_state_core = 60
@@ -142,7 +142,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 100
+		cost = 10
 
 		remove_effect = {
 			add_state_core = 4
@@ -185,7 +185,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 100
+		cost = 10
 
 		remove_effect = {
 			add_state_core = 57
@@ -227,7 +227,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 100
+		cost = 10
 
 		remove_effect = {
 			add_state_core = 42
@@ -269,7 +269,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 100
+		cost = 10
 
 		remove_effect = {
 			add_state_core = 159
@@ -307,7 +307,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 100
+		cost = 10
 
 		remove_effect = {
 			add_state_core = 735
@@ -343,7 +343,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 100
+		cost = 10
 
 		remove_effect = {
 			add_state_core = 28
@@ -378,7 +378,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 100
+		cost = 10
 
 		remove_effect = {
 			add_state_core = 151
