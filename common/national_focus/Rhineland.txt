@@ -444,9 +444,9 @@ add_command_power= 50
 		}
 		completion_reward = {
 			country_event= {
-days = 1 
-id = trc.1 
-}
+				days = 1 
+				id = trc.1 
+			}
 		}
 	}
 	#Focus for New Ties to The Netherlands
@@ -814,7 +814,14 @@ producer = TRC
 			factor = 1
 		}
 		completion_reward = {
-			release_puppet= BEL
+			BEL = {
+				transfer_state = 6
+				transfer_state = 34
+				transfer_state = 807
+				add_state_core = 6
+				add_state_core = 34
+				add_state_core = 807
+			}
 		}
 	}
 
@@ -927,6 +934,12 @@ popularity = -0.1
 		mutually_exclusive = { focus = TRC_crush_then }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = trc.4
+			}
 		}
 	}
 	#Focus for Send The Military
@@ -1084,9 +1097,9 @@ name = TRC_RP
 		}
 		completion_reward = {
 			country_event= {
-days = 1 
-id = trc.2 
-}
+				days = 1 
+				id = trc.2 
+			}
 		}
 	}
 
@@ -1218,9 +1231,9 @@ popularity = 0.1
 		}
 		completion_reward = {
 			country_event= {
-days = 1 
-id = trc.3
-}
+				days = 1 
+				id = trc.3 
+			}
  add_stability= 0.05  add_war_support= 0.05
 		}
 	}
