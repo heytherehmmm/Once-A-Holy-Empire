@@ -11,4 +11,6 @@ l_english:
  ALA_fascism:0 "Arctic Military State"
  ALA_fascism_DEF:0 "the Arctic Military State"
  ALA_fascism_ADJ:0 "Arctic"
- 
+ ALA_russia:0 "Alaskan Governorate"
+ ALA_russia_DEF:0 "the Alaskan Governorate"
+ ALA_russia_ADJ:0 "Alaskan"
