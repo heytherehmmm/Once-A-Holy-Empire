@@ -24,6 +24,11 @@ set_autonomy = {
 	autonomous_state = autonomy_imperial_governorate
 	freedom_level = 0.2
 }
+set_autonomy = {
+	target = ALA
+	autonomous_state = autonomy_imperial_governorate
+	freedom_level = 0.2
+}
 
 # COUNTRY NAMES
 set_cosmetic_tag = SOV_russia
@@ -39,7 +44,9 @@ UKR = {
 UBD = {
 	set_cosmetic_tag = UBD_russia
 }
-
+ALA = {
+	set_cosmetic_tag = ALA_russia
+}
 #RUSSIA STARTING TECH
 set_research_slots = 3
 set_stability = 0.5
@@ -146,7 +153,7 @@ add_ideas = {
 # LEADER OF MONARCHIST PARTY, KIRILL VLADIMIROVICH
 create_country_leader = {
 	name = "Kirill Vladimirovich Romanov"
-	desc = "POLITICS_KIRILL_ROMANOV_DESC"
+	desc = "POLITICS_KIRILL_VLADIMIROVICH_ROMANOV_DESC"
 	picture = "shrimpguy.dds"
 	expire = "1953.3.1"
 	ideology = despotism
