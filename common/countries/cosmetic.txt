@@ -327,6 +327,12 @@ UKR_russia = {
     color = rgb { 72 143 68 }
     color_ui = rgb { 72 143 68 }
 }
+
+ALA_russia = {
+    color = rgb { 72 143 68 }
+    color_ui = rgb { 72 143 68 }
+}
+
 AZR_russia = {
     color = rgb { 72 143 68 }
     color_ui = rgb { 72 143 68 }

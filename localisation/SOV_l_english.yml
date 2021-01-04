@@ -1,5 +1,4 @@
 ﻿l_english:
- 
  SOV_fascism:0 "Fascist State of Russia"
  SOV_fascism_DEF:0 "the Fascist State of Russia"
  SOV_democratic:0 "Russian Federation"
@@ -24,9 +23,6 @@
  UBD_russia:0 "Baltic Governorate"
  UBD_russia_DEF:0 "the Baltic Governorate"
  UBD_russia_ADJ:0 "Baltic"
- ALA_russia:0 "Alaskan Governorate"
- ALA_russia_DEF:0 "the Alaskan Governorate"
- ALA_russia_ADJ:0 "Alaskan"
  AZR_russia:0 "Caucasian Governorate"
  AZR_russia_DEF:0 "the Caucasian Governorate"
  AZR_russia_ADJ:0 "Caucasian"

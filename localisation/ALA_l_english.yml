@@ -1,0 +1,14 @@
+l_english:
+ ALA_neutrality:0 "Alaska"
+ ALA_neutrality_DEF:0 "Alaska"
+ ALA_neutrality_ADJ:0 "Alaskan"
+ ALA_communism:0 "People's Republic of Alaska"
+ ALA_communism_DEF:0 "the Alaskan People's Republic"
+ ALA_communism_ADJ:0 "Alaskan"
+ ALA_democratic:0 "Republic of Alaska"
+ ALA_democratic_DEF:0 "the Republic of Alaska"
+ ALA_democratic_ADJ:0 "Alaskan"
+ ALA_fascism:0 "Arctic Military State"
+ ALA_fascism_DEF:0 "the Arctic Military State"
+ ALA_fascism_ADJ:0 "Arctic"
+ 
