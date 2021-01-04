@@ -503,6 +503,13 @@ add_command_power= 50
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
+		completion_reward = {
+		add_tech_bonus = {
+		bonus = 0.5
+		uses = 2
+		category = industry
+		}
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -723,7 +730,7 @@ add_command_power= 50
 		}
 	}
 
-	#Focus for better guns
+	#Focus for Improved Weaponry
 	focus = {
 		id = TRC_better_guns
 		icon = GFX_TRC_better_guns-66257
@@ -736,13 +743,13 @@ add_command_power= 50
 			factor = 1
 		}
 		completion_reward = {
-			add_equipment_to_stockpile= {
- type = infantry_equipment_2 
-amount = 2500 
-producer = TRC 
-}
+        add_tech_bonus = {
+		bonus = 0.5
+		uses = 2
+		category = infantry_weapons
 		}
-	}
+		}
+		}
 
 	#Focus for New Tacticts
 	focus = {
@@ -766,6 +773,9 @@ producer = TRC
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_adress_the_belgium_issue }
+		completion_reward = {
+		add_stability = -.1
+		}
 		mutually_exclusive = { focus = TRC_open_negotiations }
 		ai_will_do = {
 			factor = 1
