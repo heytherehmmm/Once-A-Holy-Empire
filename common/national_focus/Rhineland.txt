@@ -268,6 +268,9 @@ add_command_power= 50
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_timed_idea = { idea = TRC_purged_high_command days = 90 }
+		}
 	}
 
 	#Focus for New RheinParlament election laws
@@ -357,6 +360,9 @@ add_command_power= 50
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_ideas= TRC_idea_anticorruption
+		}
 	}
 
 	#Focus for Expand the reserve
@@ -370,6 +376,9 @@ add_command_power= 50
 		prerequisite = { focus = TRC_purge_the_high_command }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_ideas = TRC_expanded_reserves
 		}
 	}
 	#Focus for The Anglo-Rhine Friendship
@@ -576,40 +585,8 @@ add_command_power= 50
 
 	
 
-	#Focus for The Economy
-	focus = {
-		id = TRC_the_economy
-		icon = GFX_goal_unknown
-		x = 57
-		y = 1
-		cost = 10
-		available_if_capitulated = yes
-		completion_reward = {
-		add_tech_bonus = {
-		bonus = 0.5
-		uses = 2
-		category = industry
-		}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	#Focus for New Road Projects
-	focus = {
-		id = TRC_new_road_projects
-		icon = GFX_goal_unknown
-		x = 56
-		y = 2
-		cost = 4
-		available_if_capitulated = yes
-		prerequisite = { focus = TRC_the_economy }
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
+	
+	
 	#Focus for Form the Belgian Naval command
 	focus = {
 		id = TRC_form_the_belgian_naval_command
@@ -651,32 +628,7 @@ add_command_power= 50
 		}
 	}
 
-	#Focus for Invest in our Heart
-	focus = {
-		id = TRC_invest_in_our_heart
-		icon = GFX_goal_unknown
-		x = 58
-		y = 2
-		cost = 4
-		available_if_capitulated = yes
-		prerequisite = { focus = TRC_the_economy }
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	#Focus for Invest in new Tractors
-	focus = {
-		id = TRC_invest_in_new_tractors
-		icon = GFX_goal_unknown
-		x = 54
-		y = 2
-		cost = 4
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
-		}
-	}
+	
 
 	
 
@@ -1028,7 +980,7 @@ popularity = -0.1
 	focus = {
 		id = TRC_the_presidents_proposal
 		icon = GFX_goal_unknown
-		x = 8
+		x = 7
 		y = 4
 		cost = 4
 		available_if_capitulated = yes
@@ -1036,6 +988,19 @@ popularity = -0.1
 		mutually_exclusive = { focus = TRC_the_rheinmarshals_proposal }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_popularity= { 
+				ideology = democratic 
+				popularity = 0.05
+			}
+			add_popularity= { 
+				ideology = neutrality 
+				popularity = 0.05
+			}
+			set_country_flag = TRC_president_deal
+			custom_effect_tooltip = TRC_president_deal
 		}
 	}
 
@@ -1132,7 +1097,7 @@ popularity = -0.1
 	focus = {
 		id = TRC_the_rheinmarshals_proposal
 		icon = GFX_TRC_the_rheinmarshals_proposal-60475
-		x = 10
+		x = 9
 		y = 4
 		cost = 4
 		available_if_capitulated = yes
@@ -1140,6 +1105,19 @@ popularity = -0.1
 		mutually_exclusive = { focus = TRC_the_presidents_proposal }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_popularity= { 
+				ideology = democratic 
+				popularity = 0.05
+			}
+			add_popularity= { 
+				ideology = neutrality 
+				popularity = 0.05
+			}
+			set_country_flag = TRC_rheinmarshal_deal
+			custom_effect_tooltip = TRC_rheinmarshal_deal
 		}
 	}
 
@@ -1360,12 +1338,15 @@ popularity = -0.1
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_ideas= TRC_idea_stricten_federal_regulations
+		}
 	}
 	#Focus for Democracy in chaos
 	focus = {
 		id = TRC_democracy_in_chaos
 		icon = GFX_TRC_democracy_in_chaos-60079
-		x = 9
+		x = 8
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -1404,7 +1385,7 @@ popularity = 0.1
 	focus = {
 		id = TRC_the_last_hope_of_the_empire
 		icon = GFX_TRC_the_last_hope_of_the_empire-59940
-		x = 6
+		x = 5
 		y = 1
 		cost = 4
 		available_if_capitulated = yes
@@ -1448,7 +1429,7 @@ popularity = 0.1
 	focus = {
 		id = TRC_no_reforms
 		icon = GFX_TRC_no_reforms-59942
-		x = 9
+		x = 8
 		y = 2
 		cost = 4
 		available_if_capitulated = yes
@@ -1456,25 +1437,286 @@ popularity = 0.1
 		mutually_exclusive = { 
 			focus = TRC_the_needed_reforms 
 		}
-		mutually_exclusive = { 
-			focus = TRC_ 
-		}
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-			add_stability= 0.05  add_popularity= { 
-ideology = fascism 
-popularity = 0.1 
-}
+			add_stability= -0.05  
+			add_popularity= { 
+				ideology = democratic 
+				popularity = -0.1 
+			}
 		}
 	}
 
 	
 
-	
+	#Focus for The Economy
+	focus = {
+		id = TRC_the_economy
+		icon = GFX_goal_unknown
+		x = 57
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		completion_reward = {
+		add_tech_bonus = {
+		bonus = 0.25
+		uses = 1
+		category = industry
+		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
+	#Focus for New Road Projects
+	focus = {
+		id = TRC_new_road_projects
+		icon = GFX_goal_unknown
+		x = 56
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_economy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
+	#Focus for Invest in our Heart
+	focus = {
+		id = TRC_invest_in_our_heart
+		icon = GFX_goal_unknown
+		x = 58
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_economy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			51 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			51 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			808 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			808 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			42 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			42 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Invest in new Tractors
+	focus = {
+		id = TRC_invest_in_new_tractors
+		icon = GFX_goal_unknown
+		x = 57
+		y = 3
+		cost = 4
+		prerequisite = { focus = TRC_new_road_projects }
+		prerequisite = { focus = TRC_invest_in_our_heart }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Establish the Rhineland Industrial Planning Agency
+	focus = {
+		id = TRC_industrial_planning_focus
+		icon = GFX_goal_unknown
+		x = 57
+		y = 4
+		cost = 5
+		prerequisite = { focus = TRC_invest_in_new_tractors }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = TRC_industrial_planning_agency
+		}
+	}
+	
+	#Focus for Civ Expansion
+	focus = {
+		id = TRC_civ_expansion
+		icon = GFX_goal_unknown
+		x = 56
+		y = 5
+		cost = 10
+		prerequisite = { focus = TRC_industrial_planning_focus }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+			random_owned_state = {
+				limit = { is_core_of = TRC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_state = {
+				limit = { is_core_of = TRC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { is_core_of = TRC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#Focus for Civ Expansion 2
+	focus = {
+		id = TRC_civ_expansion_2
+		icon = GFX_goal_unknown
+		x = 56
+		y = 6
+		cost = 5
+		prerequisite = { focus = TRC_civ_expansion }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = { is_core_of = TRC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#Focus for Mil Expansion
+	focus = {
+		id = TRC_mil_expansion
+		icon = GFX_goal_unknown
+		x = 58
+		y = 5
+		cost = 10
+		prerequisite = { focus = TRC_industrial_planning_focus }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+			random_owned_state = {
+				limit = { is_core_of = TRC }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_state = {
+				limit = { is_core_of = TRC }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { is_core_of = TRC }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#Focus for Civ Expansion 2
+	focus = {
+		id = TRC_mil_expansion_2
+		icon = GFX_goal_unknown
+		x = 58
+		y = 6
+		cost = 5
+		prerequisite = { focus = TRC_mil_expansion }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = { is_core_of = TRC }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
 
 
 	
