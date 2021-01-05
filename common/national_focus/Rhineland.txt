@@ -184,6 +184,10 @@ add_command_power= 50
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_stability = -0.05
+			remove_ideas = TRC_belgian_issue
+		}
 	}
 
 	#Focus for Befriend the Parlament
@@ -821,6 +825,7 @@ add_command_power= 50
 		prerequisite = { focus = TRC_adress_the_belgium_issue }
 		completion_reward = {
 		add_stability = -0.1
+		add_political_power = -75
 		}
 		available = {
 			has_country_flag = TRC_crush_them_flag
@@ -874,6 +879,7 @@ add_command_power= 50
 			factor = 1
 		}
 		completion_reward = {
+			remove_ideas = TRC_belgian_issue
 			BEL = {
 				transfer_state = 6
 				transfer_state = 34
@@ -897,6 +903,7 @@ add_command_power= 50
 			factor = 1
 		}
 		completion_reward = {
+			remove_ideas = TRC_belgian_issue
 			BEL = {
 				transfer_state = 6
 				transfer_state = 34
@@ -904,6 +911,22 @@ add_command_power= 50
 				add_state_core = 6
 				add_state_core = 34
 				add_state_core = 807
+				custom_effect_tooltip = TRC_domionon_of_belgium
+				
+			}
+			IF = {
+				limit = { has_dlc = "Together for Victory"}
+				
+				hidden_effect = {
+					set_autonomy = {
+					target = BEL
+					autonomy_state = autonomy_dominion
+				}
+				}
+				
+			}
+			ELSE = {
+				puppet = BEL
 			}
 		}
 	}
@@ -1061,7 +1084,7 @@ popularity = -0.1
 		completion_reward = {
 			country_event= {
 				days = 1 
-				id = trc.4
+				id = trc.5
 			}
 		}
 	}
@@ -1076,6 +1099,9 @@ popularity = -0.1
 		prerequisite = { focus = TRC_crush_then }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -150
 		}
 	}
 	
