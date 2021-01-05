@@ -420,7 +420,7 @@ add_command_power= 50
 			factor = 1
 		}
 		completion_reward = {
-			add_popularity= { 
+			add_popularity= {
 				ideology = communism 
 				popularity = -1
 			}
@@ -1206,10 +1206,25 @@ popularity = -0.1
 					long_name = TRC_rheinmarshals_party_long
 					name = TRC_rheinmarshals_party 
 			}
+			
 			hidden_effect = {
 				set_politics= {
 					ruling_party = neutrality 
 					elections_allowed = no
+				}
+				add_popularity= {
+					ideology = neutrality
+					popularity = 0.3
+				}
+				create_country_leader = {
+					name = "Paul von Lettow-Vorbeck"
+					desc = "POLITICS_PAUL_VORBECK_DESC"
+					picture = "gfx/leaders/TRC/lettow.dds"
+					expire = "2011.1.1"
+					ideology = despotism
+					traits = {
+
+					}
 				}
 			}
 		}
@@ -1283,6 +1298,10 @@ popularity = -0.1
 					ruling_party = democratic 
 					elections_allowed = yes		
 				}
+				add_popularity= {
+					ideology = democratic
+					popularity = 0.3
+				}
 			}
 		}
 	}
@@ -1321,6 +1340,10 @@ popularity = -0.1
 				set_politics= {
 					ruling_party = democratic 
 					elections_allowed = no
+				}
+				add_popularity= {
+					ideology = democratic
+					popularity = 0.3
 				}
 			}
 		}

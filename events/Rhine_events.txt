@@ -52,17 +52,20 @@ country_event = {
 	is_triggered_only = yes # If yes, it won't fire all the time
 	option = { 
 		name = trc.3.a
-		ai_chance = { factor = 1}
+		ai_chance = { factor = 2}
 		set_country_flag = TRC_RNDC_victory
+		complete_national_focus = TRC_the_rndc_victory
 	}
 	option = {
 		name = trc.3.b
-		ai_chance = { factor = 1}
+		ai_chance = { factor = 2}
 		set_country_flag = TRC_RCC_victory
+		complete_national_focus = TRC_the_rcc_victory
 	}
 	option = {
 		name = trc.3.c
 		ai_chance = { factor = 1}
 		set_country_flag = TRC_Rheinmarshal_victory
+		complete_national_focus = TRC_the_rheinmarshals_victory
 	}
 }
