@@ -172,7 +172,7 @@ add_command_power= 50
 		}
 	}
 
-	#Focus for Send the Rheinmarshal
+	#Focus for Send in the Rheinmarshal
 	focus = {
 		id = TRC_send_the_rheinmarshal
 		icon = GFX_TRC_send_the_rheinmarshal-66255
@@ -185,8 +185,12 @@ add_command_power= 50
 			factor = 1
 		}
 		completion_reward = {
+			custom_effect_tooltip = TRC_rheinmarshal_in_belgium
+			set_country_flag = TRC_rheinmarshal_in_belgium
 			add_stability = -0.05
+			add_manpower = -1000
 			remove_ideas = TRC_belgian_issue
+			
 		}
 	}
 
@@ -227,6 +231,9 @@ add_command_power= 50
 		prerequisite = { focus = TRC_invest_in_belgian_tank_companies }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_ideas = TRC_agricultural_push_idea
 		}
 	}
 
@@ -471,6 +478,9 @@ add_command_power= 50
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_ideas = TRC_lowenkrieg_tactics_idea
+		}
 	}
 	#Focus for The New Army
 	focus = {
@@ -501,6 +511,9 @@ add_command_power= 50
 		prerequisite = { focus = TRC_buy_british_tanks }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_ideas = TRC_a_new_army_idea
 		}
 	}
 	#Focus for Start to Reform the Rheinparlament
@@ -942,6 +955,13 @@ add_command_power= 50
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_equipment_to_stockpile= {
+				type = light_tank_equipment_1
+				amount = 1000 
+				producer = ENG
+			}
+		}
 	}
 
 
@@ -959,7 +979,7 @@ add_command_power= 50
 			factor = 1
 		}
 		completion_reward = {
-			random_owned_controlled_state={
+			34 ={
  limit = {
  free_building_slots = {
  building = arms_factory
@@ -1088,7 +1108,7 @@ popularity = -0.1
 			}
 		}
 	}
-	#Focus for Send The Military
+	#Focus for Send in the Military
 	focus = {
 		id = TRC_send_the_military
 		icon = GFX_TRC_send_the_military-66045
@@ -1102,6 +1122,7 @@ popularity = -0.1
 		}
 		completion_reward = {
 			add_political_power = -150
+			add_manpower = -15000
 		}
 	}
 	
@@ -1447,7 +1468,7 @@ popularity = 0.1
 		completion_reward = {
 			country_event= {
 				days = 1 
-				id = trc.3 
+				id = trc.6
 			}
  add_stability= 0.05  add_war_support= 0.05
 		}

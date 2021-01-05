@@ -51,21 +51,38 @@ country_event = {
 	picture = GFX_report_event_king_speech #Event picture
 	is_triggered_only = yes # If yes, it won't fire all the time
 	option = { 
+		trigger = { NOT = { has_country_flag = TRC_rheinmarshal_in_belgium has_country_flag = TRC_rheinmarshal_deal } }
 		name = trc.3.a
 		ai_chance = { factor = 2}
 		set_country_flag = TRC_RNDC_victory
 		complete_national_focus = TRC_the_rndc_victory
 	}
 	option = {
+		trigger = { NOT = { has_country_flag = TRC_rheinmarshal_in_belgium has_country_flag = TRC_rheinmarshal_deal } }
 		name = trc.3.b
 		ai_chance = { factor = 2}
 		set_country_flag = TRC_RCC_victory
 		complete_national_focus = TRC_the_rcc_victory
 	}
 	option = {
+		trigger = { has_country_flag = TRC_rheinmarshal_in_belgium has_country_flag = TRC_rheinmarshal_deal }
 		name = trc.3.c
 		ai_chance = { factor = 1}
 		set_country_flag = TRC_Rheinmarshal_victory
 		complete_national_focus = TRC_the_rheinmarshals_victory
 	}
+}
+
+##Event: Open Negotiations with Belgian Politicans
+country_event = {
+	id = trc.4 #Event number
+	title = trc.4.title #Event title (Add in localization)
+	desc = trc.4.desc #Event description (Add in localization)
+	picture = GFX_report_event_king_speech #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = { 
+		name = trc.4.a
+		ai_chance = { factor = 1}
+	}
+	
 }

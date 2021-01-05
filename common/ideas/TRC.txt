@@ -20,6 +20,41 @@ ideas = {
 				experience_gain_army_factor = -0.1
 			}
 		}
+		TRC_lowenkrieg_tactics_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = gfx_unknown
+
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.1
+			}
+		}
+		TRC_agricultural_push_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = gfx_unknown
+
+			modifier = {
+				supply_consumption_factor = -0.1
+			}
+		}
 		TRC_belgian_issue = {
 			allowed = {
 				always = yes
@@ -142,6 +177,25 @@ ideas = {
 
 			modifier = {
 				production_speed_arms_factory_factor = 0.2
+			}
+		}
+		TRC_a_new_army_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.05
 			}
 		}
 		    TRC_New_Tactics = {
