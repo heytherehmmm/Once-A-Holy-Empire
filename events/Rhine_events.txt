@@ -6,14 +6,14 @@ country_event = {
 	title = trc.1.title #Event title (Add in localization)
 	desc = trc.1.desc #Event description (Add in localization)
 	picture = GFX_report_event_king_speech #Event picture
-	is_triggered_only = yes # If yes, it won't fire all the time
+	is_triggered_only = no
+	fire_only_once = yes
+	trigger = {
+		tag = TRC
+		date > 1936.1.1
+	}
 	option = { 
 		name = trc.1.a
-		ai_chance = { factor = 1}
-		
-	}
-	option = {
-		name = trc.1.b
 		ai_chance = { factor = 1}
 		
 	}
@@ -29,16 +29,40 @@ country_event = {
 	option = { 
 		name = trc.2.a
 		ai_chance = { factor = 1}
-		
+		set_country_flag = TRC_crush_them_flag
 	}
 	option = {
 		name = trc.2.b
 		ai_chance = { factor = 1}
-		
+		set_country_flag = TRC_open_negotiations_flag
 	}
 	option = {
 		name = trc.2.c
 		ai_chance = { factor = 1}
-		
+		set_country_flag = TRC_granted_limited_autonomy_to_belgium_flag
+	}
+}
+
+##Event: Election of 1937
+country_event = {
+	id = trc.3 #Event number
+	title = trc.3.title #Event title (Add in localization)
+	desc = trc.3.desc #Event description (Add in localization)
+	picture = GFX_report_event_king_speech #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = { 
+		name = trc.3.a
+		ai_chance = { factor = 1}
+		set_country_flag = TRC_RNDC_victory
+	}
+	option = {
+		name = trc.3.b
+		ai_chance = { factor = 1}
+		set_country_flag = TRC_RCC_victory
+	}
+	option = {
+		name = trc.3.c
+		ai_chance = { factor = 1}
+		set_country_flag = TRC_Rheinmarshal_victory
 	}
 }

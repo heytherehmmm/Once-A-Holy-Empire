@@ -80,6 +80,7 @@ add_command_power= 50
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
+		
 		prerequisite = { focus = TRC_the_rndc_victory }
         completion_reward = {
 		51 = {
@@ -175,8 +176,8 @@ add_command_power= 50
 	focus = {
 		id = TRC_send_the_rheinmarshal
 		icon = GFX_TRC_send_the_rheinmarshal-66255
-		x = 14
-		y = 4
+		x = 15
+		y = 3
 		cost = 2
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_send_the_military }
@@ -397,7 +398,7 @@ add_command_power= 50
 		}
 	}
 	
-	#Focus for Ban Comunist parties?
+	#Focus for Ban Communist Parties
 	focus = {
 		id = TRC_ban_comunist_parties
 		icon = GFX_TRC_ban_comunist_parties-61535
@@ -408,6 +409,12 @@ add_command_power= 50
 		prerequisite = { focus = TRC_the_condem_the_rheinparlament_act }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+				ideology = communism 
+				popularity = -1
+			}
 		}
 	}
 
@@ -499,12 +506,12 @@ add_command_power= 50
 			add_stability= 0.05  add_political_power= 50
 		}
 	}
-#Focus for Adress the Belgium Issue?
+#Focus for Address the Belgium Issue?
 	focus = {
 		id = TRC_adress_the_belgium_issue
 		icon = GFX_TRC_adress_the_belgium_issue-59946
 		x = 13
-		y = 1
+		y = 0
 		cost = 2
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -513,7 +520,7 @@ add_command_power= 50
 		completion_reward = {
 			country_event= {
 				days = 1 
-				id = trc.1 
+				id = trc.2
 			}
 		}
 	}
@@ -855,15 +862,19 @@ add_command_power= 50
 	focus = {
 		id = TRC_crush_then
 		icon = GFX_TRC_crush_then-60494
-		x = 14
-		y = 2
+		x = 15
+		y = 1
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_adress_the_belgium_issue }
 		completion_reward = {
-		add_stability = -.1
+		add_stability = -0.1
+		}
+		available = {
+			has_country_flag = TRC_crush_them_flag
 		}
 		mutually_exclusive = { focus = TRC_open_negotiations }
+		mutually_exclusive = { focus = TRC_a_compromise }
 		ai_will_do = {
 			factor = 1
 		}
@@ -902,8 +913,8 @@ add_command_power= 50
 	focus = {
 		id = TRC_it_has_to_go
 		icon = GFX_TRC_it_has_to_go-66037
-		x = 12
-		y = 3
+		x = 11
+		y = 2
 		cost = 2
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_open_negotiations }
@@ -921,7 +932,29 @@ add_command_power= 50
 			}
 		}
 	}
-
+#Focus for The Dominion of Belgium
+	focus = {
+		id = TRC_the_dominion_of_belgium
+		icon = GFX_TRC_it_has_to_go-66037
+		x = 13
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_a_compromise }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			BEL = {
+				transfer_state = 6
+				transfer_state = 34
+				transfer_state = 807
+				add_state_core = 6
+				add_state_core = 34
+				add_state_core = 807
+			}
+		}
+	}
 	#Focus for Buy British Tanks
 	focus = {
 		id = TRC_buy_british_tanks
@@ -1023,12 +1056,40 @@ popularity = -0.1
 	focus = {
 		id = TRC_open_negotiations
 		icon = GFX_TRC_open_negotiations-60492
-		x = 12
-		y = 2
+		x = 11
+		y = 1
 		cost = 10
 		available_if_capitulated = yes
+		available = {
+			has_country_flag = TRC_open_negotiations_flag
+		}
 		prerequisite = { focus = TRC_adress_the_belgium_issue }
 		mutually_exclusive = { focus = TRC_crush_then }
+		mutually_exclusive = { focus = TRC_a_compromise }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = trc.4
+			}
+		}
+	}
+	#Focus for A Compromise
+	focus = {
+		id = TRC_a_compromise
+		icon = GFX_TRC_open_negotiations-60492
+		x = 13
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		available = {
+			has_country_flag = TRC_granted_limited_autonomy_to_belgium_flag
+		}
+		prerequisite = { focus = TRC_adress_the_belgium_issue }
+		mutually_exclusive = { focus = TRC_crush_then }
+		mutually_exclusive = { focus = TRC_open_negotiations }
 		ai_will_do = {
 			factor = 1
 		}
@@ -1043,8 +1104,8 @@ popularity = -0.1
 	focus = {
 		id = TRC_send_the_military
 		icon = GFX_TRC_send_the_military-66045
-		x = 14
-		y = 3
+		x = 15
+		y = 2
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_crush_then }
@@ -1152,6 +1213,9 @@ popularity = -0.1
 		mutually_exclusive = { 
 			focus = TRC_the_rndc_victory 
 		}
+		available = {
+			has_country_flag = TRC_Rheinmarshal_victory
+		}
 		mutually_exclusive = { 
 			focus = TRC_the_rcc_victory 
 		}
@@ -1160,10 +1224,16 @@ popularity = -0.1
 		}
 		completion_reward = {
 			set_party_name= { 
-ideology = neutrality 
-long_name = TRC_rheinmarshal's_party 
-name = TRC_RP 
-}
+					ideology = neutrality 
+					long_name = TRC_rheinmarshals_party_long
+					name = TRC_rheinmarshals_party 
+			}
+			hidden_effect = {
+				set_politics= {
+					ruling_party = neutrality 
+					elections_allowed = no
+				}
+			}
 		}
 	}
 
@@ -1198,7 +1268,7 @@ name = TRC_RP
 		completion_reward = {
 			country_event= {
 				days = 1 
-				id = trc.2 
+				id = trc.3
 			}
 		}
 	}
@@ -1215,21 +1285,27 @@ name = TRC_RP
 		mutually_exclusive = { 
 			focus = TRC_the_rheinmarshals_victory 
 		}
-		mutually_exclusive = { 
-			focus = TRC_the_rcc_victory 
+		available = {
+			has_country_flag = TRC_RNDC_victory
 		}
 		mutually_exclusive = { 
-			focus = TRC_ 
+			focus = TRC_the_rcc_victory 
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 			set_party_name= { 
-ideology = democratic 
-long_name = TRC_RNDC 
-name = TRC_rhein_national_democratic_coalition
-}
+					ideology = democratic 
+					long_name = TRC_rhein_national_democratic_coalition_long 
+					name = TRC_rhein_national_democratic_coalition
+			}
+			hidden_effect = {
+				set_politics= {
+					ruling_party = democratic 
+					elections_allowed = yes		
+				}
+			}
 		}
 	}
 
@@ -1251,15 +1327,24 @@ name = TRC_rhein_national_democratic_coalition
 		mutually_exclusive = { 
 			focus = TRC_ 
 		}
+		available = {
+			has_country_flag = TRC_RCC_victory
+		}
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 			set_party_name= { 
-ideology = democratic 
-long_name = TRC_rhein_conservative_coalition 
-name = TRC_RCC 
-}
+					ideology = democratic 
+					long_name = TRC_rhein_conservative_coalition_long
+					name = TRC_rhein_conservative_coalition 
+			}
+			hidden_effect = {
+				set_politics= {
+					ruling_party = democratic 
+					elections_allowed = no
+				}
+			}
 		}
 	}
 
