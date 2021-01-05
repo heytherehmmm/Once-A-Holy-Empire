@@ -435,6 +435,7 @@ add_command_power= 50
 				ideology = communism 
 				popularity = -1
 			}
+			add_stability = -0.15
 		}
 	}
 
@@ -448,18 +449,7 @@ add_command_power= 50
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_rndc_victory }
 		completion_reward = {
-		add_opinion_modifier = {
-        target = FRA
-        modifier = medium_increase
-        }
-				add_opinion_modifier = {
-        target = USA
-        modifier = medium_increase
-		}
-	    add_opinion_modifier = {
-        target = ENG
-        modifier = medium_increase
-		}
+        add_opinion_modifier = { target = FRA modifier = TRC_closer_western_ties }
 		}
 		ai_will_do = {
 			factor = 1
@@ -1135,6 +1125,24 @@ popularity = -0.1
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_new_trade_deals }
+	    completion_reward = {
+		51 = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+    }
+}
+        808 = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+    }
+}
+}
 		ai_will_do = {
 			factor = 1
 		}
@@ -1550,6 +1558,9 @@ popularity = 0.1
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_economy }
+		completion_reward = {
+		add_ideas = { TRC_New_Road_Projects }
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -1628,6 +1639,24 @@ popularity = 0.1
 		cost = 4
 		prerequisite = { focus = TRC_new_road_projects }
 		prerequisite = { focus = TRC_invest_in_our_heart }
+		completion_reward = {
+		51 = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+    }
+}
+        808 = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+    }
+}
+}
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
