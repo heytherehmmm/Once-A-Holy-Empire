@@ -281,6 +281,13 @@ add_command_power= 50
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_equipment_to_stockpile= {
+				type = fighter_equipment_0
+				amount = 300
+				producer = USA
+			}
+		}
 	}
 
 	#Focus for Make our own Planes
@@ -295,6 +302,13 @@ add_command_power= 50
 		mutually_exclusive = { focus = TRC_foreign_planes }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+				bonus = 1
+				uses = 1
+				category = light_fighter 
+			}
 		}
 	}
 
@@ -536,6 +550,12 @@ add_command_power= 50
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			remove_ideas = TRC_rhine_military_guard
+			remove_ideas = TRC_gun_production
+			add_ideas = TRC_new_army_idea
+		}
+		
 	}
 	#Focus for A New Army
 	focus = {
@@ -617,10 +637,55 @@ add_command_power= 50
 		prerequisite = { focus = TRC_the_armed_forces_of_the_rhine }
 		completion_reward = {
 			air_experience = 50
+			add_tech_bonus= {
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine 
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
+		
+	}
+#Focus for Improve our Aerial Tactics
+	focus = {
+		id = TRC_improve_our_air_doctrine
+		icon = GFX_goal_generic_build_airforce
+		x = 36
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_make_our_own_planes focus = TRC_foreign_planes }
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus= {
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+	}
+#Focus for Modern airforce
+	focus = {
+		id = TRC_modern_airforce
+		icon = GFX_BOH_modern_airforce
+		x = 36
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_improve_our_air_doctrine }
+		completion_reward = {
+			add_ideas = TRC_idea_modern_airforce
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
 	}
 
 	#Focus for Buy new fighers
@@ -634,6 +699,13 @@ add_command_power= 50
 		prerequisite = { focus = TRC_our_airforce }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile= {
+				type = fighter_equipment_0
+				amount = 200
+				producer = ENG
+			}
 		}
 	}
 
@@ -658,6 +730,9 @@ add_command_power= 50
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_ideas = TRC_belgian_naval_command
+		}
 	}
 
 
@@ -679,6 +754,24 @@ add_command_power= 50
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = { is_core_of = TRC }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { is_core_of = TRC }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -758,7 +851,7 @@ add_command_power= 50
 			factor = 1
 		}
 	}
-	#Focus for Buy naval planes
+	#Focus for Purchase naval planes
 	focus = {
 		id = TRC_buy_naval_planes
 		icon = GFX_goal_unknown
@@ -769,6 +862,13 @@ add_command_power= 50
 		prerequisite = { focus = TRC_our_airforce }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile= {
+				type = nav_bomber_equipment_1
+				amount = 125
+				producer = ENG
+			}
 		}
 	}
 
@@ -924,6 +1024,9 @@ add_command_power= 50
 		prerequisite = { focus = TRC_our_military }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_ideas = TRC_rhine_military_guard
 		}
 	}
 #Focus for It has to Go
@@ -1083,7 +1186,7 @@ popularity = -0.1
 		}
 	}
 
-	#Focus for Make More Guns
+	#Focus for Improve Gun Production Efficiency
 	focus = {
 		id = TRC_make_more_guns
 		icon = GFX_goal_unknown
@@ -1094,6 +1197,9 @@ popularity = -0.1
 		prerequisite = { focus = TRC_our_military }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_ideas = TRC_gun_production
 		}
 	}
 	#Focus for Open Negotiations
