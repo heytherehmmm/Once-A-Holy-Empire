@@ -688,6 +688,25 @@ add_command_power= 50
 		
 	}
 
+	#Focus for Modern Military
+	focus = {
+		id = TRC_modern_military
+		icon = GFX_BOH_modern_military
+		x = 43
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_a_combined_armor_army focus = TRC_tanks_alone focus = TRC_manpower_superiority focus = TRC_artillery_attacks }
+		completion_reward = {
+			remove_ideas = TRC_new_army_idea
+			add_ideas = TRC_idea_modern_military
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+	}
+
 	#Focus for Buy new fighers
 	focus = {
 		id = TRC_buy_new_fighers
@@ -717,7 +736,7 @@ add_command_power= 50
 	focus = {
 		id = TRC_form_the_belgian_naval_command
 		icon = GFX_TRC_form_the_belgian_naval_command-61641
-		x = 49
+		x = 50
 		y = 4
 		cost = 4
 		available_if_capitulated = yes
@@ -734,7 +753,53 @@ add_command_power= 50
 			add_ideas = TRC_belgian_naval_command
 		}
 	}
-
+	
+	#Focus for Futher Dockyard Expansion
+	focus = {
+		id = TRC_dockyard_expansion
+		icon = GFX_goal_unknown
+		x = 51
+		y = 5
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_form_the_belgian_naval_command }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		6 = {
+    add_extra_state_shared_building_slots = 2
+    add_building_construction = {
+        type = dockyard
+        level = 2
+        instant_build = yes
+    }
+}
+	}
+	}
+	#Focus for Futher Dockyard Expansion
+	focus = {
+		id = TRC_dockyard_expansion_2
+		icon = GFX_goal_unknown
+		x = 49
+		y = 5
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_form_the_belgian_naval_command }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		6 = {
+    add_extra_state_shared_building_slots = 2
+    add_building_construction = {
+        type = dockyard
+        level = 2
+        instant_build = yes
+    }
+}
+	}
+	}
 
 	
 
@@ -876,9 +941,9 @@ add_command_power= 50
 	focus = {
 		id = TRC_the_flanders_dockyarts
 		icon = GFX_goal_unknown
-		x = 50
+		x = 51
 		y = 3
-		cost = 4
+		cost = 6
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_our_navy }
 		ai_will_do = {
@@ -900,16 +965,59 @@ add_command_power= 50
 	focus = {
 		id = TRC_our_navy
 		icon = GFX_goal_unknown
-		x = 49
+		x = 50
 		y = 2
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_armed_forces_of_the_rhine }
-		completion_reward = {
-	    navy_experience = 20
-		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus= {
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine 
+			}
+		}
+	}
+	#Focus for Improve our Naval Doctrine
+	focus = {
+		id = TRC_improve_naval_doctrine
+		icon = GFX_goal_unknown
+		x = 50
+		y = 6
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_dockyard_expansion }
+		prerequisite = { focus = TRC_dockyard_expansion_2 }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus= {
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine 
+			}
+		}
+	}
+	#Focus for Modern Navy
+	focus = {
+		id = TRC_modern_navy
+		icon = GFX_BOH_modern_navy
+		x = 50
+		y = 7
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_improve_naval_doctrine }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = TRC_idea_modern_navy
 		}
 	}
 
@@ -917,9 +1025,9 @@ add_command_power= 50
 	focus = {
 		id = TRC_buy_old_french_ships
 		icon = GFX_goal_unknown
-		x = 48
+		x = 49
 		y = 3
-		cost = 4
+		cost = 6
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_our_navy }
 		ai_will_do = {
@@ -927,13 +1035,16 @@ add_command_power= 50
 		}
 		completion_reward = {
 			
-			if = {
-				limit = { has_dlc = "Man the Guns" }
-				load_oob = "TRC_french_ships_mtg"
-				else = {
-					custom_effect_tooltip = "Sorry, this required the Man the Guns DLC, at the moment"
+			hidden_effect = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					load_oob = "TRC_french_ships_mtg"
+					else = {
+						custom_effect_tooltip = "Sorry, this required the Man the Guns DLC, at the moment"
+					}
 				}
 			}
+			custom_effect_tooltip = TRC_french_ships_mtg
 		}
 	}
 
