@@ -449,7 +449,18 @@ add_command_power= 50
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_rndc_victory }
 		completion_reward = {
-        add_opinion_modifier = { target = FRA modifier = TRC_closer_western_ties }
+			add_opinion_modifier = {
+				target = FRA
+				modifier = huge_increase
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = huge_increase
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = huge_increase
+			}
 		}
 		ai_will_do = {
 			factor = 1

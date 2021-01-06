@@ -66,7 +66,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = gfx_unknown
+			picture = GFX_idea_TRC_belgian_issue
 
 			modifier = {
 				stability_factor = -0.1

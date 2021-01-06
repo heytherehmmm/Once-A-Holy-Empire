@@ -5625,4 +5625,9 @@ spriteTypes = {
 		name = "GFX_idea_ALA_russian_prisoners"
 		texturefile = "gfx/interface/ideas/ALA_russian_prisoners.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_TRC_belgian_issue"
+		texturefile = "gfx/interface/ideas/TRC_belgian_issue.dds"
+	}
+	
 }
