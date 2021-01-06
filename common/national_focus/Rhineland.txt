@@ -42,7 +42,7 @@
 add_command_power= 50
 		}
 	}
-	#Focus for The "Save the Traditional" act
+	#Focus for The "Save the Rhine" act
 	focus = {
 		id = TRC_the_save_the_traditional_act
 		icon = GFX_goal_unknown
@@ -51,6 +51,21 @@ add_command_power= 50
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_rcc_victory }
+		completion_reward = {
+			add_ideas = TRC_save_the_rhine
+			add_opinion_modifier = {
+				target = FRA
+				modifier = save_the_rhine_opinion
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = save_the_rhine_opinion
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = save_the_rhine_opinion
+			}
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -83,31 +98,31 @@ add_command_power= 50
 		
 		prerequisite = { focus = TRC_the_rndc_victory }
         completion_reward = {
-		51 = {
-    add_extra_state_shared_building_slots = 1
-    add_building_construction = {
-        type = arms_factory
-        level = 1
-        instant_build = yes
-    }
-}
-	808 = {
-    add_extra_state_shared_building_slots = 1
-    add_building_construction = {
-        type = arms_factory
-        level = 1
-        instant_build = yes
-}
-}
-	42 = {
-    add_extra_state_shared_building_slots = 1
-    add_building_construction = {
-        type = arms_factory
-        level = 1
-        instant_build = yes
-}
-}
-}
+			51 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			808 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			42 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -125,6 +140,13 @@ add_command_power= 50
 		mutually_exclusive = { focus = TRC_the_modern_way }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -194,13 +216,13 @@ add_command_power= 50
 		}
 	}
 
-	#Focus for Befriend the Parlament
+	#Focus for Befriend the Netherlands
 	focus = {
-		id = TRC_befriend_the_parlament
+		id = TRC_befriend_the_netherlands
 		icon = GFX_TRC_befriend_the_parlament-67414
 		x = 19
 		y = 5
-		cost = 10
+		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_new_ties_to_the_netherlands }
 		completion_reward = {
@@ -234,6 +256,15 @@ add_command_power= 50
 		}
 		completion_reward = {
 			add_ideas = TRC_agricultural_push_idea
+			random_owned_state = {
+				limit = { is_core_of = TRC }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -402,16 +433,21 @@ add_command_power= 50
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_dominate_the_rheinparlament }
 		completion_reward = {
-		diplomatic_relation = {
-        country = ENG
-        relation = non_aggression_pact
-        active = yes
-        }
-	    diplomatic_relation = {
-        country = ENG
-        relation = military_access
-        active = yes
-        }
+			diplomatic_relation = {
+				country = ENG
+				relation = non_aggression_pact
+				active = yes
+			}
+			diplomatic_relation = {
+				country = ENG
+				relation = military_access
+				active = yes
+			}
+			
+			add_opinion_modifier = {
+				target = ENG
+				modifier = huge_increase
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -473,7 +509,7 @@ add_command_power= 50
 		icon = GFX_TRC_the_lwenkrieg_tactics-61762
 		x = 17
 		y = 5
-		cost = 4
+		cost = 7
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_better_guns }
 		ai_will_do = {
@@ -561,10 +597,10 @@ add_command_power= 50
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_draw_closer_to_the_west }
 		completion_reward = {
-		add_opinion_modifier = {
-        target = HOL
-        modifier = large_increase
-        }
+			add_opinion_modifier = {
+				target = HOL
+				modifier = huge_increase
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -580,7 +616,7 @@ add_command_power= 50
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_armed_forces_of_the_rhine }
 		completion_reward = {
-		air_experience = 50
+			air_experience = 50
 		}
 		ai_will_do = {
 			factor = 1
@@ -789,6 +825,16 @@ add_command_power= 50
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				load_oob = "TRC_french_ships_mtg"
+				else = {
+					custom_effect_tooltip = "Sorry, this required the Man the Guns DLC, at the moment"
+				}
+			}
+		}
 	}
 
 	#Focus for Improved Weaponry
@@ -797,7 +843,7 @@ add_command_power= 50
 		icon = GFX_TRC_better_guns-66257
 		x = 17
 		y = 4
-		cost = 4
+		cost = 7
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_form_the_new_high_command }
 		ai_will_do = {
@@ -981,24 +1027,13 @@ add_command_power= 50
 		}
 		completion_reward = {
 			34 ={
- limit = {
- free_building_slots = {
- building = arms_factory
- size > 0
- include_locked = yes
- }
-
- }
-
- add_extra_state_shared_building_slots = 1
- add_building_construction = {
- type = arms_factory
- level = 1
- instant_build = yes
- }
-
- set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
- }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	#Focus for The "Condem The Rheinparlament" act
@@ -1216,6 +1251,10 @@ popularity = -0.1
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+		}
 	}
 
 	#Focus for Invest in Military factories
@@ -1242,6 +1281,24 @@ popularity = -0.1
 		prerequisite = { focus = TRC_the_rheinmarshals_victory }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_popularity= {
+				ideology = neutrality 
+				popularity = 0.05
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = abandoned_the_west
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = abandoned_the_west
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = abandoned_the_west
+			}
 		}
 	}
 

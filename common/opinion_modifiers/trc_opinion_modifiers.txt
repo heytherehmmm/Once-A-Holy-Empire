@@ -1,0 +1,18 @@
+#########################################################################
+# RHINE OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	abandoned_the_west = {
+		value = -45
+	}
+	save_the_rhine_opinion = {
+		value = -10
+	}
+}
