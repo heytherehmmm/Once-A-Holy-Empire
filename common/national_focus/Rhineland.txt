@@ -988,7 +988,7 @@ add_command_power= 50
 		icon = GFX_goal_unknown
 		x = 50
 		y = 6
-		cost = 4
+		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_dockyard_expansion }
 		prerequisite = { focus = TRC_dockyard_expansion_2 }
@@ -1010,7 +1010,7 @@ add_command_power= 50
 		icon = GFX_BOH_modern_navy
 		x = 50
 		y = 7
-		cost = 4
+		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_improve_naval_doctrine }
 		ai_will_do = {
