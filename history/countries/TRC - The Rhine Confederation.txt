@@ -13,6 +13,7 @@ set_war_support = 0.13
 add_ideas = {
 
 	BOH_a_fragmented_empire
+	TRC_idea_rheinparlament
 	TRC_belgian_issue
 	
 }
@@ -65,10 +66,23 @@ if = {
 		mtg_transport = 1
 	}
 }
+#Rheinparlament control levels
+set_variable = {
+	var = TRC_rcc_control
+	value = 124
+}
+set_variable = {
+	var = TRC_rndc_control
+	value = 98
+}
+set_variable = {
+	var = TRC_rheinmarshal_control
+	value = 23
+}
 
 set_politics = {
 	ruling_party = democratic
-	last_election = "1933.1.1"
+	last_election = "1933.2.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
