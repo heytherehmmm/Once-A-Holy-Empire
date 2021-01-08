@@ -1,0 +1,62 @@
+﻿focus_tree = {
+	
+    id = Poland
+    country = {
+        factor = 12
+        modifier = {
+            add = 1
+            tag = POL
+        }
+    }
+	
+    # Focus: The Future of Poland
+    focus = {
+		id = POL_the_future_of_poland
+		icon = a
+		x = 10
+		y = 1
+		cost = 4
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+        }
+    }
+	
+    # Focus: Ally with the Romans
+    focus = {
+		id = POL_ally_with_the_romans
+		icon = a
+		x = 8
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = POL_the_future_of_poland }
+		mutually_exclusive = { focus = POL_side_with_the_crumbling_empire }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		
+		}
+	}
+    # Focus: Side with the Crumbling Empire
+    focus = {
+		id = POL_side_with_the_crumbling_empire
+		icon = a
+		x = 12
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = POL_the_future_of_poland }
+		mutually_exclusive = { focus = POL_ally_with_the_romans }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+		}
+
+	}
