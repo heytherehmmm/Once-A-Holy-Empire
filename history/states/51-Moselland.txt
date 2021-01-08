@@ -8,18 +8,14 @@ state={
 
 	history={
 		owner = TRC
-		victory_points = {
-			6469 10 
-		}
+		
 		victory_points = {
 			587 5 
 		}
 		buildings = {
 			infrastructure = 8
 			arms_factory = 3
-			industrial_complex = 2
-			air_base = 3
-
+			air_base = 2
 		}
 		add_core_of = TRC
 		add_core_of = BOH
