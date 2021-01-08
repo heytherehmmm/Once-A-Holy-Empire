@@ -212,7 +212,27 @@ add_command_power= 50
 			add_stability = -0.05
 			add_manpower = -1000
 			remove_ideas = TRC_belgian_issue
+			custom_effect_tooltip = TRC_rcc_remove_20
+			custom_effect_tooltip = TRC_rndc_remove_15
+			custom_effect_tooltip = TRC_rheinmarshal_add_35
 			
+			hidden_effect = {
+				add_to_variable = {
+					var = TRC_rcc_control
+					value = -20
+				}
+				add_to_variable = {
+					var = TRC_rndc_control
+					value = -15
+				}
+				add_to_variable = {
+					var = TRC_rheinmarshal_control
+					value = 30
+				}
+				remove_ideas = TRC_idea_rheinparlament
+				add_ideas = TRC_idea_rheinparlament_rheinmarshal
+			
+			}
 		}
 	}
 
@@ -236,6 +256,141 @@ add_command_power= 50
         relation = guarantee
         active = yes
 		}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Focus for The Confederation of the Rhine
+	focus = {
+		id = TRC_confederation_of_the_rhine
+		icon = GFX_TRC_confederation_of_the_rhine
+		x = 22
+		y = 6
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_lwenkrieg_tactics OR = TRC_agricultural_push OR = TRC_befriend_the_netherlands }
+		prerequisite = { focus = TRC_a_new_army OR = TRC_the_anglorhine_friendship OR = TRC_invest_in_the_car_indrustry }
+		
+		
+		completion_reward = {
+			add_ideas = TRC_idea_confederation_of_the_rhine
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Focus for The Council of the Rhine
+	focus = {
+		id = TRC_council_of_the_rhine
+		icon = GFX_TRC_council_of_the_rhine
+		x = 31
+		y = 6
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_new_tacticts OR = TRC_ban_comunist_parties OR = TRC_invest_in_military_factories }
+		
+		
+		completion_reward = {
+			add_ideas = TRC_idea_council_of_the_rhine
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Focus for Demand Rotterdam
+	focus = {
+		id = TRC_demand_rotterdam
+		icon = GFX_TRC_demand_rotterdam
+		x = 30
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_council_of_the_rhine  }
+		
+		
+		completion_reward = {
+			HOL = {
+				country_event= {
+					days = 1 
+					id = trc.8
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Focus for Demand Nord-Pas-de-Calais
+	focus = {
+		id = TRC_demand_calais
+		icon = GFX_TRC_demand_calais
+		x = 32
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_council_of_the_rhine  }
+		
+		
+		completion_reward = {
+			FRA = {
+				country_event= {
+					days = 1 
+					id = trc.11
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Focus for Petition the Netherlands for Rotterdam
+	focus = {
+		id = TRC_petition_rotterdam
+		icon = GFX_TRC_petition_rotterdam
+		x = 23
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_confederation_of_the_rhine  }
+		
+		
+		completion_reward = {
+			HOL = {
+				country_event= {
+					days = 1 
+					id = trc.14
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Focus for Petition France for Nord-Pas-de-Calais
+	focus = {
+		id = TRC_petition_calais
+		icon = GFX_TRC_petition_calais
+		x = 21
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_confederation_of_the_rhine  }
+		
+		
+		completion_reward = {
+			FRA = {
+				country_event= {
+					days = 1 
+					id = trc.17
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -343,6 +498,18 @@ add_command_power= 50
 		}
 		completion_reward = {
 			add_ideas = TRC_idea_parliament
+			custom_effect_tooltip = TRC_rndc_add_10
+			custom_effect_tooltip = TRC_rcc_remove_10
+			hidden_effect = {
+				add_to_variable = {
+					var = TRC_rndc_control
+					value = 10
+				}
+				add_to_variable = {
+					var = TRC_rcc_control
+					value = -10
+				}
+			}
 		}
 	}
 
@@ -418,6 +585,18 @@ add_command_power= 50
 		}
 		completion_reward = {
 			add_ideas= TRC_idea_anticorruption
+			custom_effect_tooltip = TRC_rndc_add_10
+			custom_effect_tooltip = TRC_rcc_remove_10
+			hidden_effect = {
+				add_to_variable = {
+					var = TRC_rndc_control
+					value = 10
+				}
+				add_to_variable = {
+					var = TRC_rcc_control
+					value = -10
+				}
+			}
 		}
 	}
 
@@ -587,6 +766,18 @@ add_command_power= 50
 		}
 		completion_reward = {
 			add_stability= 0.05  add_political_power= 50
+			custom_effect_tooltip = TRC_rndc_add_10
+			custom_effect_tooltip = TRC_rcc_remove_10
+			hidden_effect = {
+				add_to_variable = {
+					var = TRC_rndc_control
+					value = 10
+				}
+				add_to_variable = {
+					var = TRC_rcc_control
+					value = -10
+				}
+			}
 		}
 	}
 #Focus for Address the Belgium Issue?
@@ -1069,12 +1260,12 @@ add_command_power= 50
 		}
 		}
 
-	#Focus for New Tacticts
+	#Focus for New Tactics
 	focus = {
 		id = TRC_new_tacticts
 		icon = GFX_TRC_new_tacticts-66253
 		x = 29
-		y = 4
+		y = 5
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_new_prussian_standarts }
@@ -1095,8 +1286,29 @@ add_command_power= 50
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_adress_the_belgium_issue }
 		completion_reward = {
-		add_stability = -0.1
-		add_political_power = -75
+			add_stability = -0.1
+			add_political_power = -75
+			custom_effect_tooltip = TRC_rcc_remove_20
+			custom_effect_tooltip = TRC_rndc_add_10
+			custom_effect_tooltip = TRC_rheinmarshal_add_10
+			
+			hidden_effect = {
+				add_to_variable = {
+					var = TRC_rcc_control
+					value = -20
+				}
+				add_to_variable = {
+					var = TRC_rndc_control
+					value = 10
+				}
+				add_to_variable = {
+					var = TRC_rheinmarshal_control
+					value = 10
+				}
+				remove_ideas = TRC_idea_rheinparlament
+				add_ideas = TRC_idea_rheinparlament_rheinmarshal
+			
+			}
 		}
 		available = {
 			has_country_flag = TRC_crush_them_flag
@@ -1264,12 +1476,13 @@ add_command_power= 50
 		}
 		completion_reward = {
 			add_popularity= { 
-ideology = democratic 
-popularity = -0.1 
-}
+				ideology = democratic 
+				popularity = -0.1 
+			}
+			remove_ideas = TRC_idea_rheinparlament
 		}
 	}
-#Focus for The President's proposal
+#Focus for The President's proposal The Presidents proposal
 	focus = {
 		id = TRC_the_presidents_proposal
 		icon = GFX_goal_unknown
@@ -1294,6 +1507,12 @@ popularity = -0.1
 			}
 			set_country_flag = TRC_president_deal
 			custom_effect_tooltip = TRC_president_deal
+			hidden_effect = {
+				country_event= {
+					days = 1 
+					id = trc.7
+				}
+			}
 		}
 	}
 
@@ -1384,7 +1603,7 @@ popularity = -0.1
 		id = TRC_invest_in_the_car_indrustry
 		icon = GFX_TRC_invest_in_the_car_indrustry-61352
 		x = 27
-		y = 4
+		y = 5
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_new_trade_deals }
@@ -1436,6 +1655,13 @@ popularity = -0.1
 			}
 			set_country_flag = TRC_rheinmarshal_deal
 			custom_effect_tooltip = TRC_rheinmarshal_deal
+			hidden_effect = {
+				country_event= {
+					days = 1 
+					id = trc.6
+				}
+			}
+			
 		}
 	}
 
@@ -1479,7 +1705,7 @@ popularity = -0.1
 		id = TRC_invest_in_military_factories
 		icon = GFX_goal_unknown
 		x = 33
-		y = 4
+		y = 5
 		cost = 4
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_a_military_economy }
@@ -1727,7 +1953,7 @@ popularity = -0.1
 		}
 	}
 
-	#Focus for End the Reforms
+	#Focus for Conclude the Reformations
 	focus = {
 		id = TRC_end_the_reforms
 		icon = GFX_goal_unknown
@@ -1741,6 +1967,18 @@ popularity = -0.1
 		}
 		completion_reward = {
 			add_ideas= TRC_idea_stricten_federal_regulations
+			custom_effect_tooltip = TRC_rndc_add_10
+			custom_effect_tooltip = TRC_rcc_remove_10
+			hidden_effect = {
+				add_to_variable = {
+					var = TRC_rndc_control
+					value = 10
+				}
+				add_to_variable = {
+					var = TRC_rcc_control
+					value = -10
+				}
+			}
 		}
 	}
 	#Focus for Democracy in chaos
@@ -1799,7 +2037,7 @@ popularity = 0.1
 		completion_reward = {
 			country_event= {
 				days = 1 
-				id = trc.6
+				id = trc.1
 			}
  add_stability= 0.05  add_war_support= 0.05
 		}

@@ -1,7 +1,84 @@
 ideas = {
 
 	country = {
+		
+		TRC_idea_rheinparlament = {
+			picture = GFX_idea_TRC_rheinparlament
+			allowed = {
+				always = yes
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = gfx_unknown
+			
+			modifier = {
+				democratic_drift = 0.05
+			}
+			
+			
+		}
+		TRC_idea_confederation_of_the_rhine = {
+			picture = GFX_idea_confederation_of_the_rhine
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.05
+				stability_factor = 0.05
+			}
+			
+			
+		}
+		TRC_idea_council_of_the_rhine = {
+			picture = GFX_idea_council_of_the_rhine
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.05
+				stability_factor = 0.05
+			}
+			
+			
+		}
+		TRC_idea_rheinparlament_rheinmarshal = {
+			picture = GFX_idea_TRC_rheinparlament
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = -0.05
+			}
+			
+			
+		}
+		
 		TRC_purged_high_command = {
 			allowed = {
 				always = yes
