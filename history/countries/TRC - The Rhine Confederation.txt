@@ -1,4 +1,4 @@
-capital = 6
+capital = 808
 
 oob = "TRC_1936"
 if = {
