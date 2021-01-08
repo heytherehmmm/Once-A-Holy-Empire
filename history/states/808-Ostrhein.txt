@@ -9,6 +9,14 @@ state={
 		owner = TRC
 		add_core_of = TRC
 		add_core_of = BOH
+		victory_points = {
+			6469 30 
+		}
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 2
+			air_base = 1
+		}
 	}
 	
 	provinces={
