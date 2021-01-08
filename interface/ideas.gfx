@@ -3446,6 +3446,10 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "idea_generic_purge"
+		texturefile = "gfx/interface/ideas/idea_generic_purge.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_generic_political_support"
 		texturefile = "gfx/interface/ideas/idea_generic_political_support.dds"
 	}
@@ -5621,6 +5625,11 @@ spriteTypes = {
 		name = "GFX_idea_BOH_democratic_empire"
 		texturefile = "gfx/interface/goals/GFX_BOH_a_democratic_empire-61329.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_TRC_rheinparlament"
+		texturefile = "gfx/interface/ideas/TRC_rheinparlament.dds"
+	}
+	
 	spriteType = {
 		name = "GFX_idea_ALA_russian_prisoners"
 		texturefile = "gfx/interface/ideas/ALA_russian_prisoners.dds"

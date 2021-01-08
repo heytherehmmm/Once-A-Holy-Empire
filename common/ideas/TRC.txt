@@ -3,7 +3,9 @@ ideas = {
 	country = {
 		
 		TRC_idea_rheinparlament = {
-			picture = GFX_idea_TRC_rheinparlament
+		
+			picture = TRC_rheinparlament
+			
 			allowed = {
 				always = yes
 			}
@@ -13,8 +15,6 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
-			picture = gfx_unknown
 			
 			modifier = {
 				democratic_drift = 0.05
@@ -61,7 +61,7 @@ ideas = {
 			
 		}
 		TRC_idea_rheinparlament_rheinmarshal = {
-			picture = GFX_idea_TRC_rheinparlament
+			picture = TRC_rheinparlament
 			allowed = {
 				always = yes
 			}
@@ -90,7 +90,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = gfx_unknown
+			picture = idea_generic_purge
 
 			modifier = {
 				army_attack_factor = -0.1
@@ -110,7 +110,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = gfx_unknown
+			picture = GFX_idea_FRA_motorized_focus
 
 			modifier = {
 				army_speed_factor = 0.1
@@ -129,7 +129,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = gfx_unknown
+			picture = idea_generic_agrarian_reform
 
 			modifier = {
 				supply_consumption_factor = -0.1
@@ -147,7 +147,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = GFX_idea_TRC_belgian_issue
+			picture = TRC_belgian_issue
 
 			modifier = {
 				stability_factor = -0.1
