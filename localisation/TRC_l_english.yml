@@ -259,7 +259,7 @@ trc.12.a:0 "Great!"
 trc.13.title:0 "France denies our Demands"
 trc.13.desc:0 "The French government has rejected our demands. They will not give us Nord-Pas-de-Calais."
 trc.13.a:0 "Send the troops in, now!"
-trc.13.a:0 "Back down..."
+trc.13.b:0 "Back down..."
 
 trc.14.title:0 "The Rhineland petitions us for Rotterdam"
 trc.14.desc:0 "A transmission from the Rhenish government was recieved this morning. They are requesting that we give them Rotterdam in exchange for money."
