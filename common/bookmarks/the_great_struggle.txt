@@ -119,6 +119,8 @@ bookmarks = {
 			ideology = democratic
 			ideas = {
 				BOH_a_fragmented_empire
+				TRC_idea_rheinparlament
+				TRC_belgian_issue
 			}
 			focuses = {
 				TRC_the_rcc_victory
