@@ -1,6 +1,6 @@
 ﻿focus_tree = {
 	
-    id = Poland
+    id = Poland2
     country = {
         factor = 12
         modifier = {

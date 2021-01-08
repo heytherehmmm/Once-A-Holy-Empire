@@ -139,6 +139,17 @@ bookmarks = {
 			}
 		}
 
+		"POL"={
+			minor = yes
+			history = "POL_GTB_DESC_LOC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				POL_the_future_of_poland
+			}
+		}
 
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
