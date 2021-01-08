@@ -270,9 +270,23 @@ add_command_power= 50
 		y = 6
 		cost = 6
 		available_if_capitulated = yes
-		prerequisite = { focus = TRC_the_lwenkrieg_tactics OR = TRC_agricultural_push OR = TRC_befriend_the_netherlands }
-		prerequisite = { focus = TRC_a_new_army OR = TRC_the_anglorhine_friendship OR = TRC_invest_in_the_car_indrustry }
 		
+		available = {
+			OR = {
+				AND = {
+					has_completed_focus = TRC_the_lwenkrieg_tactics 
+					has_completed_focus = TRC_agricultural_push 
+					has_completed_focus = TRC_befriend_the_netherlands 
+				}
+				AND = {
+					has_completed_focus = TRC_a_new_army 
+					has_completed_focus = TRC_the_anglorhine_friendship 
+					has_completed_focus = TRC_invest_in_the_car_indrustry 
+				}
+			}
+			
+		}
+		prerequisite = { focus = TRC_the_lwenkrieg_tactics focus = TRC_befriend_the_netherlands focus = TRC_agricultural_push focus = TRC_a_new_army focus = TRC_the_anglorhine_friendship focus = TRC_invest_in_the_car_indrustry }
 		
 		completion_reward = {
 			add_ideas = TRC_idea_confederation_of_the_rhine
@@ -290,8 +304,9 @@ add_command_power= 50
 		y = 6
 		cost = 6
 		available_if_capitulated = yes
-		prerequisite = { focus = TRC_new_tacticts OR = TRC_ban_comunist_parties OR = TRC_invest_in_military_factories }
-		
+		prerequisite = { focus = TRC_new_tacticts }
+		prerequisite = { focus = TRC_invest_in_military_factories }
+		prerequisite = { focus = TRC_ban_comunist_parties }
 		
 		completion_reward = {
 			add_ideas = TRC_idea_council_of_the_rhine
