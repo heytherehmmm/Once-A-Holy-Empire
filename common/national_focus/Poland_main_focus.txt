@@ -97,7 +97,7 @@
         available_if_capitulated = yes
         prerequisite = { focus = POL_the_future_of_poland }
         mutually_exclusive = { focus = POL_continue_ignacy_moscickis_policies  }
-        mutually_exclusive = { focus = POL_continue_ignacy_moscickis_policies }
+        mutually_exclusive = { focus = POL_support_radical_movements }
         ai_will_do = {
             factor = 1
         }
@@ -120,10 +120,7 @@
 			
 		}
 		prerequisite = { focus = POL_national_democracy focus = POL_continue_ignacy_moscickis_policies  }
-					has_completed_focus POL_continue_ignacy_moscickis_policies
-				}
-			
-		}
+		
 		prerequisite = { focus = POL_national_democracy focus = POL_continue_ignacy_moscickis_policies }
 		mutually_exclusive = {focus = POL_make_concessions_to_the_extremists }
         ai_will_do = {
@@ -148,10 +145,7 @@
 			
 		}
 		prerequisite = { focus = POL_national_democracy focus = POL_continue_ignacy_moscickis_policies  }
-					has_completed_focus = POL_continue_ignacy_moscickis_policies
-				}
-			
-		}
+		
 		prerequisite = { focus = POL_national_democracy focus = POL_continue_ignacy_moscickis_policies }
 		mutually_exclusive = {focus = POL_crack_down_on_extremists }
         ai_will_do = {
