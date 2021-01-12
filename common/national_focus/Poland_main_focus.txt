@@ -30,7 +30,7 @@
         cost = 4
         available_if_capitulated = yes
         prerequisite = { focus = POL_the_future_of_poland }
-        mutually_exclusive = { focus = POL_continue_ignacy_moscickis_policies  }
+        mutually_exclusive = { focus = POL_continue_ignacy_mościcki's_policies }
 		mutually_exclusive = { focus = POL_national_democracy }
         ai_will_do = {
             factor = 1
@@ -40,8 +40,8 @@
         }
     }
     focus = {
-        id = POL_continue_ignacy_moscickis_policies
-        icon = GFX_POL_continue_ignacy_moscickis_policies
+        id = POL_continue_ignacy_mościcki's_policies
+        icon = GFX_POL_continue_ignacy_mościcki's_policies
         x = 12
         y = 2
         cost = 4
@@ -72,7 +72,7 @@
             
         }
     }
-	focus = {
+		focus = {
         id = POL_support_the_communists
         icon = GFX_POL_ally_with_the_falangists
         x = 9
@@ -88,7 +88,7 @@
             
         }
     }
-	focus = {
+		focus = {
         id = POL_national_democracy
         icon = GFX_POL_national_democracy
         x = 18
@@ -96,7 +96,7 @@
         cost = 4
         available_if_capitulated = yes
         prerequisite = { focus = POL_the_future_of_poland }
-        mutually_exclusive = { focus = POL_continue_ignacy_moscickis_policies  }
+        mutually_exclusive = { focus = POL_continue_ignacy_mościcki's_policies }
         ai_will_do = {
             factor = 1
         }
@@ -104,7 +104,7 @@
             
         }
     }
-	focus = {
+	    focus = {
         id = POL_crack_down_on_extremists
         icon = GFX_POL_crack_down_on_extremists
         x = 16
@@ -114,11 +114,11 @@
 		available = {
 			OR = {
 					has_completed_focus = POL_national_democracy
-					has_completed_focus = POL_continue_ignacy_moscickis_policies  
+					has_completed_focus = POL_continue_ignacy_mościcki's_policies 
 				}
 			
 		}
-		prerequisite = { focus = POL_national_democracy focus = POL_continue_ignacy_moscickis_policies  }
+		prerequisite = { focus = POL_national_democracy focus = POL_continue_ignacy_mościcki's_policies }
 		mutually_exclusive = {focus = POL_make_concessions_to_the_extremists }
         ai_will_do = {
             factor = 1
@@ -127,7 +127,7 @@
             
         }
     }
-	focus = {
+		    focus = {
         id = POL_make_concessions_to_the_extremists
         icon = GFX_POL_make_concessions_to_the_extremists
         x = 14
@@ -137,11 +137,11 @@
 		available = {
 			OR = {
 					has_completed_focus = POL_national_democracy
-					has_completed_focus = POL_continue_ignacy_moscickis_policies  
+					has_completed_focus = POL_continue_ignacy_mościcki's_policies 
 				}
 			
 		}
-		prerequisite = { focus = POL_national_democracy focus = POL_continue_ignacy_moscickis_policies  }
+		prerequisite = { focus = POL_national_democracy focus = POL_continue_ignacy_mościcki's_policies }
 		mutually_exclusive = {focus = POL_crack_down_on_extremists }
         ai_will_do = {
             factor = 1
