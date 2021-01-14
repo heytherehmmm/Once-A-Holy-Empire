@@ -87,11 +87,11 @@ add_political_power = 50
 	focus = {
 		id = SOV_visit_minsk
 		icon = GFX_SOV_visit_minsk
-		x = 1
-		y = 2
+		x = -1
+		y = 1
 		cost = 5
 		prerequisite = {
-			focus = SOV_visit_kiev
+			focus = SOV_imperial_tour
 		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -133,11 +133,11 @@ add_political_power = 50
 	focus = {
 		id = SOV_visit_baku
 		icon = GFX_SOV_visit_baku
-		x = 3
-		y = 2
+		x = 5
+		y = 1
 		cost = 5
 		prerequisite = {
-			focus = SOV_visit_riga
+			focus = SOV_imperial_tour
 		}
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -152,7 +152,7 @@ add_political_power = 50
 		}
 	}
 	
-	#Focus for Governate Crisis of 1937
+	#Focus for Governorate Crisis of 1937
 	focus = {
 		id = SOV_governate_crisis_of_1937
 		icon = GFX_SOV_governorate_crisis
@@ -169,6 +169,12 @@ add_political_power = 50
 		}
 		prerequisite = {
 			focus = SOV_visit_baku
+		}
+		prerequisite = {
+			focus = SOV_visit_kiev
+		}
+		prerequisite = {
+			focus = SOV_visit_riga
 		}
 		available = {
 			date > 1937.2.15
