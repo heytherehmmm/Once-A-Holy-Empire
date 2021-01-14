@@ -782,8 +782,8 @@ add_command_power= 50
 			factor = 1
 		}
 		completion_reward = {
-			remove_ideas = TRC_rhine_military_guard
-			remove_ideas = TRC_gun_production
+			
+			remove_ideas = { TRC_gun_production TRC_rhine_military_guard }
 			add_ideas = TRC_new_army_idea
 		}
 		
@@ -941,8 +941,10 @@ add_command_power= 50
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_a_combined_armor_army focus = TRC_tanks_alone focus = TRC_manpower_superiority focus = TRC_artillery_attacks }
 		completion_reward = {
-			remove_ideas = TRC_new_army_idea
-			add_ideas = TRC_idea_modern_military
+			swap_ideas = {
+				remove_idea = TRC_new_army_idea
+				add_idea = TRC_idea_modern_military
+			}
 		}
 		ai_will_do = {
 			factor = 1
