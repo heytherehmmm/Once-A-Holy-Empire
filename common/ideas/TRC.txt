@@ -1,5 +1,25 @@
 ideas = {
-
+	industrial_concern = {
+		
+		ig_faben = {
+			
+			allowed = {
+				original_tag = TRC
+			}
+			
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.15
+			}
+			
+			traits = { refinery_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
 	country = {
 		
 		TRC_idea_rheinparlament = {

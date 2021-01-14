@@ -827,28 +827,13 @@ ideas = {
 	
 	industrial_concern = {
 		
-		ig_faben = {
-			
-			allowed = {
-				original_tag = BOH
-			}
-			
-			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.15
-			}
-			
-			traits = { refinery_concern }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
+		
 		BOH_hugenberg = {
 			ledger = army
 			picture = BOH_hugenberg-62448
 			allowed = {
 				original_tag = BOH
+				has_country_flag = BOH_can_do_hugenberg
 			}
 			allowed_civil_war = {
 				always= yes
@@ -861,13 +846,15 @@ ideas = {
 				production_speed_fuel_silo_factor= 0.15
 				production_speed_synthetic_refinery_factor= 0.15
 				base_fuel_gain_factor= 0.15
+				synth_resources = 0.15
 			}
-			traits = { industrial_concern }
+			traits = { refinery_concern }
 		}
 		BOH_hjalmar = {
 			picture = BOH_hjalmar-62449
 			allowed = {
 				original_tag = BOH
+				has_country_flag = BOH_can_do_hjalmar
 			}
 			allowed_civil_war = {
 				always= yes
@@ -884,20 +871,6 @@ ideas = {
 			}
 			traits = { industrial_concern }
 		}
-		
-
-		siemens = {
-			
-			allowed = {
-				original_tag = BOH
-			}
-			
-			research_bonus = {
-				electronics = 0.15
-			}
-			
-			traits = { electronics_concern }
-		}		
 	}
 	
 	materiel_manufacturer = {
