@@ -75,7 +75,10 @@ SOV_governorate_crisis_decisions = {
 			has_country_flag = SOV_completed_tour_of_kiev
 		}
 		visible = {
-			has_decision = SOV_tour_of_kiev
+			OR = {
+				has_country_flag = SOV_completed_tour_of_kiev
+				has_decision = SOV_tour_of_kiev
+			}
 		}
 		
 		remove_effect = {
@@ -105,7 +108,10 @@ SOV_governorate_crisis_decisions = {
 			has_country_flag = SOV_completed_tour_of_kiev
 		}
 		visible = {
-			has_decision = SOV_tour_of_kiev
+			OR = {
+				has_country_flag = SOV_completed_tour_of_kiev
+				has_decision = SOV_tour_of_kiev
+			}
 		}
 		
 		remove_effect = {
@@ -151,7 +157,10 @@ SOV_governorate_crisis_decisions = {
 			has_country_flag = SOV_completed_tour_of_kiev
 		}
 		visible = {
-			has_decision = SOV_tour_of_kiev
+			OR = {
+				has_country_flag = SOV_completed_tour_of_kiev
+				has_decision = SOV_tour_of_kiev
+			}
 		}
 		remove_effect = {
 			custom_effect_tooltip = SOV_ukraine_crisis_remove_10
@@ -240,7 +249,10 @@ SOV_governorate_crisis_decisions = {
 			has_country_flag = SOV_completed_tour_of_baku
 		}
 		visible = {
-			has_decision = SOV_tour_of_baku
+			OR = {
+				has_country_flag = SOV_completed_tour_of_baku
+				has_decision = SOV_tour_of_baku
+			}
 		}
 		
 		remove_effect = {
@@ -270,7 +282,10 @@ SOV_governorate_crisis_decisions = {
 			has_country_flag = SOV_completed_tour_of_baku
 		}
 		visible = {
-			has_decision = SOV_tour_of_baku
+			OR = {
+				has_country_flag = SOV_completed_tour_of_baku
+				has_decision = SOV_tour_of_baku
+			}
 		}
 		
 		remove_effect = {
@@ -305,7 +320,10 @@ SOV_governorate_crisis_decisions = {
 			has_country_flag = SOV_completed_tour_of_baku
 		}
 		visible = {
-			has_decision = SOV_tour_of_baku
+			OR = {
+				has_country_flag = SOV_completed_tour_of_baku
+				has_decision = SOV_tour_of_baku
+			}
 		}
 		remove_effect = {
 			custom_effect_tooltip = SOV_transcaucasia_crisis_remove_15

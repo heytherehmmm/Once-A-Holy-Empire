@@ -12,6 +12,7 @@ country_event = {
 		ai_chance = { factor = 2}
 		custom_effect_tooltip = SOV_ukraine_crisis_tour
 		set_country_flag = SOV_can_tour_ukraine
+		add_political_power = 5
 	}
 	option = {
 		name = rus.1.b
@@ -37,7 +38,7 @@ country_event = {
 		ai_chance = { factor = 2}
 		custom_effect_tooltip = SOV_belarus_crisis_tour
 		set_country_flag = SOV_can_tour_belarus
-		
+		add_political_power = 5
 	}
 	option = {
 		name = rus.2.b
@@ -63,6 +64,7 @@ country_event = {
 		ai_chance = { factor = 2}
 		custom_effect_tooltip = SOV_baltic_crisis_tour
 		set_country_flag = SOV_can_tour_baltic
+		add_political_power = 5
 	}
 	option = {
 		name = rus.3.b
@@ -88,6 +90,7 @@ country_event = {
 		ai_chance = { factor = 2}
 		custom_effect_tooltip = SOV_transcaucasia_crisis_tour
 		set_country_flag = SOV_can_tour_caucasia
+		add_political_power = 5
 	}
 	option = {
 		name = rus.4.b
@@ -138,8 +141,9 @@ country_event = {
 		random_list = {
 			85 = {
 				custom_effect_tooltip = "people gather in the streets to see the Tsar!"
+				add_political_power = 25
 			}
-			15 = { custom_effect_tooltip = "Kirill is assassinated" news_event = { id = rus.40 days = 2 } }
+			15 = { custom_effect_tooltip = "Kirill is assassinated"  hidden_effect = { news_event = { id = rus.40 days = 2 }  } }
 		}
 		custom_effect_tooltip = SOV_ukraine_crisis_remove_10
 		add_to_variable = {
