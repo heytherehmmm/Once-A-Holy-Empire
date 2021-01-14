@@ -63,7 +63,8 @@ if = {
 	}
 }
 
-set_popularities = {	democratic = 30	communism = 40	neutrality = 30
+set_popularities = {	democratic = 3
+	fascism = 2	communism = 40	neutrality = 55
 }
 set_politics = {
 	ruling_party = neutrality
@@ -72,14 +73,15 @@ set_politics = {
 	elections_allowed = no
 }
 
+
 create_country_leader = {
 	name = "Evgeni Gegechkori"
-	desc = "Evgeni Gegechkori is a Georgian nobleman, politician, and Democratic revolutionary. Although he is rather radical in his political views, he has brought stability to Transcaucasia."
-	picture = "Evgeni_Gegechkori.dds"
-	expire = "1953.3.1"
+	desc = "POLITICS_EVGENI_GEGECHKORI_DESC"
+	picture = "gfx/leaders/AZR/Evgeni_Gegechkori.dds"
+	expire = "2011.1.1"
 	ideology = moderatism
 	traits = {
-		
+
 	}
 }
 
@@ -104,17 +106,3 @@ create_country_leader = {
 		
 	}
 }
-
-create_country_leader = {
-	name = "Gara Garabeyov"
-	desc = ""
-	picture = "gfx/leaders/SOV/Portrait_Soviet_Generic_3.dds"
-	expire = "1953.3.1"
-	ideology = moderatism
-	traits = {
-		
-	}
-}
-
-
-
