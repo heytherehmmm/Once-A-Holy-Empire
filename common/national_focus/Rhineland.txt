@@ -92,7 +92,7 @@ add_command_power= 50
 		id = TRC_invest_in_the_rhineland_factories
 		icon = GFX_TRC_invest_in_the_rhineland_factories-60464
 		x = 21
-		y = 5
+		y = 3
 		cost = 10
 		available_if_capitulated = yes
 		
@@ -164,6 +164,7 @@ add_command_power= 50
 		}
 		completion_reward = {
 			army_experience= 25
+			add_political_power = 75
 		}
 	}
 	#Focus for The Modern Way
@@ -358,6 +359,42 @@ add_command_power= 50
 					id = trc.11
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Focus for Replace the Old Textbooks
+	focus = {
+		id = TRC_replace_old_textbooks
+		icon = GFX_TRC_replace_old_textbooks
+		x = 22
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_petition_rotterdam }
+		prerequisite = { focus = TRC_petition_calais }
+		completion_reward = {
+			remove_ideas = BOH_a_fragmented_empire
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#Focus for Our Place in History
+	focus = {
+		id = TRC_our_place_in_history
+		icon = GFX_TRC_our_place_in_history
+		x = 31
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_demand_rotterdam }
+		prerequisite = { focus = TRC_demand_calais }
+		completion_reward = {
+			remove_ideas = BOH_a_fragmented_empire
 		}
 		ai_will_do = {
 			factor = 1
@@ -1253,7 +1290,7 @@ add_command_power= 50
 			custom_effect_tooltip = TRC_french_ships_mtg
 		}
 	}
-
+	
 	#Focus for Improved Weaponry
 	focus = {
 		id = TRC_better_guns
@@ -1460,7 +1497,7 @@ add_command_power= 50
 		icon = GFX_TRC_invest_in_belgian_tank_companies-61357
 		x = 21
 		y = 4
-		cost = 4
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_invest_in_the_rhineland_factories }
 		ai_will_do = {
@@ -1619,7 +1656,7 @@ add_command_power= 50
 		icon = GFX_TRC_invest_in_the_car_indrustry-61352
 		x = 27
 		y = 5
-		cost = 4
+		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_invest_in_rhine_factories }
 	    completion_reward = {
@@ -1651,7 +1688,7 @@ add_command_power= 50
 		icon = GFX_TRC_invest_in_the_car_indrustry-61352
 		x = 27
 		y = 4
-		cost = 6
+		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_new_trade_deals }
 	    completion_reward = {
@@ -1664,6 +1701,14 @@ add_command_power= 50
 				}
 			}
 			808 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			51 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -1726,7 +1771,7 @@ add_command_power= 50
 		icon = GFX_goal_unknown
 		x = 33
 		y = 3
-		cost = 4
+		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = TRC_the_rheinmarshals_victory }
 		completion_reward = {
@@ -1754,16 +1799,61 @@ add_command_power= 50
 			add_stability = 0.05
 		}
 	}
-
+	
+	#Focus for Improved Artillery
+	focus = {
+		id = TRC_better_artillery
+		icon = GFX_TRC_better_guns-66257
+		x = 29
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_the_new_prussian_standarts }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	
+	#Focus for Essen Military Expansion
+	focus = {
+		id = TRC_essen_military_expansion
+		icon = GFX_goal_unknown
+		x = 33
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = TRC_a_military_economy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			808 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
 	#Focus for Invest in Military factories
 	focus = {
 		id = TRC_invest_in_military_factories
 		icon = GFX_goal_unknown
 		x = 33
 		y = 5
-		cost = 4
+		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = TRC_a_military_economy }
+		prerequisite = { focus = TRC_essen_military_expansion }
 		ai_will_do = {
 			factor = 1
 		}
@@ -1899,7 +1989,14 @@ add_command_power= 50
 					instant_build = yes
 				}
 			}
-			
+			808 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
