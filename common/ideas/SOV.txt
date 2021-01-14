@@ -127,8 +127,11 @@ ideas = {
 				always= yes
 			}
 			modifier = {
-				AZR = { cic_to_overlord_factor = -0.75  }
 				political_power_factor= -0.05
+			}
+			targeted_modifier = {
+				 tag = AZR #Makes it target the country TAGW
+				 cic_to_overlord_factor = -0.75  
 			}
 		}
 		SOV_riots_in_belarus = {
@@ -143,8 +146,12 @@ ideas = {
 				always= yes
 			}
 			modifier = {
-				BEL = { cic_to_overlord_factor = -0.75  }
+				
 				political_power_factor= -0.05
+			}
+			targeted_modifier = {
+				 tag = BEL #Makes it target the country TAGW
+				 cic_to_overlord_factor = -0.75  
 			}
 		}
 		SOV_riots_in_ukraine = {
@@ -159,8 +166,11 @@ ideas = {
 				always= yes
 			}
 			modifier = {
-				UKR = { cic_to_overlord_factor = -0.75  }
 				political_power_factor= -0.05
+			}
+			targeted_modifier = {
+				 tag = UKR #Makes it target the country TAGW
+				 cic_to_overlord_factor = -0.75  
 			}
 		}
 		SOV_riots_in_baltics = {
@@ -175,8 +185,11 @@ ideas = {
 				always= yes
 			}
 			modifier = {
-				UBD = { cic_to_overlord_factor = -0.75  }
 				political_power_factor= -0.05
+			}
+			targeted_modifier = {
+				 tag = UBD #Makes it target the country TAGW
+				 cic_to_overlord_factor = -0.75  
 			}
 		}
 	}
