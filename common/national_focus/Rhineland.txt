@@ -1959,7 +1959,7 @@ add_command_power= 50
 					name = "Paul von Lettow-Vorbeck"
 					desc = "POLITICS_PAUL_VORBECK_DESC"
 					picture = "gfx/leaders/TRC/lettow.dds"
-					expire = "2011.1.1"
+					expire = "1964.3.9"
 					ideology = despotism
 					traits = {
 
