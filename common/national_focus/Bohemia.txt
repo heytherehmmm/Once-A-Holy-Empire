@@ -678,6 +678,7 @@ days = 365
 				#Rhine
 				42 = { add_core_of= BAV }
 				51 = { add_core_of= BAV }
+				814 = { add_core_of= BAV }
 				807 = { add_core_of= BAV }
 				808 = { add_core_of= BAV }
 				34 = { add_core_of= BAV }
@@ -706,6 +707,7 @@ days = 365
 				60 = {remove_core_of= BOH   }
 				#Rhine
 				42 = { remove_core_of= BOH }
+				814 = { remove_core_of= BOH }
 				51 = {remove_core_of= BOH   }
 				807 = {remove_core_of= BOH   }
 				808 = {remove_core_of= BOH   }
@@ -974,6 +976,7 @@ add_building_construction = {
 				#Rhine
 				42 = { remove_core_of= BOH }
 				51 = {remove_core_of= BOH   }
+				814 = { remove_core_of= BOH   }
 				807 = {remove_core_of= BOH   }
 				808 = {remove_core_of= BOH   }
 				34 = {remove_core_of= BOH   }
