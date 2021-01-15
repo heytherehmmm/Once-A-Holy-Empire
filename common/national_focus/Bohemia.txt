@@ -208,7 +208,7 @@ army_experience= 50
 		}
 		completion_reward = {
 			add_timed_idea = { idea = BOH_idea_support_kaiser days = 180 }
-			add_ideas= BOH_the_kaiser
+			
 		}
 	}
 	#Focus for A Constitutional Monarchy
@@ -226,10 +226,11 @@ army_experience= 50
 			factor = 1
 		}
 		completion_reward = {
-			add_popularity= { 
-ideology = democratic 
-popularity = 0.15
-}
+			add_popularity= {
+				ideology = democratic 
+				popularity = 0.15
+			}
+			add_ideas= BOH_the_kaiser
 		}
 	}
 	#Focus for Absolutism
@@ -1366,11 +1367,11 @@ add_war_support= 0.1
 	focus = {
 		id = BOH_royal_weddings
 		icon = GFX_goal_generic_neutrality_focus
-		x = 14
-		y = 6
+		x = 13
+		y = 5
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = BOH_put_new_officials_in_place }
+		prerequisite = { focus = BOH_an_imperial_empire }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
@@ -1383,20 +1384,61 @@ add_war_support= 0.1
 	focus = {
 		id = BOH_royal_ceremony
 		icon = GFX_goal_generic_neutrality_focus
-		x = 16
-		y = 6
+		x = 17
+		y = 5
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = BOH_put_new_officials_in_place }
+		prerequisite = { focus = BOH_a_democratic_empire }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 			add_political_power= 25
-			country_event = {
-				days = 1
-				id = ohe.61
+			IF = {
+				limit = { ROM = { has_government = neutrality } }
+				ROM = {
+					country_event = {
+						days = 1
+						id = ohe.61
+					}
+				}
+			}
+			IF = {
+				limit = { HUN = { has_government = neutrality } }
+				HUN = {
+					country_event = {
+						days = 1
+						id = ohe.61
+					}
+				}
+			}
+			IF = {
+				limit = { AUS = { has_government = neutrality } }
+				AUS = {
+					country_event = {
+						days = 1
+						id = ohe.61
+					}
+				}
+			}
+			IF = {
+				limit = { YUG = { has_government = neutrality } }
+				YUG = {
+					country_event = {
+						days = 1
+						id = ohe.61
+					}
+				}
+			}
+			IF = {
+				limit = { BUL = { has_government = neutrality } }
+				BUL = {
+					country_event = {
+						days = 1
+						id = ohe.61
+					}
+				}
 			}
 		}
 	}
