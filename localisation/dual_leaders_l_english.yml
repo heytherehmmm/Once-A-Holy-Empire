@@ -44,8 +44,6 @@
  BOH_CHANCELLOR_TITLE:0 "Chancellor"
  BOH_CHANCELLOR_DESC:0 "Chancellor"
  ## Monarchist HRE stuff
- BOH_PRIME_MINISTER_TITLE:0 "Prime Minister"
- BOH_MONARCH_DESC:0 "Prime Minister"
  BOH_MONARCH_TITLE:0 "Kaiser"
  BOH_MONARCH_DESC:0 "Kaiser"
  BOH_OTTO:0 "Otto von Hapsburg"
