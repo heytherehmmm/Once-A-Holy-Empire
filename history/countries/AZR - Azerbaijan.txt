@@ -79,7 +79,7 @@ create_country_leader = {
 	desc = "POLITICS_EVGENI_GEGECHKORI_DESC"
 	picture = "gfx/leaders/AZR/Evgeni_Gegechkori.dds"
 	expire = "2011.1.1"
-	ideology = moderatism
+	ideology = vassal_state
 	traits = {
 
 	}
