@@ -167,7 +167,7 @@ army_experience= 50
 			factor = 10
 		}
 		available = {
-				OR = {TPR = { is_puppet_of = BOH has_autonomy_state = autonomy_integrated_puppet} TPR = {has_government= neutrality has_war= no neutrality > 0.5  }}
+				OR = {TPR = { is_puppet_of = BOH has_autonomy_state = autonomy_integrated_puppet} TPR = {has_government= aristocracy has_war= no aristocracy > 0.5  }}
 		}
 		completion_reward = {
 			annex_country = {target = TPR}
@@ -187,7 +187,7 @@ army_experience= 50
 			factor = 10
 		}
 		available = {
-			OR = {BAV = { is_puppet_of = BOH has_autonomy_state = autonomy_integrated_puppet} BAV = {has_government= neutrality  has_war= no neutrality > 0.5  }}
+			OR = {BAV = { is_puppet_of = BOH has_autonomy_state = autonomy_integrated_puppet} BAV = {has_government= aristocracy  has_war= no aristocracy > 0.5  }}
 		}
 		completion_reward = {
 			annex_country = {target = BAV}
@@ -249,7 +249,7 @@ army_experience= 50
 		}
 		completion_reward = {
 			add_popularity= { 
-ideology = neutrality
+ideology = aristocracy
 popularity = 0.15
 }
 		}
@@ -284,14 +284,14 @@ elections_allowed = yes
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_absolute_power }
-		available = { has_government = neutrality}
+		available = { has_government = aristocracy}
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 			add_popularity= { 
-				ideology = neutrality 
+				ideology = aristocracy 
 				popularity = 0.05
 			}
 		}
@@ -347,7 +347,7 @@ elections_allowed = yes
 			factor = 10
 		}
 		available = {
-			has_government= neutrality
+			has_government= aristocracy
 		}
 		completion_reward = {
 			add_political_power= 75
@@ -941,7 +941,7 @@ add_building_construction = {
 				elections_allowed = yes
 			}
 			start_civil_war= {
-			 ideology = neutrality
+			 ideology = aristocracy
 			 size = 0.5
 			}
 		}
@@ -1061,9 +1061,9 @@ add_building_construction = {
 				}
 			}
 			ELSE_IF = {
-				limit = { has_government = neutrality}
+				limit = { has_government = aristocracy}
 				TPR = { 
-					neutrality > 0.55
+					aristocracy > 0.55
 				}
 			}
 
@@ -1281,9 +1281,9 @@ producer = BOH
 				}
 			}
 			ELSE_IF = {
-				limit = { has_government = neutrality}
+				limit = { has_government = aristocracy}
 				BAV = { 
-					neutrality > 0.55
+					aristocracy > 0.55
 				}
 			}
 
@@ -1396,7 +1396,7 @@ add_war_support= 0.1
 		completion_reward = {
 			add_political_power= 25
 			IF = {
-				limit = { ROM = { has_government = neutrality } }
+				limit = { ROM = { has_government = aristocracy } }
 				ROM = {
 					country_event = {
 						days = 1
@@ -1405,7 +1405,7 @@ add_war_support= 0.1
 				}
 			}
 			IF = {
-				limit = { HUN = { has_government = neutrality } }
+				limit = { HUN = { has_government = aristocracy } }
 				HUN = {
 					country_event = {
 						days = 1
@@ -1414,7 +1414,7 @@ add_war_support= 0.1
 				}
 			}
 			IF = {
-				limit = { AUS = { has_government = neutrality } }
+				limit = { AUS = { has_government = aristocracy } }
 				AUS = {
 					country_event = {
 						days = 1
@@ -1423,7 +1423,7 @@ add_war_support= 0.1
 				}
 			}
 			IF = {
-				limit = { YUG = { has_government = neutrality } }
+				limit = { YUG = { has_government = aristocracy } }
 				YUG = {
 					country_event = {
 						days = 1
@@ -1432,7 +1432,7 @@ add_war_support= 0.1
 				}
 			}
 			IF = {
-				limit = { BUL = { has_government = neutrality } }
+				limit = { BUL = { has_government = aristocracy } }
 				BUL = {
 					country_event = {
 						days = 1
@@ -3952,7 +3952,7 @@ target = SWI
 		x = 41
 		y = 5
 		cost = 5
-		available = { has_government = neutrality }
+		available = { has_government = aristocracy }
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_increase_mountaineer_investment }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
