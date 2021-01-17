@@ -158,7 +158,7 @@ ideas = {
 				political_power_factor= -0.05
 			}
 			targeted_modifier = {
-				 tag = BEL #Makes it target the country TAGW
+				 tag = BLR #Makes it target the country TAGW
 				 cic_to_overlord_factor = -0.75  
 			}
 		}
