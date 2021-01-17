@@ -657,6 +657,11 @@ days = 365
 					#
 				}
 			}
+			custom_effect_tooltip = BOH_Fuhrer_Ties
+				hidden_effect = {
+					create_faction = "Mitteleuropäisches Komitee"
+					add_to_faction = BAV
+				}
 		}
 	}
 	
@@ -674,7 +679,7 @@ days = 365
 			factor = 1
 		}
 		completion_reward = {
-		custom_effect_tooltip = "We will relinquish our claims on Western Germany."
+		custom_effect_tooltip = BOH_split_claims
 			hidden_effect = { 
 				#Rhine
 				42 = { add_core_of= BAV }
@@ -731,6 +736,59 @@ days = 365
 			}
 		}
 	}
+	#Focus for Coordinate Our Economies
+	focus = {
+		id = BOH_coordinate_economies
+		icon = GFX_BOH_coordinate_economies_
+		x = 7.5
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_split_our_claims_with_bavaria }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 2000
+			}
+			BAV = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2000
+				}
+			}
+		}
+	}
+	#Focus for Coordinate Our Armies
+	focus = {
+		id = BOH_coordinate_armies
+		icon = GFX_BOH_coordinate_armies
+		x = 9
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_split_our_claims_with_bavaria }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 2000
+			}
+			BAV = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2000
+				}
+			}
+		}
+	}
+
 
 	#Focus for Gain Influence In Pomerania
 	focus = {
