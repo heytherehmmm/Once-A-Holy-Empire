@@ -1,5 +1,10 @@
 spriteTypes = {
 	
+	spriteType = {
+		name = "GFX_ideology_aristocracy_group"
+		texturefile = "gfx/interface/ideologies/aristocracy_group.dds"
+	}
+	
 	#Government in Exile
 
 	spriteType = {

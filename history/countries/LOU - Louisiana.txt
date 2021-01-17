@@ -25,7 +25,7 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = aristocracy
 	last_election = "1921.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -34,14 +34,14 @@ set_popularities = {
 	democratic = 16
 	fascism = 7
 	communism = 3
-	neutrality = 74
+	aristocracy = 74
 }
 create_country_leader = {
-	name = "Alphonse I"
+	name = "Some Orleanist Leader"
 	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-	picture = "gfx/leaders/LOU/portrait_alfonso_xiii.dds"
+	picture = "gfx/leaders/LOU/portrait_orleanist_dds"
 	expire = "1965.1.1"
-	ideology = despotism
+	ideology = semi_constitutional_monarchy
 	traits = {
 		dislikes_france
 	}

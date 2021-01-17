@@ -110,15 +110,16 @@ if = {
 
 #RUSSIAN POLITICS
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = aristocracy
 	last_election = "1933.7.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 32
+	communism = 30
 	fascism = 10
-	neutrality = 58
+	neutrality = 2
+	aristocracy = 58
 }
 
 ##
@@ -156,7 +157,7 @@ create_country_leader = {
 	desc = "POLITICS_KIRILL_VLADIMIROVICH_ROMANOV_DESC"
 	picture = "shrimpguy.dds"
 	expire = "1953.3.1"
-	ideology = despotism
+	ideology = absolute_monarchy
 	traits = {
 		
 	}

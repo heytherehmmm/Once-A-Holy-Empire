@@ -1,0 +1,8 @@
+spriteTypes = {	
+	#### NEW STUFF
+	
+	SpriteType = {
+		name = "aristocracy"
+		texturefile = "gfx/interface/goals/aristocracy.dds"
+	}
+}
