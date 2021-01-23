@@ -213,23 +213,13 @@ add_command_power= 50
 			add_stability = -0.05
 			add_manpower = -1000
 			remove_ideas = TRC_belgian_issue
-			custom_effect_tooltip = TRC_rcc_remove_20
-			custom_effect_tooltip = TRC_rndc_remove_15
 			custom_effect_tooltip = TRC_rheinmarshal_add_35
 			
 			hidden_effect = {
-				add_to_variable = {
-					var = TRC_rcc_control
-					value = -20
-				}
-				add_to_variable = {
-					var = TRC_rndc_control
-					value = -15
-				}
-				add_to_variable = {
-					var = TRC_rheinmarshal_control
-					value = 30
-				}
+				set_temp_variable = { temp_member = 3 }
+				set_temp_variable = { temp_seats = 35 }
+				modify_parliament_seat = yes
+				
 				remove_ideas = TRC_idea_rheinparlament
 				add_ideas = TRC_idea_rheinparlament_rheinmarshal
 			
@@ -551,16 +541,10 @@ add_command_power= 50
 		completion_reward = {
 			add_ideas = TRC_idea_parliament
 			custom_effect_tooltip = TRC_rndc_add_10
-			custom_effect_tooltip = TRC_rcc_remove_10
 			hidden_effect = {
-				add_to_variable = {
-					var = TRC_rndc_control
-					value = 10
-				}
-				add_to_variable = {
-					var = TRC_rcc_control
-					value = -10
-				}
+				set_temp_variable = { temp_member = 2 }
+				set_temp_variable = { temp_seats = 10 }
+				modify_parliament_seat = yes
 			}
 		}
 	}
@@ -638,16 +622,10 @@ add_command_power= 50
 		completion_reward = {
 			add_ideas= TRC_idea_anticorruption
 			custom_effect_tooltip = TRC_rndc_add_10
-			custom_effect_tooltip = TRC_rcc_remove_10
 			hidden_effect = {
-				add_to_variable = {
-					var = TRC_rndc_control
-					value = 10
-				}
-				add_to_variable = {
-					var = TRC_rcc_control
-					value = -10
-				}
+				set_temp_variable = { temp_member = 2 }
+				set_temp_variable = { temp_seats = 10 }
+				modify_parliament_seat = yes
 			}
 		}
 	}
@@ -821,14 +799,9 @@ add_command_power= 50
 			custom_effect_tooltip = TRC_rndc_add_10
 			custom_effect_tooltip = TRC_rcc_remove_10
 			hidden_effect = {
-				add_to_variable = {
-					var = TRC_rndc_control
-					value = 10
-				}
-				add_to_variable = {
-					var = TRC_rcc_control
-					value = -10
-				}
+				set_temp_variable = { temp_member = 2 }
+				set_temp_variable = { temp_seats = 10 }
+				modify_parliament_seat = yes
 			}
 		}
 	}
@@ -1342,23 +1315,12 @@ add_command_power= 50
 		completion_reward = {
 			add_stability = -0.1
 			add_political_power = -75
-			custom_effect_tooltip = TRC_rcc_remove_20
-			custom_effect_tooltip = TRC_rndc_add_10
-			custom_effect_tooltip = TRC_rheinmarshal_add_10
+			custom_effect_tooltip = TRC_rheinmarshal_add_20
 			
 			hidden_effect = {
-				add_to_variable = {
-					var = TRC_rcc_control
-					value = -20
-				}
-				add_to_variable = {
-					var = TRC_rndc_control
-					value = 10
-				}
-				add_to_variable = {
-					var = TRC_rheinmarshal_control
-					value = 10
-				}
+				set_temp_variable = { temp_member = 3 }
+				set_temp_variable = { temp_seats = 20 }
+				modify_parliament_seat = yes
 				remove_ideas = TRC_idea_rheinparlament
 				add_ideas = TRC_idea_rheinparlament_rheinmarshal
 			
@@ -1955,6 +1917,11 @@ add_command_power= 50
 					ideology = neutrality
 					popularity = 0.3
 				}
+				
+				country_event= {
+					days = 85 
+					id = trc.20 
+				}
 				create_country_leader = {
 					name = "Paul von Lettow-Vorbeck"
 					desc = "POLITICS_PAUL_VORBECK_DESC"
@@ -2121,17 +2088,10 @@ add_command_power= 50
 		}
 		completion_reward = {
 			add_ideas= TRC_idea_stricten_federal_regulations
-			custom_effect_tooltip = TRC_rndc_add_10
-			custom_effect_tooltip = TRC_rcc_remove_10
 			hidden_effect = {
-				add_to_variable = {
-					var = TRC_rndc_control
-					value = 10
-				}
-				add_to_variable = {
-					var = TRC_rcc_control
-					value = -10
-				}
+				set_temp_variable = { temp_member = 2 }
+				set_temp_variable = { temp_seats = 10 }
+				modify_parliament_seat = yes
 			}
 		}
 	}

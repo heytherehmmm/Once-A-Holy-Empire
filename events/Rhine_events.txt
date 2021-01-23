@@ -50,22 +50,56 @@ country_event = {
 	desc = trc.3.desc #Event description (Add in localization)
 	picture = GFX_report_event_election_vote #Event picture
 	is_triggered_only = yes # If yes, it won't fire all the time
-	option = { 
-		trigger = { NOT = { has_country_flag = TRC_rheinmarshal_in_belgium has_country_flag = TRC_rheinmarshal_deal } }
+	fire_only_once = yes
+	option = {
+		trigger = {
+			check_variable = {
+				var = parliament_seat_array^0 #RCC
+				value = parliament_seat_array^1 #RNDC
+				compare = greater_than
+			}
+			check_variable = {
+				var = parliament_seat_array^0 #RCC
+				value = parliament_seat_array^2 #Rheinmarshals Partei
+				compare = greater_than
+			}
+		}
 		name = trc.3.a
-		ai_chance = { factor = 2}
+		ai_chance = { factor = 1}
 		set_country_flag = TRC_RNDC_victory
 		complete_national_focus = TRC_the_rndc_victory
 	}
 	option = {
-		trigger = { has_country_flag = TRC_president_deal NOT = { has_country_flag = TRC_rheinmarshal_in_belgium has_country_flag = TRC_rheinmarshal_deal } }
+		trigger = { 
+			check_variable = {
+				var = parliament_seat_array^1 #RNDC
+				value = parliament_seat_array^0 #RCC
+				compare = greater_than
+			}
+			check_variable = {
+				var = parliament_seat_array^1 #RNDC
+				value = parliament_seat_array^2 #Rheinmarshals Partei
+				compare = greater_than
+			}
+		}
 		name = trc.3.b
-		ai_chance = { factor = 2}
+		ai_chance = { factor = 1}
 		set_country_flag = TRC_RCC_victory
 		complete_national_focus = TRC_the_rcc_victory
 	}
 	option = {
-		trigger = { has_country_flag = TRC_rheinmarshal_in_belgium has_country_flag = TRC_rheinmarshal_deal }
+		trigger = { 
+			check_variable = {
+				var = parliament_seat_array^2 #Rheinmarshals Partei
+				value = parliament_seat_array^1 #RNDC
+				compare = greater_than
+			}
+			check_variable = {
+				var = parliament_seat_array^2 #Rheinmarshals Partei
+				value = parliament_seat_array^0 #RCC
+				compare = greater_than
+			}
+		}
 		name = trc.3.c
 		ai_chance = { factor = 1}
 		set_country_flag = TRC_Rheinmarshal_victory
@@ -110,23 +144,12 @@ country_event = {
 	option = { 
 		name = trc.6.a
 		ai_chance = { factor = 1}
-		custom_effect_tooltip = TRC_rcc_remove_20
-		custom_effect_tooltip = TRC_rndc_remove_10
 		custom_effect_tooltip = TRC_rheinmarshal_add_30
 			
 		hidden_effect = {
-			add_to_variable = {
-				var = TRC_rcc_control
-				value = -20
-			}
-			add_to_variable = {
-				var = TRC_rndc_control
-				value = -10
-			}
-			add_to_variable = {
-				var = TRC_rheinmarshal_control
-				value = 30
-			}
+			set_temp_variable = { temp_member = 3 }
+				set_temp_variable = { temp_seats = 30 }
+				modify_parliament_seat = yes
 			remove_ideas = TRC_idea_rheinparlament
 			add_ideas = TRC_idea_rheinparlament_rheinmarshal
 		
@@ -144,24 +167,11 @@ country_event = {
 	option = { 
 		name = trc.7.a
 		ai_chance = { factor = 1}
-		custom_effect_tooltip = TRC_rndc_remove_20
-		custom_effect_tooltip = TRC_rheinmarshal_remove_10
-		custom_effect_tooltip = TRC_rcc_add_30
 			
 		hidden_effect = {
-			add_to_variable = {
-				var = TRC_rcc_control
-				value = 30
-			}
-			add_to_variable = {
-				var = TRC_rndc_control
-				value = -20
-			}
-			add_to_variable = {
-				var = TRC_rheinmarshal_control
-				value = -10
-			}
-		
+			set_temp_variable = { temp_member = 1 }
+				set_temp_variable = { temp_seats = 30 }
+				modify_parliament_seat = yes
 		}
 	}
 }
@@ -412,6 +422,58 @@ country_event = {
 	is_triggered_only = yes # If yes, it won't fire all the time
 	option = {
 		name = trc.19.a
+		ai_chance = { factor = 1}
+	}
+}
+
+
+##Event: The Rheinparlament Question
+country_event = {
+	id = trc.20 #Event number
+	title = trc.20.title #Event title (Add in localization)
+	desc = trc.20.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.20.a
+		ai_chance = { factor = 1}
+	}
+	option = {
+		name = trc.20.b
+		ai_chance = { factor = 1}
+	}
+}
+
+##Event: Executive Order #14
+country_event = {
+	id = trc.21 #Event number
+	title = trc.21.title #Event title (Add in localization)
+	desc = trc.21.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.21.a
+		ai_chance = { factor = 1}
+	}
+}
+
+##Event: Riotters break into the Rheinparlament
+country_event = {
+	id = trc.22 #Event number
+	title = trc.22.title #Event title (Add in localization)
+	desc = trc.22.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.22.a
+		ai_chance = { factor = 3}
+		country_event = {
+			id = trc.21
+			days = 5
+		}
+	}
+	option = {
+		name = trc.22.b
 		ai_chance = { factor = 1}
 	}
 }
