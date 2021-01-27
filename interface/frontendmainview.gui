@@ -547,7 +547,7 @@ guiTypes = {
 			textureFile = ""
 			font = "cg_16b"
 			borderSize = {x = 0 y = 0}
-			text = "- Imperial Russia Content" 
+			text = "- New main menu and main theme" 
 			format = centre
 			maxWidth = 250
 			maxHeight = 20	
@@ -571,7 +571,7 @@ guiTypes = {
 			textureFile = ""
 			font = "cg_16b"
 			borderSize = {x = 0 y = 0}
-			text = "- Various fixes, events, and tweaks" 
+			text = "- Various fixes, new events, and balance tweaks" 
 			format = centre
 			maxWidth = 250
 			maxHeight = 20	
