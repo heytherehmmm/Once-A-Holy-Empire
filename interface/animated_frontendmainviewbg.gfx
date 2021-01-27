@@ -1,0 +1,222 @@
+spriteTypes = {
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_01"
+		texturefile = "gfx/animated_textures/frontend_background/01.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_02"
+		texturefile = "gfx/animated_textures/frontend_background/02.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_03"
+		texturefile = "gfx/animated_textures/frontend_background/03.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_04"
+		texturefile = "gfx/animated_textures/frontend_background/04.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_05"
+		texturefile = "gfx/animated_textures/frontend_background/05.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_06"
+		texturefile = "gfx/animated_textures/frontend_background/06.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_07"
+		texturefile = "gfx/animated_textures/frontend_background/07.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_08"
+		texturefile = "gfx/animated_textures/frontend_background/08.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_09"
+		texturefile = "gfx/animated_textures/frontend_background/09.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_10"
+		texturefile = "gfx/animated_textures/frontend_background/10.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_11"
+		texturefile = "gfx/animated_textures/frontend_background/11.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_12"
+		texturefile = "gfx/animated_textures/frontend_background/12.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_13"
+		texturefile = "gfx/animated_textures/frontend_background/13.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_14"
+		texturefile = "gfx/animated_textures/frontend_background/14.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_15"
+		texturefile = "gfx/animated_textures/frontend_background/15.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_16"
+		texturefile = "gfx/animated_textures/frontend_background/16.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_17"
+		texturefile = "gfx/animated_textures/frontend_background/17.dds"
+		noOfFrames = 117 
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_18"
+		texturefile = "gfx/animated_textures/frontend_background/18.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_19"
+		texturefile = "gfx/animated_textures/frontend_background/19.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_frontend_bg_tile_20"
+		texturefile = "gfx/animated_textures/frontend_background/20.dds"
+		noOfFrames = 117
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+}
