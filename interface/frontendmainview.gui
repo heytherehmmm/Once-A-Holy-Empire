@@ -655,7 +655,7 @@ guiTypes = {
 			textureFile = ""
 			font = "cg_18b"
 			borderSize = {x = 0 y = 0}
-			text = "OHE BETA v1.6.0"
+			text = "OHE BETA v1.5.3"
 			format = centre
 			maxWidth = 250
 			maxHeight = 20	
