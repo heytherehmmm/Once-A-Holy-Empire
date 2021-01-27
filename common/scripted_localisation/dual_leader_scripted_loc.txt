@@ -18,6 +18,22 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			original_tag = TRC
+			has_government = democratic
+		}
+		localization_key = TRC_DEM_TITLE
+	}
+	text = {
+		trigger = {
+			original_tag = TRC
+			has_country_leader = {
+				name = "Paul von Lettow-Vorbeck"
+			}
+		}
+		localization_key = TRC_RHEINMARSHAL_TITLE
+	}
+	text = {
+		trigger = {
 			original_tag = SOV
 			has_government = neutrality
 		}
@@ -29,6 +45,13 @@ defined_text = {
 			has_government = neutrality
 		}
 		localization_key = "BOH_MONARCH_TITLE"
+	}
+	text = {
+        trigger = {
+			tag = BOH
+			has_government = democratic
+		}
+		localization_key = "BOH_PRIME_MINISTER_TITLE"
 	}
 	text = {
 		trigger = {
@@ -124,6 +147,13 @@ defined_text = {
 		localization_key = BOH_MONARCH_TITLE
 	}
 	text = {
+		trigger = {
+			tag = BOH
+			has_government = democratic
+		}
+		localization_key = BOH_MONARCH_TITLE
+	}
+	text = {
         trigger = {
 			original_tag = ITA
 			ITA = {
@@ -176,6 +206,13 @@ defined_text = {
 		localization_key = BOH_OTTO
 	}
 	text = {
+        trigger = {
+			tag = BOH
+			has_government = democratic
+		}
+		localization_key = BOH_OTTO
+	}
+	text = {
 		localization_key = DEFAULT_TITLE
 	}
 }
@@ -219,6 +256,14 @@ defined_text = {
 		localization_key = "GFX_BOH_OTTO"
 	}
 	text = {
+		trigger = {
+			tag = BOH
+			has_government = democratic
+			has_completed_focus = BOH_less_radical_socialism
+		}
+		localization_key = "GFX_BOH_OTTO"
+	}
+	text = {
 		localization_key = "GFX_portrait_bg_blank"
 	}
 }
@@ -240,6 +285,13 @@ defined_text = {
         trigger = {
 			tag = BOH
 			has_government = fascism
+		}
+		localization_key = "BOH_MONARCH_DESC"
+	}
+	text = {
+        trigger = {
+			tag = BOH
+			has_government = democratic
 		}
 		localization_key = "BOH_MONARCH_DESC"
 	}
@@ -268,5 +320,12 @@ defined_text = {
 			has_government = neutrality
 		}
 		localization_key = "BOH_MONARCH_DESC"
+	}
+	text = {
+        trigger = {
+			tag = BOH
+			has_government = democratic
+		}
+		localization_key = "BOH_PRIME_MINISTER_DESC"
 	}
 }

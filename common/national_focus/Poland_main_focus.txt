@@ -1,0 +1,413 @@
+﻿focus_tree = {
+    
+    id = Poland
+    country = {
+        factor = 0
+        modifier = {
+            add = 1
+            tag = POL
+        }
+    }
+    focus = {
+        id = POL_the_future_of_poland
+        icon = GFX_POL_the_future_of_poland
+        x = 14
+        y = 1
+        cost = 4
+        available_if_capitulated = yes
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+
+        }
+    }
+    focus = {
+        id = POL_support_radical_movements
+        icon = GFX_POL_support_radical_movements
+        x = 6
+        y = 2
+        cost = 10
+        available_if_capitulated = yes
+        prerequisite = { focus = POL_the_future_of_poland }
+        mutually_exclusive = { focus = POL_continue_ignacy_moscickis_policies }
+		mutually_exclusive = { focus = POL_national_democracy }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        
+        }
+    }
+    focus = {
+        id = POL_continue_ignacy_moscickis_policies
+        icon = GFX_POL_continue_ignacy_moscickis_policies
+        x = 14
+        y = 2
+        cost = 10
+        available_if_capitulated = yes
+        prerequisite = { focus = POL_the_future_of_poland }
+        mutually_exclusive = { focus = POL_support_radical_movements }
+		mutually_exclusive = { focus = POL_national_democracy }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            
+        }
+    }
+	    focus = {
+        id = POL_ally_with_the_falangists
+        icon = GFX_POL_ally_with_the_falangists
+        x = 3
+        y = 3
+        cost = 10
+        available_if_capitulated = yes
+        prerequisite = { focus = POL_support_radical_movements }
+        mutually_exclusive = { focus = POL_support_the_communists }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            
+        }
+    }
+		focus = {
+        id = POL_support_the_communists
+        icon = GFX_POL_ally_with_the_falangists
+        x = 9
+        y = 3
+        cost = 10
+        available_if_capitulated = yes
+        prerequisite = { focus = POL_support_radical_movements }
+        mutually_exclusive = { focus = POL_ally_with_the_falangists }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            
+        }
+    }
+		focus = {
+        id = POL_national_democracy
+        icon = GFX_POL_national_democracy
+        x = 24
+        y = 2
+        cost = 10
+        available_if_capitulated = yes
+        prerequisite = { focus = POL_the_future_of_poland }
+        mutually_exclusive = { focus = POL_continue_ignacy_moscickis_policies }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            
+        }
+    }
+	    focus = {
+        id = POL_crack_down_on_extremists
+        icon = GFX_POL_crack_down_on_extremists
+        x = 21
+        y = 3
+        cost = 15
+        available_if_capitulated = yes
+		available = {
+			OR = {
+					has_completed_focus = POL_national_democracy
+					has_completed_focus = POL_continue_ignacy_moscickis_policies 
+				}
+			
+		}
+		prerequisite = { focus = POL_national_democracy focus = POL_continue_ignacy_moscickis_policies }
+		mutually_exclusive = {focus = POL_make_concessions_to_the_extremists }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            
+        }
+    }
+		focus = {
+        id = POL_make_concessions_to_the_extremists
+        icon = GFX_POL_make_concessions_to_the_extremists
+        x = 19
+        y = 3
+        cost = 10
+        available_if_capitulated = yes
+		available = {
+			OR = {
+					has_completed_focus = POL_national_democracy
+					has_completed_focus = POL_continue_ignacy_moscickis_policies 
+				}
+			
+		}
+		prerequisite = { focus = POL_national_democracy focus = POL_continue_ignacy_mościckis_policies }
+		mutually_exclusive = {focus = POL_crack_down_on_extremists }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            
+        }
+    }
+	    focus = {
+        id = POL_revise_the_constitution
+        icon = GFX_POL_rewrite_the_constitution
+        x = 29
+        y = 1
+        cost = 10
+        available_if_capitulated = yes
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+            
+        }
+    }
+		focus = {
+        id = POL_a_meeting_with_the_kaiser
+        icon = GFX_POL_a_meeting_with_the_kaiser
+        x = 11
+        y = 3
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_continue_ignacy_moscickis_policies }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        unlock_decision_category_tooltip = POL_meeting_with_the_kaiser_category
+        }
+    }
+	    focus = {
+        id = POL_a_meeting_with_the_tsar
+        icon = GFX_POL_a_meeting_with_the_tsar
+        x = 17
+        y = 3
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_continue_ignacy_moscickis_policies }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+		focus = {
+        id = POL_forge_our_own_path
+        icon = GFX_POL_forge_our_own_path
+        x = 14
+        y = 3
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_continue_ignacy_moscickis_policies }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+	    focus = {
+        id = POL_pro_holy_roman_diplomacy
+        icon = GFX_POL_pro_holy_roman_diplomacy
+        x = 11
+        y = 4
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_a_meeting_with_the_kaiser }
+		mutually_exclusive = { focus = POL_pro_russian_diplomacy }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+		focus = {
+        id = POL_pro_russian_diplomacy
+        icon = GFX_POL_pro_holy_russian_diplomacy
+        x = 17
+        y = 4
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_a_meeting_with_the_tsar }
+		mutually_exclusive = { focus = POL_pro_holy_roman_diplomacy }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+	    focus = {
+        id = POL_non-aggresion_pact_with_the_holy_romans
+        icon = GFX_POL_non-aggresion_pact_with_the_holy_romans
+        x = 9
+        y = 5
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_pro_holy_roman_diplomacy }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+		focus = {
+        id = POL_non-aggresion_pact_with_the_russians
+        icon = GFX_POL_non-aggresion_pact_with_the_russians
+        x = 19
+        y = 5
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_pro_russian_diplomacy }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+		focus = {
+        id = POL_begin_rearmament
+        icon = GFX_POL_begin_rearmament
+        x = 13
+        y = 5
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_forge_our_own_path }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+	    focus = {
+        id = POL_expand_the_entertainment_industry
+        icon = GFX_POL_begin_rearmament
+        x = 15
+        y = 5
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_forge_our_own_path }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+		focus = {
+        id = POL_improve_gun_production
+        icon = GFX_POL_begin_rearmament
+        x = 14
+        y = 6
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_expand_the_entertainment_industry }
+		prerequisite = { focus = POL_begin_rearmament }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+		focus = {
+        id = POL_further_our_claims
+        icon = GFX_POL_begin_rearmament
+        x = 14
+        y = 8
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_improve_gun_production }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+		focus = {
+        id = POL_affirm_our_claims_on_slovakia
+        icon = GFX_POL_begin_rearmament
+        x = 10
+        y = 9
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_further_our_claims }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+		focus = {
+        id = POL_further_into_the_empire
+        icon = GFX_POL_begin_rearmament
+        x = 12
+        y = 9
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_further_our_claims }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+	    focus = {
+        id = POL_the_return_of_poznan
+        icon = GFX_POL_begin_rearmament
+        x = 16
+        y = 9
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_further_our_claims }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+		focus = {
+        id = POL_march_eastward
+        icon = GFX_POL_begin_rearmament
+        x = 18
+        y = 9
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_further_our_claims }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+		focus = {
+        id = POL_onwards_towards_prussia
+        icon = GFX_POL_begin_rearmament
+        x = 14
+        y = 9
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_further_our_claims }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+	    focus = {
+        id = POL_greater_poland_once_more!
+        icon = GFX_POL_begin_rearmament
+        x = 14
+        y = 10
+        cost = 10
+        available_if_capitulated = yes
+		prerequisite = { focus = POL_affirm_our_claims_on_slovakia }
+		prerequisite = { focus = POL_march_eastward }
+		prerequisite = { focus = POL_the_return_of_poznan }
+		prerequisite = { focus = POL_further_into_the_empire }
+		prerequisite = { focus = POL_onwards_towards_prussia }
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+        }
+    }
+}

@@ -1,0 +1,35 @@
+﻿units = {
+
+	##### NAVAL UNITS #####
+	### Rheinmarine ###
+	fleet = {
+		name = "Rheinische Marine"			
+		naval_base = 6560  # Amsterdam
+		task_force = {
+			name = "Erste Flotte"			
+			location = 6560  # Gent
+			ship = { name = "RS Kongo" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = TRC } } }		
+			ship = { name = "RS Belgien" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = TRC } } }		
+			ship = { name = "RS Sturmschiff" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = TRC } } }		
+		}				
+		task_force = {	
+			name = "Rheinische U-Boot-Flottille"			
+			location = 6560  # Gent
+			ship = { name = "U-1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = TRC } } }
+			ship = { ordered_name = 9 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = TRC } } }
+			ship = { ordered_name = 10 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = TRC } } }
+			ship = { ordered_name = 11 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = TRC } } }
+			ship = { ordered_name = 12 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = TRC } } }
+			ship = { ordered_name = 13 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = TRC } } }
+			ship = { ordered_name = 14 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = TRC } } }
+			ship = { ordered_name = 15 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = TRC } } }
+		}				
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+#####################

@@ -1,7 +1,10 @@
-capital = 6
+capital = 808
 
 oob = "TRC_1936"
-
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "TRC_navy_mtg"
+}
 set_research_slots = 3
 
 set_stability = 0.7
@@ -10,7 +13,9 @@ set_war_support = 0.13
 add_ideas = {
 
 	BOH_a_fragmented_empire
-
+	TRC_idea_rheinparlament
+	TRC_belgian_issue
+	
 }
 set_technology = {
  	infantry_weapons = 1
@@ -30,18 +35,62 @@ set_technology = {
 	CAS1 = 1
 	tech_support = 1
 }
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_destroyer = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+}
+#Rheinparlament control levels
+set_variable = {
+	var = TRC_rcc_control
+	value = 124
+}
+set_variable = {
+	var = TRC_rndc_control
+	value = 98
+}
+set_variable = {
+	var = TRC_rheinmarshal_control
+	value = 23
+}
 
 set_politics = {
 	ruling_party = democratic
-	last_election = "1933.1.1"
+	last_election = "1933.2.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = { 
-	democratic = 77
-	fascism = 13
-	communism = 4
-	neutrality = 6
+	democratic = 82
+	fascism = 1
+	communism = 9
+	neutrality = 8
 }
 
 
@@ -56,13 +105,3 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Paul von Lettow-Vorbeck"
-	desc = "POLITICS_PAUL_VORBECK_DESC"
-	picture = "gfx/leaders/TRC/lettow.dds"
-	expire = "2011.1.1"
-	ideology = despotism
-	traits = {
-
-	}
-}

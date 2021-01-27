@@ -1,24 +1,479 @@
 add_namespace = trc
 
-##Event: Example Event. Put your event title here
+##Event: The Status of the Rhine
 country_event = {
 	id = trc.1 #Event number
 	title = trc.1.title #Event title (Add in localization)
 	desc = trc.1.desc #Event description (Add in localization)
 	picture = GFX_report_event_king_speech #Event picture
-	is_triggered_only = yes # If yes, it won't fire all the time
+	is_triggered_only = no
+	fire_only_once = yes
+	trigger = {
+		tag = TRC
+		date > 1936.1.1
+	}
 	option = { 
 		name = trc.1.a
 		ai_chance = { factor = 1}
-		add_timed_idea= { 
-			idea = democratic_kaiser_influence
-			days = 720
+		
+	}
+}
+
+##Event: Riots in Belgium
+country_event = {
+	id = trc.2 #Event number
+	title = trc.2.title #Event title (Add in localization)
+	desc = trc.2.desc #Event description (Add in localization)
+	picture = GFX_report_event_generic_riot #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = { 
+		name = trc.2.a
+		ai_chance = { factor = 1}
+		set_country_flag = TRC_crush_them_flag
+	}
+	option = {
+		name = trc.2.b
+		ai_chance = { factor = 1}
+		set_country_flag = TRC_open_negotiations_flag
+	}
+	option = {
+		name = trc.2.c
+		ai_chance = { factor = 1}
+		set_country_flag = TRC_granted_limited_autonomy_to_belgium_flag
+	}
+}
+
+##Event: Election of 1937
+country_event = {
+	id = trc.3 #Event number
+	title = trc.3.title #Event title (Add in localization)
+	desc = trc.3.desc #Event description (Add in localization)
+	picture = GFX_report_event_election_vote #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	fire_only_once = yes
+	option = {
+		trigger = {
+			check_variable = {
+				var = parliament_seat_array^0 #RCC
+				value = parliament_seat_array^1 #RNDC
+				compare = greater_than
+			}
+			check_variable = {
+				var = parliament_seat_array^0 #RCC
+				value = parliament_seat_array^2 #Rheinmarshals Partei
+				compare = greater_than
+			}
+		}
+		name = trc.3.a
+		ai_chance = { factor = 1}
+		set_country_flag = TRC_RNDC_victory
+		complete_national_focus = TRC_the_rndc_victory
+	}
+	option = {
+		trigger = { 
+			check_variable = {
+				var = parliament_seat_array^1 #RNDC
+				value = parliament_seat_array^0 #RCC
+				compare = greater_than
+			}
+			check_variable = {
+				var = parliament_seat_array^1 #RNDC
+				value = parliament_seat_array^2 #Rheinmarshals Partei
+				compare = greater_than
+			}
+		}
+		name = trc.3.b
+		ai_chance = { factor = 1}
+		set_country_flag = TRC_RCC_victory
+		complete_national_focus = TRC_the_rcc_victory
+	}
+	option = {
+		trigger = { 
+			check_variable = {
+				var = parliament_seat_array^2 #Rheinmarshals Partei
+				value = parliament_seat_array^1 #RNDC
+				compare = greater_than
+			}
+			check_variable = {
+				var = parliament_seat_array^2 #Rheinmarshals Partei
+				value = parliament_seat_array^0 #RCC
+				compare = greater_than
+			}
+		}
+		name = trc.3.c
+		ai_chance = { factor = 1}
+		set_country_flag = TRC_Rheinmarshal_victory
+		complete_national_focus = TRC_the_rheinmarshals_victory
+	}
+}
+
+##Event: Open Negotiations with Belgian Politicans
+country_event = {
+	id = trc.4 #Event number
+	title = trc.4.title #Event title (Add in localization)
+	desc = trc.4.desc #Event description (Add in localization)
+	picture = GFX_report_event_gre_allied_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = { 
+		name = trc.4.a
+		ai_chance = { factor = 1}
+	}
+	
+}
+
+##Event: A Compromise?
+country_event = {
+	id = trc.5 #Event number
+	title = trc.5.title #Event title (Add in localization)
+	desc = trc.5.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = { 
+		name = trc.5.a
+		ai_chance = { factor = 1}
+	}
+}
+
+##Event: The Rheinmarshal makes a proposal to the Rheinparlament
+country_event = {
+	id = trc.6 #Event number
+	title = trc.6.title #Event title (Add in localization)
+	desc = trc.6.desc #Event description (Add in localization)
+	picture = GFX_news_event_generic_parliament #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = { 
+		name = trc.6.a
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = TRC_rheinmarshal_add_30
+			
+		hidden_effect = {
+			set_temp_variable = { temp_member = 3 }
+				set_temp_variable = { temp_seats = 30 }
+				modify_parliament_seat = yes
+			remove_ideas = TRC_idea_rheinparlament
+			add_ideas = TRC_idea_rheinparlament_rheinmarshal
+		
+		}
+	}
+}
+
+##Event: The President makes a Proposal to the Rheinparlament
+country_event = {
+	id = trc.7 #Event number
+	title = trc.7.title #Event title (Add in localization)
+	desc = trc.7.desc #Event description (Add in localization)
+	picture = GFX_news_event_generic_parliament #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = { 
+		name = trc.7.a
+		ai_chance = { factor = 1}
+			
+		hidden_effect = {
+			set_temp_variable = { temp_member = 1 }
+				set_temp_variable = { temp_seats = 30 }
+				modify_parliament_seat = yes
+		}
+	}
+}
+
+##Event: The Rheinmarshal demands Rotterdam
+country_event = {
+	id = trc.8 #Event number
+	title = trc.8.title #Event title (Add in localization)
+	desc = trc.8.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.8.a
+		ai_chance = { factor = 2}
+		TRC = {
+			country_event = {
+				id = trc.10
+				days = 1
+			}
+		}
+		
+	}
+	option = { 
+		name = trc.8.b
+		ai_chance = { factor = 1}
+		TRC = {
+			country_event = {
+				id = trc.9
+				days = 1
+			}
+		}
+	}
+}
+
+##Event: The Netherlands Agrees to our Demands
+country_event = {
+	id = trc.9 #Event number
+	title = trc.9.title #Event title (Add in localization)
+	desc = trc.9.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.9.a
+		ai_chance = { factor = 1}
+		transfer_state = 813
+		transfer_state = 35
+	}
+}
+
+##Event: The Netherlands Agrees to our Demands
+country_event = {
+	id = trc.10 #Event number
+	title = trc.10.title #Event title (Add in localization)
+	desc = trc.10.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.10.a
+		ai_chance = { factor = 1}
+		create_wargoal = {
+			type = take_state_focus
+			target = HOL
+			generator = { 35 813 }
 		}
 	}
 	option = {
-		name = trc.1.b
+		name = trc.10.b
 		ai_chance = { factor = 1}
+		add_political_power = -150
+	}
+}
+
+##Event: The Rheinmarshal demands Nord-Pas-de-Calais
+country_event = {
+	id = trc.11 #Event number
+	title = trc.11.title #Event title (Add in localization)
+	desc = trc.11.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.11.a
+		ai_chance = { factor = 2}
+		TRC = {
+			country_event = {
+				id = trc.13
+				days = 1
+			}
+		}
 		
-		# Do something else here
+	}
+	option = { 
+		name = trc.11.b
+		ai_chance = { factor = 1}
+		TRC = {
+			country_event = {
+				id = trc.12
+				days = 1
+			}
+		}
+	}
+}
+
+##Event: France Agrees to our Demands
+country_event = {
+	id = trc.12 #Event number
+	title = trc.12.title #Event title (Add in localization)
+	desc = trc.12.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.12.a
+		ai_chance = { factor = 1}
+		transfer_state = 29
+	}
+}
+
+##Event: France denies demands
+country_event = {
+	id = trc.13 #Event number
+	title = trc.13.title #Event title (Add in localization)
+	desc = trc.13.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.13.a
+		ai_chance = { factor = 1}
+		create_wargoal = {
+			type = take_state_focus
+			target = FRA
+			generator = { 29 }
+		}
+	}
+	option = {
+		name = trc.13.b
+		ai_chance = { factor = 1}
+		add_political_power = -150
+	}
+}
+
+##Event: The Rhineland petitions us for Rotterdam
+country_event = {
+	id = trc.14 #Event number
+	title = trc.14.title #Event title (Add in localization)
+	desc = trc.14.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.14.a
+		ai_chance = { factor = 2}
+		TRC = {
+			country_event = {
+				id = trc.16
+				days = 1
+			}
+		}
+		
+	}
+	option = { 
+		name = trc.14.b
+		ai_chance = { factor = 1}
+		TRC = {
+			country_event = {
+				id = trc.15
+				days = 1
+			}
+		}
+	}
+}
+
+##Event: The Netherlands Agrees
+country_event = {
+	id = trc.15 #Event number
+	title = trc.15.title #Event title (Add in localization)
+	desc = trc.15.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.15.a
+		ai_chance = { factor = 1}
+		transfer_state = 813
+		transfer_state = 35
+	}
+}
+
+##Event: The Netherlands denies
+country_event = {
+	id = trc.16 #Event number
+	title = trc.16.title #Event title (Add in localization)
+	desc = trc.16.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.16.a
+		ai_chance = { factor = 1}
+	}
+}
+
+##Event: The Rhenish are asking for Nord-Pas-de-Calais
+country_event = {
+	id = trc.17 #Event number
+	title = trc.17.title #Event title (Add in localization)
+	desc = trc.17.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.17.a
+		ai_chance = { factor = 2}
+		TRC = {
+			country_event = {
+				id = trc.19
+				days = 1
+			}
+		}
+		
+	}
+	option = { 
+		name = trc.17.b
+		ai_chance = { factor = 1}
+		TRC = {
+			country_event = {
+				id = trc.18
+				days = 1
+			}
+		}
+	}
+}
+
+##Event: France Agrees
+country_event = {
+	id = trc.18 #Event number
+	title = trc.18.title #Event title (Add in localization)
+	desc = trc.18.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.18.a
+		ai_chance = { factor = 1}
+		transfer_state = 29
+	}
+}
+
+##Event: France denies demands
+country_event = {
+	id = trc.19 #Event number
+	title = trc.19.title #Event title (Add in localization)
+	desc = trc.19.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.19.a
+		ai_chance = { factor = 1}
+	}
+}
+
+
+##Event: The Rheinparlament Question
+country_event = {
+	id = trc.20 #Event number
+	title = trc.20.title #Event title (Add in localization)
+	desc = trc.20.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.20.a
+		ai_chance = { factor = 1}
+	}
+	option = {
+		name = trc.20.b
+		ai_chance = { factor = 1}
+	}
+}
+
+##Event: Executive Order #14
+country_event = {
+	id = trc.21 #Event number
+	title = trc.21.title #Event title (Add in localization)
+	desc = trc.21.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.21.a
+		ai_chance = { factor = 1}
+	}
+}
+
+##Event: Riotters break into the Rheinparlament
+country_event = {
+	id = trc.22 #Event number
+	title = trc.22.title #Event title (Add in localization)
+	desc = trc.22.desc #Event description (Add in localization)
+	picture = report_event_gre_diplomacy #Event picture
+	is_triggered_only = yes # If yes, it won't fire all the time
+	option = {
+		name = trc.22.a
+		ai_chance = { factor = 3}
+		country_event = {
+			id = trc.21
+			days = 5
+		}
+	}
+	option = {
+		name = trc.22.b
+		ai_chance = { factor = 1}
 	}
 }

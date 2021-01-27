@@ -251,12 +251,12 @@ country_event = {
 	option = {
 		name = ohe.12.a
 		ai_chance = { factor = 2}
-		add_ideas= BOH_hugenberg
+		set_country_flag = BOH_can_do_hugenberg
 	}
 	option = {
 		name = ohe.12.b
 		ai_chance = { factor = 1}
-		add_ideas= BOH_hjalmar
+		set_country_flag = BOH_can_do_hjalmar
 	}
 }
 ##Event: The Holy Roman Empire Requests Alliance

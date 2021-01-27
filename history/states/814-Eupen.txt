@@ -1,0 +1,21 @@
+state={
+	id=814
+	name="STATE_814"
+
+	history={
+		owner = TRC
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+		}
+		add_core_of = TRC
+		add_core_of = BOH
+	}
+	
+	provinces={
+		3488
+	}
+	manpower=12494
+	buildings_max_level_factor=1
+	state_category="rural"
+}

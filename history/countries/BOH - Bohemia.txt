@@ -31,7 +31,7 @@ set_technology = {
 	tactical_bomber1 = 1
 	strategic_bomber1 = 1
 	CAS1 = 1
-	mobile_warfare = 1
+	superior_firepower = 1
 	trade_interdiction = 1
 	formation_flying = 1
 	synth_oil_experiments = 1
@@ -40,7 +40,7 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = aristocracy
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -49,7 +49,7 @@ set_popularities = {
 	democratic = 14
 	fascism = 26
 	communism = 5
-	neutrality = 55
+	aristocracy = 55
 }
 
 
@@ -59,7 +59,7 @@ create_country_leader = {
 	desc = "POLITICS_OTTO_DESC"
 	picture = "gfx/leaders/BOH/otto.dds"
 	expire = "2011.6.4"
-	ideology = despotism
+	ideology = absolute_monarchy
 	traits = {
 		empire_builder
 		popular_figurehead

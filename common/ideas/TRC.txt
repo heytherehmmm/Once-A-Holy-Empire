@@ -1,0 +1,484 @@
+ideas = {
+	industrial_concern = {
+		
+		ig_faben = {
+			
+			allowed = {
+				original_tag = TRC
+			}
+			
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.15
+			}
+			
+			traits = { refinery_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	country = {
+		
+		TRC_idea_rheinparlament = {
+		
+			picture = TRC_rheinparlament
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.05
+			}
+			
+			
+		}
+		TRC_idea_confederation_of_the_rhine = {
+			picture = GFX_idea_confederation_of_the_rhine
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.05
+				stability_factor = 0.05
+			}
+			
+			
+		}
+		TRC_idea_council_of_the_rhine = {
+			picture = GFX_idea_council_of_the_rhine
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.05
+				stability_factor = 0.05
+			}
+			
+			
+		}
+		TRC_idea_rheinparlament_rheinmarshal = {
+			picture = TRC_rheinparlament
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = -0.05
+			}
+			
+			
+		}
+		
+		TRC_purged_high_command = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = idea_generic_purge
+
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				experience_gain_army_factor = -0.1
+			}
+		}
+		
+		TRC_lowenkrieg_tactics_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = GFX_idea_FRA_motorized_focus
+
+			modifier = {
+				army_speed_factor = 0.1
+				org_loss_when_moving = -0.1
+			}
+		}
+		
+		TRC_agricultural_push_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = idea_generic_agrarian_reform
+
+			modifier = {
+				supply_consumption_factor = -0.1
+			}
+		}
+		
+		TRC_belgian_issue = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = TRC_belgian_issue
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+			}
+		}
+		
+		TRC_idea_parliament = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = gfx_unknown
+
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		
+		TRC_idea_stricten_federal_regulations = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = gfx_unknown
+
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		
+		TRC_industrial_planning_agency = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = gfx_unknown
+
+			modifier = {
+				global_building_slots_factor = 0.15
+			}
+		}
+		
+		TRC_idea_anticorruption = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = gfx_unknown
+
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		
+		TRC_expanded_reserves = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = gfx_unknown
+
+			modifier = {
+				conscription = 0.015
+			}
+		}
+		
+		TRC_Military_Buildup = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_industrial_concern_1
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.2
+			}
+		}
+		
+		TRC_a_new_army_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.05
+			}
+		}
+		
+		TRC_New_Tactics = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.05
+			}
+		}
+		
+		TRC_save_the_rhine = 
+		{
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+		TRC_rhine_military_guard = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+
+			modifier = {
+				conscription = 0.015
+			}
+		}
+		TRC_gun_production = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+			}
+		}
+		TRC_idea_modern_airforce = {
+			picture = BOH_modern_airforce-67082
+			equipment_bonus = { 
+					fighter_equipment = { instant = yes air_agility = 0.1 maximum_speed = 0.1  } 
+					nav_bomber_equipment = { instant = yes naval_strike_attack = 0.1 naval_strike_targetting = 0.1  } 
+				}
+			modifier = {
+				air_superiority_efficiency = 0.1
+				
+			}
+		}
+		TRC_idea_modern_military = {
+			picture = BOH_modern_military-67081
+			modifier = {
+				army_org_factor = 0.1
+				land_reinforce_rate = 0.15
+				conscription = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+			}
+		}
+		TRC_idea_modern_navy = {
+			picture = generic_sea_focused_navy
+			modifier = {
+				naval_retreat_speed = 0.1
+				navy_capital_ship_attack_factor = 0.1
+			}
+			equipment_bonus = { 
+					naval_folder = { instant = yes naval_speed = 0.1 evasion = 0.1 port_capacity_usage = 0.1  } 
+				}
+		}
+		TRC_new_army_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				conscription = 0.025
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+		TRC_belgian_naval_command = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_navy_bonus
+
+			modifier = {
+				navy_org_factor = 0.15
+				naval_morale_factor = 0.15
+			}
+		}
+		TRC_New_Road_Projects = {
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_infantry_bonus
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+	}
+}
+  

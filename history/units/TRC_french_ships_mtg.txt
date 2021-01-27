@@ -1,0 +1,16 @@
+﻿units = {
+
+	##### NAVAL UNITS #####
+	### Rheinmarine ###
+	fleet = {
+		name = "Rheinische Marine"			
+		naval_base = 6560  # Amsterdam
+		task_force = {				
+			name = "Erste Flotte"			
+			location = 6560  # Gent
+			ship = { name = "RS Köln" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = FRA  } } }		
+			ship = { name = "RS Düsseldorf" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = FRA } } }		
+			ship = { name = "RS Essen" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA } } }		
+		}
+	}
+}

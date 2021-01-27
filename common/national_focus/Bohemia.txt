@@ -80,7 +80,7 @@
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH } 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 		completion_reward = {
 			add_tech_bonus= {
@@ -121,7 +121,7 @@ tech_mountaineers = 1
 		prerequisite = { focus = BOH_land_doctrine_assessment }
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
 		ai_will_do = {
-			factor = 1
+			factor = 40
 		}
 		completion_reward = {
 			add_ideas= BOH_army_training
@@ -164,10 +164,10 @@ army_experience= 50
 		prerequisite = { focus = BOH_hold_a_referendum_in_pomerania }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		available = {
-				OR = {TPR = { is_puppet_of = BOH has_autonomy_state = autonomy_integrated_puppet} TPR = {has_government= neutrality has_war= no neutrality > 0.5  }}
+				OR = {TPR = { is_puppet_of = BOH has_autonomy_state = autonomy_integrated_puppet} TPR = {has_government= aristocracy has_war= no aristocracy > 0.5  }}
 		}
 		completion_reward = {
 			annex_country = {target = TPR}
@@ -184,10 +184,10 @@ army_experience= 50
 		prerequisite = { focus = BOH_hold_a_referendum_in_bavaria }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		available = {
-			OR = {BAV = { is_puppet_of = BOH has_autonomy_state = autonomy_integrated_puppet} BAV = {has_government= neutrality  has_war= no neutrality > 0.5  }}
+			OR = {BAV = { is_puppet_of = BOH has_autonomy_state = autonomy_integrated_puppet} BAV = {has_government= aristocracy  has_war= no aristocracy > 0.5  }}
 		}
 		completion_reward = {
 			annex_country = {target = BAV}
@@ -204,11 +204,11 @@ army_experience= 50
 		prerequisite = { focus = BOH_support_the_kaisers_regime }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_timed_idea = { idea = BOH_idea_support_kaiser days = 180 }
-			add_ideas= BOH_the_kaiser
+			
 		}
 	}
 	#Focus for A Constitutional Monarchy
@@ -226,10 +226,11 @@ army_experience= 50
 			factor = 1
 		}
 		completion_reward = {
-			add_popularity= { 
-ideology = democratic 
-popularity = 0.15
-}
+			add_popularity= {
+				ideology = democratic 
+				popularity = 0.15
+			}
+			add_ideas= BOH_the_kaiser
 		}
 	}
 	#Focus for Absolutism
@@ -244,11 +245,11 @@ popularity = 0.15
 		mutually_exclusive = { focus = BOH_less_radical_socialism }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_popularity= { 
-ideology = neutrality
+ideology = aristocracy
 popularity = 0.15
 }
 		}
@@ -283,14 +284,14 @@ elections_allowed = yes
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_absolute_power }
-		available = { has_government = neutrality}
+		available = { has_government = aristocracy}
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 			add_popularity= { 
-				ideology = neutrality 
+				ideology = aristocracy 
 				popularity = 0.05
 			}
 		}
@@ -309,7 +310,7 @@ elections_allowed = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_political_power = 75
@@ -326,7 +327,7 @@ elections_allowed = yes
 		prerequisite = { focus = BOH_less_radical_socialism focus = BOH_absolute_power }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_timed_idea = { idea = BOH_purged_enemies days = 140 }
@@ -343,10 +344,10 @@ elections_allowed = yes
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		available = {
-			has_government= neutrality
+			has_government= aristocracy
 		}
 		completion_reward = {
 			add_political_power= 75
@@ -358,7 +359,7 @@ elections_allowed = yes
 		icon = GFX_goal_generic_army_artillery2
 		x = 49
 		y = 1
-		cost = 5
+		cost = 20
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_appoint_new_military_commanders }
 		search_filters = { FOCUS_FILTER_RESEARCH } 
@@ -374,7 +375,7 @@ category = artillery
 		}
 	}
 
-	#Focus for Improve our Radio Towers
+	#Focus for Improve our Computers
 	focus = {
 		id = BOH_improve_our_radio_towers
 		icon = GFX_focus_research
@@ -385,7 +386,7 @@ category = artillery
 		prerequisite = { focus = BOH_plough_through_the_sudetes }
 		search_filters = { FOCUS_FILTER_RESEARCH } 
 		ai_will_do = {
-			factor = 1
+			factor = 8
 		}
 		completion_reward = {
 			add_tech_bonus= {
@@ -406,7 +407,7 @@ category = electronics
 		prerequisite = { focus = BOH_encourage_immigration }
 		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_ideas= BOH_reformed_economy
@@ -431,7 +432,7 @@ category = electronics
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		ai_will_do = {
-			factor = 1
+			factor = 8
 		}
 		completion_reward = {
 			add_tech_bonus= {
@@ -453,7 +454,7 @@ category = industry
 		prerequisite = { focus = BOH_improve_industrial_tools }
 		search_filters = { FOCUS_FILTER_MANPOWER } 
 		ai_will_do = {
-			factor = 1
+			factor = 8
 		}
 		completion_reward = {
 			add_ideas = { BOH_idea_immigration }
@@ -492,7 +493,7 @@ category = industry
 		prerequisite = { focus = BOH_appoint_an_economical_minister }
 		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		ai_will_do = {
-			factor = 1
+			factor = 8
 		}
 		completion_reward = {
 			add_timed_idea= { 
@@ -656,6 +657,11 @@ days = 365
 					#
 				}
 			}
+			custom_effect_tooltip = BOH_Fuhrer_Ties
+				hidden_effect = {
+					create_faction = "Mitteleuropäisches Komitee"
+					add_to_faction = BAV
+				}
 		}
 	}
 	
@@ -673,11 +679,12 @@ days = 365
 			factor = 1
 		}
 		completion_reward = {
-		custom_effect_tooltip = "We will relinquish our claims on Western Germany."
+		custom_effect_tooltip = BOH_split_claims
 			hidden_effect = { 
 				#Rhine
 				42 = { add_core_of= BAV }
 				51 = { add_core_of= BAV }
+				814 = { add_core_of= BAV }
 				807 = { add_core_of= BAV }
 				808 = { add_core_of= BAV }
 				34 = { add_core_of= BAV }
@@ -706,6 +713,7 @@ days = 365
 				60 = {remove_core_of= BOH   }
 				#Rhine
 				42 = { remove_core_of= BOH }
+				814 = { remove_core_of= BOH }
 				51 = {remove_core_of= BOH   }
 				807 = {remove_core_of= BOH   }
 				808 = {remove_core_of= BOH   }
@@ -728,6 +736,59 @@ days = 365
 			}
 		}
 	}
+	#Focus for Coordinate Our Economies
+	focus = {
+		id = BOH_coordinate_economies
+		icon = GFX_BOH_coordinate_economies_
+		x = 7.5
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_split_our_claims_with_bavaria }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 2000
+			}
+			BAV = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2000
+				}
+			}
+		}
+	}
+	#Focus for Coordinate Our Armies
+	focus = {
+		id = BOH_coordinate_armies
+		icon = GFX_BOH_coordinate_armies
+		x = 9
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = BOH_split_our_claims_with_bavaria }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 2000
+			}
+			BAV = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2000
+				}
+			}
+		}
+	}
+
 
 	#Focus for Gain Influence In Pomerania
 	focus = {
@@ -740,7 +801,7 @@ days = 365
 		prerequisite = { focus = BOH_deal_with_the_neighbors }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			TPR = { country_event= {
@@ -762,7 +823,7 @@ id = ohe.1
 		prerequisite = { focus = BOH_revitalize_our_industry }
 		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		ai_will_do = {
-			factor = 1
+			factor = 8
 		}
 		completion_reward = {
 			69 = {
@@ -798,7 +859,7 @@ add_building_construction = {
 		prerequisite = { focus = BOH_revitalize_our_industry }
 		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		ai_will_do = {
-			factor = 1
+			factor = 8
 		}
 		completion_reward = {
 			random_owned_controlled_state={
@@ -851,7 +912,7 @@ add_building_construction = {
 		prerequisite = { focus = BOH_revitalize_our_industry }
 		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		ai_will_do = {
-			factor = 1
+			factor = 8
 		}
 		completion_reward = {
 			random_owned_controlled_state={
@@ -938,7 +999,7 @@ add_building_construction = {
 				elections_allowed = yes
 			}
 			start_civil_war= {
-			 ideology = neutrality
+			 ideology = aristocracy
 			 size = 0.5
 			}
 		}
@@ -974,6 +1035,7 @@ add_building_construction = {
 				#Rhine
 				42 = { remove_core_of= BOH }
 				51 = {remove_core_of= BOH   }
+				814 = { remove_core_of= BOH   }
 				807 = {remove_core_of= BOH   }
 				808 = {remove_core_of= BOH   }
 				34 = {remove_core_of= BOH   }
@@ -1029,7 +1091,7 @@ add_building_construction = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_political_power= 150
@@ -1047,7 +1109,7 @@ add_building_construction = {
 		prerequisite = { focus = BOH_gain_influence_in_pomerania }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		available = {
 			IF = {
@@ -1057,9 +1119,9 @@ add_building_construction = {
 				}
 			}
 			ELSE_IF = {
-				limit = { has_government = neutrality}
+				limit = { has_government = aristocracy}
 				TPR = { 
-					neutrality > 0.55
+					aristocracy > 0.55
 				}
 			}
 
@@ -1084,7 +1146,7 @@ id = ohe.17
 		prerequisite = { focus = BOH_deal_with_the_neighbors }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			BAV = { country_event= {
@@ -1267,7 +1329,7 @@ producer = BOH
 		prerequisite = { focus = BOH_gain_influence_in_bavaria }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		available = {
 			IF = {
@@ -1277,9 +1339,9 @@ producer = BOH
 				}
 			}
 			ELSE_IF = {
-				limit = { has_government = neutrality}
+				limit = { has_government = aristocracy}
 				BAV = { 
-					neutrality > 0.55
+					aristocracy > 0.55
 				}
 			}
 
@@ -1304,7 +1366,7 @@ id = ohe.11
 		prerequisite = { focus = BOH_stop_the_communists_in_the_west }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			create_wargoal= { 
@@ -1331,7 +1393,7 @@ add_war_support= 0.1
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			create_wargoal= { 
@@ -1353,7 +1415,7 @@ add_war_support= 0.1
 		prerequisite = { focus = BOH_purge_political_conspirators }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			add_political_power= 100  add_stability= 0.05
@@ -1363,11 +1425,11 @@ add_war_support= 0.1
 	focus = {
 		id = BOH_royal_weddings
 		icon = GFX_goal_generic_neutrality_focus
-		x = 14
-		y = 6
+		x = 13
+		y = 5
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = BOH_put_new_officials_in_place }
+		prerequisite = { focus = BOH_an_imperial_empire }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
@@ -1380,20 +1442,61 @@ add_war_support= 0.1
 	focus = {
 		id = BOH_royal_ceremony
 		icon = GFX_goal_generic_neutrality_focus
-		x = 16
-		y = 6
+		x = 17
+		y = 5
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = BOH_put_new_officials_in_place }
+		prerequisite = { focus = BOH_a_democratic_empire }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 			add_political_power= 25
-			country_event = {
-				days = 1
-				id = ohe.61
+			IF = {
+				limit = { ROM = { has_government = aristocracy } }
+				ROM = {
+					country_event = {
+						days = 1
+						id = ohe.61
+					}
+				}
+			}
+			IF = {
+				limit = { HUN = { has_government = aristocracy } }
+				HUN = {
+					country_event = {
+						days = 1
+						id = ohe.61
+					}
+				}
+			}
+			IF = {
+				limit = { AUS = { has_government = aristocracy } }
+				AUS = {
+					country_event = {
+						days = 1
+						id = ohe.61
+					}
+				}
+			}
+			IF = {
+				limit = { YUG = { has_government = aristocracy } }
+				YUG = {
+					country_event = {
+						days = 1
+						id = ohe.61
+					}
+				}
+			}
+			IF = {
+				limit = { BUL = { has_government = aristocracy } }
+				BUL = {
+					country_event = {
+						days = 1
+						id = ohe.61
+					}
+				}
 			}
 		}
 	}
@@ -1408,7 +1511,7 @@ add_war_support= 0.1
 		prerequisite = { focus = BOH_stop_the_communists_in_the_west }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			create_wargoal= { 
@@ -1745,7 +1848,7 @@ add_tech_bonus = {
 		prerequisite = { focus = BOH_appoint_new_military_commanders }
 		search_filters = { FOCUS_FILTER_RESEARCH } 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 		completion_reward = {
 			add_tech_bonus= {
@@ -2208,7 +2311,7 @@ show_ideas_tooltip = erwin_rommel
 		prerequisite = { focus = BOH_appoint_new_military_commanders }
 		search_filters = { FOCUS_FILTER_RESEARCH } 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 		completion_reward = {
 			add_tech_bonus= {
@@ -2238,7 +2341,7 @@ category = motorized_equipment
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH } 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 		completion_reward = {
 			add_ideas= BOH_military_advisors
@@ -2394,7 +2497,7 @@ category = air_doctrine
 		prerequisite = { focus = BOH_invest_in_the_local_population }
 		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		ai_will_do = {
-			factor = 1
+			factor = 8
 		}
 		completion_reward = {
 			random_owned_controlled_state={
@@ -2478,7 +2581,7 @@ random_owned_controlled_state={
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 		completion_reward = {
 			create_corps_commander= { 
@@ -2512,7 +2615,7 @@ random_owned_controlled_state={
 		prerequisite = { focus = BOH_take_switzerland }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		completion_reward = {
 			create_wargoal= { 
@@ -2790,6 +2893,7 @@ target = ITA
 		completion_reward = {
 			remove_ideas = BOH_reopening_our_economy 
 			add_ideas = BOH_fully_recovered
+			add_ideas = limited_conscription
 		}
 	}
 
@@ -3676,7 +3780,7 @@ id = ohe.48
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			TRC = {country_event= {
@@ -3698,7 +3802,7 @@ id = ohe.2
 		prerequisite = { focus = BOH_retake_the_industrial_heartland }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			AUS = {country_event= {
@@ -3722,7 +3826,7 @@ id = ohe.9
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		bypass = {
 			HOL={
@@ -3749,7 +3853,7 @@ id = ohe.9
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		ai_will_do = {
-			factor = 1
+			factor = 8
 		}
 		completion_reward = {
 			country_event= {
@@ -3773,7 +3877,7 @@ id = ohe.12
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		completion_reward = {
 			create_wargoal= { 
@@ -3794,7 +3898,7 @@ target = SWI
 		prerequisite = { focus = BOH_fund_the_prague_arms_company }
 		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		ai_will_do = {
-			factor = 1
+			factor = 8
 		}
 		completion_reward = {
 						random_owned_controlled_state={
@@ -3906,7 +4010,7 @@ target = SWI
 		x = 41
 		y = 5
 		cost = 5
-		available = { has_government = neutrality }
+		available = { has_government = aristocracy }
 		available_if_capitulated = yes
 		prerequisite = { focus = BOH_increase_mountaineer_investment }
 		search_filters = { FOCUS_FILTER_ANNEXATION } 

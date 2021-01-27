@@ -31,13 +31,13 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = aristocracy
 	last_election = "1933.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = { 
-	neutrality = 77
+	aristocracy = 77
 	fascism = 13
 	communism = 4
 	democratic = 6
@@ -49,7 +49,7 @@ create_country_leader = {
 	desc = "POLITICS_FRIEDRICH_DESC"
 	picture = "gfx/leaders/UBD/friedrich.dds"
 	expire = "2011.1.1"
-	ideology = despotism
+	ideology = vassal_state
 	traits = {
 
 	}
