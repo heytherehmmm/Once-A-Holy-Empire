@@ -794,10 +794,9 @@ add_command_power= 50
 		ai_will_do = {
 			factor = 1
 		}
-		completion_reward = {
+		completion_reward = { 
 			add_stability= 0.05  add_political_power= 50
 			custom_effect_tooltip = TRC_rndc_add_10
-			custom_effect_tooltip = TRC_rcc_remove_10
 			hidden_effect = {
 				set_temp_variable = { temp_member = 2 }
 				set_temp_variable = { temp_seats = 10 }
@@ -1303,7 +1302,7 @@ add_command_power= 50
 			factor = 1
 		}
 	}
-	#Focus for Crush them!!
+	#Focus for Crush them!
 	focus = {
 		id = TRC_crush_then
 		icon = GFX_TRC_crush_then-60494
