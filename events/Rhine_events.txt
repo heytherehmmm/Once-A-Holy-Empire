@@ -54,12 +54,12 @@ country_event = {
 	option = {
 		trigger = {
 			check_variable = {
-				var = parliament_seat_array^0 #RCC
-				value = parliament_seat_array^1 #RNDC
+				var = parliament_seat_array^1 #RCC
+				value = parliament_seat_array^0 #RNDC
 				compare = greater_than
 			}
 			check_variable = {
-				var = parliament_seat_array^0 #RCC
+				var = parliament_seat_array^1 #RCC
 				value = parliament_seat_array^2 #Rheinmarshals Partei
 				compare = greater_than
 			}
@@ -72,12 +72,12 @@ country_event = {
 	option = {
 		trigger = { 
 			check_variable = {
-				var = parliament_seat_array^1 #RNDC
-				value = parliament_seat_array^0 #RCC
+				var = parliament_seat_array^0 #RNDC
+				value = parliament_seat_array^1 #RCC
 				compare = greater_than
 			}
 			check_variable = {
-				var = parliament_seat_array^1 #RNDC
+				var = parliament_seat_array^0 #RNDC
 				value = parliament_seat_array^2 #Rheinmarshals Partei
 				compare = greater_than
 			}
@@ -148,11 +148,8 @@ country_event = {
 			
 		hidden_effect = {
 			set_temp_variable = { temp_member = 3 }
-				set_temp_variable = { temp_seats = 30 }
-				modify_parliament_seat = yes
-			remove_ideas = TRC_idea_rheinparlament
-			add_ideas = TRC_idea_rheinparlament_rheinmarshal
-		
+			set_temp_variable = { temp_seats = 30 }
+			modify_parliament_seat = yes
 		}
 	}
 }
@@ -167,11 +164,11 @@ country_event = {
 	option = { 
 		name = trc.7.a
 		ai_chance = { factor = 1}
-			
+		custom_effect_tooltip = TRC_rcc_add_20 `
 		hidden_effect = {
 			set_temp_variable = { temp_member = 1 }
-				set_temp_variable = { temp_seats = 30 }
-				modify_parliament_seat = yes
+			set_temp_variable = { temp_seats = 20 }
+			modify_parliament_seat = yes
 		}
 	}
 }
@@ -434,12 +431,14 @@ country_event = {
 	desc = trc.20.desc #Event description (Add in localization)
 	picture = report_event_gre_diplomacy #Event picture
 	is_triggered_only = yes # If yes, it won't fire all the time
-	option = {
-		name = trc.20.a
-		ai_chance = { factor = 1}
+	immediate = {
+		country_event= {
+			days = 10 
+			id = trc.22
+		}
 	}
 	option = {
-		name = trc.20.b
+		name = trc.20.a
 		ai_chance = { factor = 1}
 	}
 }
@@ -454,6 +453,13 @@ country_event = {
 	option = {
 		name = trc.21.a
 		ai_chance = { factor = 1}
+		custom_effect_tooltip = TRC_rheinmarshal_add_30 
+			
+		hidden_effect = {
+			set_temp_variable = { temp_member = 3 }
+			set_temp_variable = { temp_seats = 30 }
+			modify_parliament_seat = yes
+		}
 	}
 }
 
@@ -462,8 +468,11 @@ country_event = {
 	id = trc.22 #Event number
 	title = trc.22.title #Event title (Add in localization)
 	desc = trc.22.desc #Event description (Add in localization)
-	picture = report_event_gre_diplomacy #Event picture
+	picture = GFX_report_event_generic_riot #Event picture
 	is_triggered_only = yes # If yes, it won't fire all the time
+	immediate = {
+		news_event = { id = trc.23 days = 0 }
+	}
 	option = {
 		name = trc.22.a
 		ai_chance = { factor = 3}
@@ -475,5 +484,30 @@ country_event = {
 	option = {
 		name = trc.22.b
 		ai_chance = { factor = 1}
+	}
+}
+
+##News Event: Riotters break into the Rheinparlament
+news_event = {
+	id = trc.23
+	title = trc.23.title
+	desc = trc.23.desc
+	picture = GFX_news_event_generic_riot
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = trc.23.a
+		ai_chance = { factor = 1}
+	}
+	option = {
+		name = trc.23.b
+		ai_chance = { factor = 1}
+		FROM = {
+		add_opinion_modifier = {
+			target = TRC
+			modifier = protest_action
+		}
+		}
+		
 	}
 }
