@@ -1295,7 +1295,7 @@ add_command_power= 50
 		y = 5
 		cost = 4
 		available_if_capitulated = yes
-		prerequisite = { focus = TRC_the_new_prussian_standarts }
+		prerequisite = { focus = TRC_better_artillery }
 		completion_reward = {
 		add_ideas = { TRC_New_Tactics }
 		}
