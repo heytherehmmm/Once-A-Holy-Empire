@@ -3,10 +3,12 @@
 oob = "ALA_1936"
 
 set_research_slots = 2
+
 add_ideas = {
 		#laws
 	ALA_russian_prisoners
 }
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -47,6 +49,7 @@ if = {
 		transport = 1
 	}
 }
+
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
@@ -65,6 +68,7 @@ if = {
 
 set_popularities = {	democratic = 40	aristocracy = 55	communism = 3	fascism = 2
 }
+
 set_politics = {
 	ruling_party = aristocracy
 	last_election = "1933.7.1"
@@ -72,5 +76,13 @@ set_politics = {
 	elections_allowed = no
 }
 
-
-
+create_country_leader = {
+	name = "Alaska Man"
+	desc = "POLITICS_HERGT_DESC"
+	picture = "gfx/leaders/ALA/Kolchak.dds"
+	expire = "2011.6.4"
+	ideology = vassal_state
+	traits = {
+		
+	}
+}
