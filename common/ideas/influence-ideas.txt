@@ -75,7 +75,7 @@ ideas = {
 				always= yes
 			}
 			modifier = {
-				neutrality_drift = 0.2
+				aristocracy_drift = 0.2
 			}
 		}
 		democratic_kaiser_influence = {

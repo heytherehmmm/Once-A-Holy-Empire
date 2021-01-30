@@ -77,6 +77,17 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Oskar Hergt"
+	desc = "POLITICS_HERGT_DESC"
+	picture = "gfx/leaders/BOH/Hergt.dds"
+	expire = "2011.6.4"
+	ideology = conservatism
+	traits = {
+		
+	}
+}
+
 
 create_field_marshal = {
 	name = "Otto von Hapsburg"

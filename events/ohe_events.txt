@@ -17,7 +17,7 @@ country_event = {
 		}
 	}
 	option = {
-		trigger = { BOH = { has_government = neutrality } }
+		trigger = { BOH = { has_government = aristocracy } }
 		name = ohe.1.b
 		ai_chance = { factor = 1}
 		add_timed_idea= { 
