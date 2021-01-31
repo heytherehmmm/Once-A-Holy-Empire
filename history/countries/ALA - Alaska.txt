@@ -77,7 +77,7 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Alaska Man"
+	name = "Alexander Kolchak"
 	desc = "POLITICS_HERGT_DESC"
 	picture = "gfx/leaders/ALA/Kolchak.dds"
 	expire = "2011.6.4"
