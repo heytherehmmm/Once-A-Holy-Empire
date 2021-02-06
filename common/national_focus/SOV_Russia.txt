@@ -152,13 +152,13 @@ add_political_power = 50
 		}
 	}
 	
-	#Focus for Governorate Crisis of 1937
+	#Focus for The Governorate Autonomy Act
 	focus = {
-		id = SOV_governate_crisis_of_1937
-		icon = GFX_SOV_governorate_crisis
+		id = SOV_governate_autonomy_act
+		icon = GFX_SOV_governate_autonomy_act
 		x = 2
-		y = 3
-		cost = 1
+		y = 2
+		cost = 5
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
@@ -176,8 +176,35 @@ add_political_power = 50
 		prerequisite = {
 			focus = SOV_visit_riga
 		}
+		completion_reward = {
+			country_event= {
+				days = 1 
+				id = rus.15
+			}
+		}
+	}
+	
+	#Focus for Governorate Crisis of 1937
+	focus = {
+		id = SOV_governate_crisis_of_1937
+		icon = GFX_SOV_governorate_crisis
+		x = 2
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = SOV_governate_autonomy_act
+		}
 		available = {
-			date > 1937.2.15
+			OR = {
+				has_country_flag = SOV_failed_to_reform_governorate_system
+				has_country_flag = SOV_reformed_governorate_system
+			}
+			
 		}
 		completion_reward = {
 			country_event= {

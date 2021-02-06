@@ -50,6 +50,7 @@ SOV_governorate_crisis_decisions = {
 		}
 		visible = {
 			tag = SOV
+			has_country_flag = SOV_can_tour_ukraine
 		}
 		
 		remove_effect = {
@@ -57,117 +58,6 @@ SOV_governorate_crisis_decisions = {
 				id = rus.21
 			}
 			set_country_flag = SOV_completed_tour_of_kiev
-		}
-	}
-	SOV_ukrainian_civ_administrations = {
-
-		icon = generic_ignite_civil_war
-
-		priority = 94
-		fire_only_once = yes
-		modifier = {
-			political_power_factor= -0.25
-		}
-		days_remove = 25
-		cost = 10
-
-		available = {
-			has_country_flag = SOV_completed_tour_of_kiev
-		}
-		visible = {
-			OR = {
-				has_country_flag = SOV_completed_tour_of_kiev
-				has_decision = SOV_tour_of_kiev
-			}
-		}
-		
-		remove_effect = {
-			custom_effect_tooltip = SOV_ukraine_crisis_remove_10
-			add_to_variable = {
-				var = ukraine_crisis_level
-				value = -10
-			}
-		}
-	}
-	
-	SOV_ukrainian_infrastructure_projects = {
-
-		icon = generic_ignite_civil_war
-
-		priority = 94
-		fire_only_once = yes
-		modifier = {
-			production_speed_buildings_factor= -0.1
-			political_power_factor= -0.05
-			consumer_goods_factor=0.1
-		}
-		days_remove = 50
-		cost = 10
-
-		available = {
-			has_country_flag = SOV_completed_tour_of_kiev
-		}
-		visible = {
-			OR = {
-				has_country_flag = SOV_completed_tour_of_kiev
-				has_decision = SOV_tour_of_kiev
-			}
-		}
-		
-		remove_effect = {
-			custom_effect_tooltip = SOV_ukraine_crisis_remove_30
-			add_to_variable = {
-				var = ukraine_crisis_level
-				value = -30
-			}
-			202 = {
-				add_building_construction = { 
-					 type = infrastructure          
-					 level = 2
-					 instant_build = yes}
-			}
-			226 = {
-				add_building_construction = { 
-					 type = infrastructure          
-					 level = 2
-					 instant_build = yes}
-			}
-			192 = {
-				add_building_construction = { 
-					 type = infrastructure          
-					 level = 2
-					 instant_build = yes}
-			}
-		}
-	}
-	
-	SOV_ukrainian_schools = {
-
-		icon = generic_ignite_civil_war
-
-		priority = 94
-		fire_only_once = yes
-		modifier = {
-			political_power_factor= -0.05
-		}
-		days_remove = 25
-		cost = 10
-
-		available = {
-			has_country_flag = SOV_completed_tour_of_kiev
-		}
-		visible = {
-			OR = {
-				has_country_flag = SOV_completed_tour_of_kiev
-				has_decision = SOV_tour_of_kiev
-			}
-		}
-		remove_effect = {
-			custom_effect_tooltip = SOV_ukraine_crisis_remove_10
-			add_to_variable = {
-				var = ukraine_crisis_level
-				value = -10
-			}
 		}
 	}
 	
@@ -191,6 +81,7 @@ SOV_governorate_crisis_decisions = {
 		}
 		visible = {
 			tag = SOV
+			has_country_flag = SOV_can_tour_baltic
 		}
 		
 		remove_effect = {
@@ -223,6 +114,7 @@ SOV_governorate_crisis_decisions = {
 		}
 		visible = {
 			tag = SOV
+			has_country_flag = SOV_can_tour_baltic
 		}
 		
 		remove_effect = {
@@ -264,76 +156,6 @@ SOV_governorate_crisis_decisions = {
 		}
 	}
 	
-	SOV_improve_baku_oil_fields = {
-
-		icon = generic_ignite_civil_war
-
-		priority = 68
-		fire_only_once = yes
-		modifier = {
-			production_speed_buildings_factor= -0.1
-			political_power_factor= -0.15
-			consumer_goods_factor=0.1
-		}
-		days_remove = 50
-		cost = 10
-
-		available = {
-			has_country_flag = SOV_completed_tour_of_baku
-		}
-		visible = {
-			OR = {
-				has_country_flag = SOV_completed_tour_of_baku
-				has_decision = SOV_tour_of_baku
-			}
-		}
-		
-		remove_effect = {
-			229 = {
-				add_building_construction = { 
-					 type = infrastructure
-					 level = 2
-					 instant_build = yes
-				}
-				add_resource = {
-					type = oil
-					amount = 32
-				}
-			}
-			
-		}
-	}
-	
-	SOV_transcaucasian_civ_administrations = {
-
-		icon = generic_ignite_civil_war
-
-		priority = 67
-		fire_only_once = yes
-		modifier = {
-			political_power_factor= -0.05
-		}
-		days_remove = 25
-		cost = 10
-
-		available = {
-			has_country_flag = SOV_completed_tour_of_baku
-		}
-		visible = {
-			OR = {
-				has_country_flag = SOV_completed_tour_of_baku
-				has_decision = SOV_tour_of_baku
-			}
-		}
-		remove_effect = {
-			custom_effect_tooltip = SOV_transcaucasia_crisis_remove_15
-			add_to_variable = {
-				var = transcaucasia_crisis_level
-				value = -15
-			}
-		}
-	}
-	
 	SOV_tour_of_minsk = {
 
 		icon = generic_ignite_civil_war
@@ -355,6 +177,7 @@ SOV_governorate_crisis_decisions = {
 		}
 		visible = {
 			tag = SOV
+			has_country_flag = SOV_can_tour_baltic
 		}
 		
 		remove_effect = {
@@ -364,6 +187,7 @@ SOV_governorate_crisis_decisions = {
 			set_country_flag = SOV_completed_tour_of_minsk
 		}
 	}
+	
 	SOV_governorate_crisis_looming = {
 
 		icon = generic_ignite_civil_war
@@ -376,7 +200,7 @@ SOV_governorate_crisis_decisions = {
 		fire_only_once = yes
 
 		activation = {
-			date > 1936.1.2
+			date > 1935.1.1
 		} 	 
 
 		visible = {
@@ -417,6 +241,7 @@ SOV_governorate_crisis_decisions = {
 		timeout_effect = {
 			custom_effect_tooltip = "This won't be very good..."
 			hidden_effect = {
+				set_country_flag = SOV_failed_to_reform_governorate_system
 				country_event = {
 					id = rus.25
 				}
@@ -424,6 +249,7 @@ SOV_governorate_crisis_decisions = {
 		}
 		complete_effect = {                    # What happens when we activate the mission i.e. mission success?
             custom_effect_tooltip = "We've successfully reformed the Governorate System!"
+			set_country_flag = SOV_reformed_governorate_system
         }
 	}
 }

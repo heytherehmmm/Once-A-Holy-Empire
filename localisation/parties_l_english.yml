@@ -98,6 +98,13 @@
  FRA_democratic_party:0 "Parti Radical"
  FRA_fascism_party:0 "Mouvement Franciste"
  SOV_aristocracy_party:0 "Imperial Russian Nobility"
+ 
+ AZR_russia_party:0 "Transcaucasian Administration"
+ UKR_russia_party:0 "Ukranian Administration"
+ BLR_russia_party:0 "Belarusian Administration"
+ UBD_russia_party:0 "Baltic Administration"
+ ALA_russia_party:0 "Alaskan Administration"
+ 
  SOV_communism_party:0 "All-Union Communist Party"
  SOV_democratic_party:0 "Trudoviks"
  SOV_fascism_party:0 "RFP"
@@ -571,9 +578,9 @@
  KAZ_democratic_party:0 "Alash Party"
  KAZ_communism_party:0 "Communist Party of Kazakhstan"
  KAZ_neutrality_party:0 "Royalists"
- AZR_fascism_party:0 "Fire Horse Clique"
- AZR_democratic_party:0 "Müsavat"
- AZR_communism_party:0 "Communist Party of Azerbaijan"
+ AZR_fascism_party:0 "Fire Horse Front"
+ AZR_democratic_party:0 "Müsavat Partiyası"
+ AZR_communism_party:0 "Transcaucasian Communist Party"
  AZR_neutrality_party:0 "Ittihad"
  ARM_fascism_party:0 "Armenian Legion"
  ARM_democratic_party:0 "Armenian Revolutionary Federation" #or ARF 

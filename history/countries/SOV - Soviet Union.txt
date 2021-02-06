@@ -30,22 +30,50 @@ set_autonomy = {
 	freedom_level = 0.2
 }
 
+
+
+
 # COUNTRY NAMES & COLORS
 set_cosmetic_tag = SOV_russia
 AZR = {
 	set_cosmetic_tag = AZR_russia
+	set_party_name = { 
+		ideology = aristocracy 
+		long_name = AZR_russia_party
+		name = AZR_russia_party
+	}
 }
 BLR = {
 	set_cosmetic_tag = BLR_russia
+	set_party_name = { 
+		ideology = aristocracy 
+		long_name = BLR_russia_party
+		name = BLR_russia_party
+	}
 }
 UKR = {
 	set_cosmetic_tag = UKR_russia
+	set_party_name = { 
+		ideology = aristocracy 
+		long_name = UKR_russia_party
+		name = UKR_russia_party
+	}
 }
 UBD = {
 	set_cosmetic_tag = UBD_russia
+	set_party_name = { 
+		ideology = aristocracy 
+		long_name = UBD_russia_party
+		name = UBD_russia_party
+	}
 }
 ALA = {
 	set_cosmetic_tag = ALA_russia
+	set_party_name = { 
+		ideology = aristocracy 
+		long_name = ALA_russia_party
+		name = ALA_russia_party
+	}
 }
 #RUSSIA STARTING TECH
 set_research_slots = 3
@@ -139,7 +167,7 @@ set_variable = {
 }
 set_variable = {
 	var = transcaucasia_crisis_level
-	value = 30
+	value = 20
 }
 
 # RUSSIAN STARTING IDEAS

@@ -118,15 +118,44 @@ country_event = {
 	}
 }
 
-
-
-
-
-
-
-
-
-
+##Event: Status of the Russian Empire in 1936
+country_event = {
+	id = rus.15
+	title = rus.15.title
+	desc = rus.15.desc
+	picture = GFX_report_event_soviet_purge_trial
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = rus.15.a	
+		ai_chance = { factor = 1}
+		add_political_power = -300
+		custom_effect_tooltip = SOV_ukraine_crisis_remove_30
+		add_to_variable = {
+			var = ukraine_crisis_level
+			value = -30
+		}
+		custom_effect_tooltip = SOV_baltic_crisis_remove_30
+		add_to_variable = {
+			var = baltic_crisis_level
+			value = -30 
+		}
+		custom_effect_tooltip = SOV_transcaucasia_crisis_remove_30
+		add_to_variable = {
+			var = transcaucasia_crisis_level
+			value = -30
+		}
+		custom_effect_tooltip = SOV_belarus_crisis_remove_10
+		add_to_variable = {
+			var = belarus_crisis_level
+			value = -10
+		}
+	}
+	option = { 
+		name = rus.15.b
+		ai_chance = { factor = 1}
+	}
+}
 
 ##Event: Tour of Kiev
 country_event = {
@@ -135,28 +164,150 @@ country_event = {
 	desc = rus.21.desc
 	picture = GFX_report_event_king_speech
 	is_triggered_only = yes
-	option = { #
+	option = { #Kirill agrees to take a tour of the city.
 		name = rus.21.a
 		ai_chance = { factor = 1}
-		random_list = {
-			85 = {
-				custom_effect_tooltip = "people gather in the streets to see the Tsar!"
-				add_political_power = 25
-			}
-			15 = { custom_effect_tooltip = "Kirill is assassinated"  hidden_effect = { news_event = { id = rus.40 days = 2 }  } }
-		}
 		custom_effect_tooltip = SOV_ukraine_crisis_remove_10
 		add_to_variable = {
 			var = ukraine_crisis_level
 			value = -10
 		}
 	}
-	option = { #
+	option = { #Kirill will take the tour, and he will give more autonomy to the Kiev Administration.
 		name = rus.21.b
+		ai_chance = { factor = 2}
+		custom_effect_tooltip = SOV_ukraine_crisis_remove_30
+		add_to_variable = {
+			var = ukraine_crisis_level
+			value = -30
+		}
+		UKR = {
+			add_autonomy_ratio = {
+				value = 0.2
+				localization = UKR_more_autonomy
+			}
+		}
+		add_political_power = -50
+	}
+	option = { #Kirill doesn't attend.
+		name = rus.21.c
 		ai_chance = { factor = 2}
 		custom_effect_tooltip = SOV_ukraine_crisis_10
 		add_to_variable = {
 			var = ukraine_crisis_level
+			value = 10
+		}
+	}
+}
+
+##Event: Tour of Riga
+country_event = {
+	id = rus.22 
+	title = rus.22.title
+	desc = rus.22.desc
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+	option = { #Kirill agrees to take a tour of the city.
+		name = rus.22.a
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_baltic_crisis_remove_10
+		add_to_variable = {
+			var = baltic_crisis_level
+			value = -10
+		}
+	}
+	option = { #Kirill will take the tour, and he will give more autonomy to the Baltic Administration.
+		name = rus.22.b
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_baltic_crisis_remove_15
+		add_to_variable = {
+			var = baltic_crisis_level
+			value = -15
+		}
+		UBD = {
+			add_autonomy_ratio = {
+				value = 0.2
+				localization = UBD_more_autonomy
+			}
+		}
+		add_political_power = -50
+	}
+	option = { #Kirill doesn't attend.
+		name = rus.22.c
+		ai_chance = { factor = 2}
+		custom_effect_tooltip = SOV_baltic_crisis_10
+		add_to_variable = {
+			var = baltic_crisis_level
+			value = 10
+		}
+	}
+}
+
+##Event: Tour of Baku
+country_event = {
+	id = rus.23
+	title = rus.23.title
+	desc = rus.23.desc
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+	option = { #Kirill doesn't attend due to a mild hangover.
+		name = rus.23.a
+		ai_chance = { factor = 1}
+		random_list = {
+			10 = {
+			}
+			90 = { news_event = { id = rus.40 days = 2 } } 
+		}
+	}
+	option = { #Kirill doesn't attend due to a mild hangover.
+		name = rus.23.b
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_transcaucasia_crisis_10
+		add_to_variable = {
+			var = transcaucasia_crisis_level
+			value = 10
+		}
+	}
+}
+
+##Event: Tour of Minsk
+country_event = {
+	id = rus.24 
+	title = rus.24.title
+	desc = rus.24.desc
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+	option = { #Kirill agrees to take a tour of the city.
+		name = rus.24.a
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_belarus_crisis_remove_10
+		add_to_variable = {
+			var = belarus_crisis_level
+			value = -10
+		}
+	}
+	option = { #Kirill will take the tour, and he will give more autonomy to the Belarusian Administration.
+		name = rus.24.b
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = SOV_belarus_crisis_remove_15
+		add_to_variable = {
+			var = belarus_crisis_level
+			value = -15
+		}
+		BLR = {
+			add_autonomy_ratio = {
+				value = 0.2
+				localization = BLR_more_autonomy
+			}
+		}
+		add_political_power = -50
+	}
+	option = { #Kirill doesn't attend.
+		name = rus.24.c
+		ai_chance = { factor = 2}
+		custom_effect_tooltip = SOV_belarus_crisis_10
+		add_to_variable = { 
+			var = belarus_crisis_level
 			value = 10
 		}
 	}
@@ -174,7 +325,7 @@ country_event = {
 		tag = SOV
 		date > 1936.1.1
 	}
-	option = { 
+	option = {  
 		name = rus.30.a	
 		ai_chance = { factor = 1}
 	}
@@ -187,8 +338,8 @@ country_event = {
 	desc = rus.31.desc
 	picture = GFX_doesnt_matter
 	hidden = yes
-	is_triggered_only = no
-	fire_only_once = no
+	is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
 		tag = SOV
 		
@@ -453,6 +604,10 @@ news_event = {
 	
 	option = {
 		name = rus.40.a
+		#TO DO: governorates rebel and soviets declare war
+	}
+	option = {
+		name = rus.40.b
 		#TO DO: governorates rebel and soviets declare war
 	}
 	
