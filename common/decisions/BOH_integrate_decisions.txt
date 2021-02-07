@@ -24,11 +24,12 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 10
+		cost = 0
 
 		remove_effect = {
 			add_state_core = 50
 			add_state_core = 55
+			add_manpower = 50000
 		}
 
 		ai_will_do = {
@@ -61,13 +62,14 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 10
+		cost = 0
 
 		remove_effect = {
 			add_state_core = 85
 			add_state_core = 5
 			add_state_core = 188
 			add_state_core = 763
+			add_manpower = 100000
 		}
 
 		ai_will_do = {
@@ -100,13 +102,14 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 10
+		cost = 0
 
 		remove_effect = {
 			add_state_core = 60
 			add_state_core = 54
 			add_state_core = 52
 			add_state_core = 53
+			add_manpower = 100000
 		}
 
 		ai_will_do = {
@@ -142,7 +145,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 10
+		cost = 0
 
 		remove_effect = {
 			add_state_core = 4
@@ -152,6 +155,7 @@ BOH_integration_decisions = {
 			add_state_core = 160
 			add_state_core = 736
 			add_state_core = 102
+			add_manpower = 100000
 		}
 
 		ai_will_do = {
@@ -185,13 +189,15 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 10
+		cost = 0
 
 		remove_effect = {
 			add_state_core = 57
+			add_state_core = 56
 			add_state_core = 59
 			add_state_core = 58
 			add_state_core = 61
+			add_manpower = 75000
 		}
 
 		ai_will_do = {
@@ -206,6 +212,7 @@ BOH_integration_decisions = {
 			controls_state = 42
 			controls_state = 51
 			controls_state = 807
+			controls_state = 813
 			controls_state = 808
 			controls_state = 34
 			controls_state = 8
@@ -227,16 +234,18 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 10
+		cost = 0
 
 		remove_effect = {
 			add_state_core = 42
 			add_state_core = 51
 			add_state_core = 807
 			add_state_core = 808
+			add_state_core = 813
 			add_state_core = 34
 			add_state_core = 8
 			add_state_core = 6
+			add_manpower = 100000
 		}
 
 		ai_will_do = {
@@ -269,7 +278,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 10
+		cost = 0
 
 		remove_effect = {
 			add_state_core = 159
@@ -307,7 +316,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 10
+		cost = 0
 
 		remove_effect = {
 			add_state_core = 735
@@ -343,7 +352,7 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 10
+		cost = 0
 
 		remove_effect = {
 			add_state_core = 28
@@ -378,11 +387,45 @@ BOH_integration_decisions = {
 		days_remove = 90
 		
 
-		cost = 10
+		cost = 0
 
 		remove_effect = {
 			add_state_core = 151
 			add_state_core = 3
+			add_manpower = 25000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	BOH_integrate_armies = {
+
+		icon = generic_manpower_bonus
+	
+		available = {
+			has_completed_focus = BOH_com_reunited
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		modifier = {
+			stability_factor = -0.05
+			consumer_goods_factor = 0.1
+			industrial_capacity_factory = -0.1
+		}
+
+		days_remove = 90
+		
+
+		cost = 0
+
+		remove_effect = {
+			add_ideas = BOH_integrated_armies
 		}
 
 		ai_will_do = {

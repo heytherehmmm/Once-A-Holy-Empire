@@ -3243,6 +3243,7 @@ target = ITA
 				controls_state = 6
 				controls_state = 34
 				controls_state = 807
+				controls_state = 813
 				controls_state = 8
 				controls_state = 42
 				#German Minors
@@ -3273,11 +3274,12 @@ target = ITA
 			}
 		}
 		completion_reward = { 
-		remove_ideas = BOH_a_fragmented_empire 
-		country_event= {
+			remove_ideas = BOH_a_fragmented_empire 
+			country_event= {
 				days = 0
 				id = ohe.37
-				} }
+			} 
+		}
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION } 
 		ai_will_do = {
@@ -3348,10 +3350,7 @@ target = ITA
 		completion_reward = {
 			#custom_effect_tooltip = BOH_proclaim_holy_roman_federation2
 			set_cosmetic_tag = BOH_holy_roman_federation
-			country_event= {
-				days = 1
-				id = ohe.38 custom_effect_tooltip = "For each warlord we own, we will release as a puppet."
-			}
+			
 		}
 		
 	}

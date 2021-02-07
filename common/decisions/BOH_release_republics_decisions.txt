@@ -23,12 +23,51 @@ BOH_release_republics_decisions = {
 		days_remove = 10
 
 
-		cost = 5
+		cost = 0
 
 		remove_effect = {
 			release = BAD
 			puppet = BAD
 			BAD = {load_oob = "BAD_1936" set_cosmetic_tag = BAD_holy_roman_federation}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+	BOH_release_rwr_brandenburg = {
+
+		icon = GFX_baden
+
+		available = {
+			controls_state = 64
+			controls_state = 68
+			controls_state = 86
+			controls_state = 63
+			controls_state = 62
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		modifier = {
+			stability_factor = -0.05
+			consumer_goods_factor = 0.1
+			industrial_capacity_factory = -0.1
+		}
+
+		days_remove = 10
+
+
+		cost = 0
+
+		remove_effect = {
+			release = TPR
+			puppet = TPR
+			TPR = {load_oob = "TPR_1936" set_cosmetic_tag = TPR_holy_roman_federation}
 		}
 
 		ai_will_do = {
@@ -64,7 +103,7 @@ BOH_release_republics_decisions = {
 		days_remove = 10
 		
 
-		cost = 5
+		cost = 0
 
 		remove_effect = {
 			release = AUS
@@ -102,7 +141,7 @@ BOH_release_republics_decisions = {
 		days_remove = 10
 
 
-		cost = 5
+		cost = 0
 
 		remove_effect = {
 			release = PRS
@@ -139,7 +178,7 @@ BOH_release_republics_decisions = {
 
 		days_remove = 10
 
-		cost = 5
+		cost = 0
 
 		remove_effect = {
 			release = BAV
@@ -177,7 +216,7 @@ BOH_release_republics_decisions = {
 
 		days_remove = 10
 
-		cost = 5
+		cost = 0
 
 		remove_effect = {
 			release = NTE
@@ -218,7 +257,7 @@ BOH_release_republics_decisions = {
 		days_remove = 10
 
 
-		cost = 5
+		cost = 0
 
 		remove_effect = {
 			release = TRC

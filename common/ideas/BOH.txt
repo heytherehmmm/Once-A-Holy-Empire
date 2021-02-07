@@ -75,6 +75,12 @@ ideas = {
 				production_speed_coastal_bunker_factor = 0.2
 			}
 		}
+		BOH_integrated_armies = {
+			picture = generic_manpower_bonus
+			modifier = {
+				conscription = 0.015
+			}
+		}
 		
 		BOH_the_kaiser = {
 			picture = BOH_the_kaiser-61704
