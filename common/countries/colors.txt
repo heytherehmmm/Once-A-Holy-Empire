@@ -11,6 +11,12 @@ UKA = {
 	color = rgb { 102 72 45 }
 	color_ui = rgb { 102 72 45 }
 }
+
+SSR = {
+    color = rgb { 163 63 63 }
+    color_ui = rgb { 163 63 63 }
+}
+
 LOU = {
 	color = rgb { 142 155 191 }
 	color_ui = rgb { 188 203 245 }

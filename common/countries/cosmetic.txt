@@ -318,14 +318,17 @@ USA_CSA = {
 	color_ui = rgb { 186 205 219 }
 }
 
-SOV_russia = {
-    color = rgb { 72 143 68 }
-    color_ui = rgb { 72 143 68 }
-}
 AZR_transcaucasiansfsr = {
     color = rgb { 133 29 29 }
     color_ui = rgb { 133 29 29 }
 }
+
+
+SOV_russia = {
+    color = rgb { 72 143 68 }
+    color_ui = rgb { 72 143 68 }
+}
+
 UKR_russia = {
     color = rgb { 72 143 68 }
     color_ui = rgb { 72 143 68 }
