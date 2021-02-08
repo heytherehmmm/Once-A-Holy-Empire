@@ -7,6 +7,10 @@ HUN = {
 	color = rgb { 255 221 153 }
 	color_ui = rgb { 224 228 160 }
 }
+UKA = {
+	color = rgb { 102 72 45 }
+	color_ui = rgb { 102 72 45 }
+}
 LOU = {
 	color = rgb { 142 155 191 }
 	color_ui = rgb { 188 203 245 }

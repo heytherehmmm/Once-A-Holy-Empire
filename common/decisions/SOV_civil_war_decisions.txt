@@ -241,10 +241,7 @@ SOV_governorate_crisis_decisions = {
 		timeout_effect = {
 			custom_effect_tooltip = "This won't be very good..."
 			hidden_effect = {
-				set_country_flag = SOV_failed_to_reform_governorate_system
-				country_event = {
-					id = rus.25
-				}
+				#To be finished 
 			}
 		}
 		complete_effect = {                    # What happens when we activate the mission i.e. mission success?

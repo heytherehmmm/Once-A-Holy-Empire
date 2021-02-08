@@ -11,6 +11,15 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			tag = SOV
+			has_country_leader = {
+				name = "Power Vacuum"
+			}
+		}
+		localization_key = SOV_FALLEN_GOV_TITLE
+	}
+	text = {
+		trigger = {
 			original_tag = ENG
 			has_government = democratic
 		}
@@ -306,6 +315,15 @@ defined_text = {
 			has_government = fascism
 		}
 		localization_key = "BOH_CHANCELLOR_DESC"
+	}
+	text = {
+		trigger = {
+			tag = SOV
+			has_country_leader = {
+				name = "Power Vacuum"
+			}
+		}
+		localization_key = "SOV_FALLEN_GOV_DESC"
 	}
 	text = {
 		trigger = {

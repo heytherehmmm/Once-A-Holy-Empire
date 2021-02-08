@@ -1,0 +1,345 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Riflemen"			# Rifle Division
+	division_names_group = UKA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		#recon = { x = 0 y = 0 } 		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		#engineer = { x = 0 y = 1 } 	# (semi-mot) Engineer bn
+		#artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Kavaleriyskaya Diviziya" 	# Cavalry Division
+	division_names_group = UKA_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Militia"
+	division_names_group = SOV_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = 	{
+		#Militiary_police = { x = 0 y = 0 }
+	}
+	priority = 0
+}
+### Note: OOB abstracts away the following:
+#	Marine Brigade (3x marine bn), 2 Brigades: Leningrad, Sevastopol
+#	Airborne Brigade (3x paratrooper bn), 1 Brigade: Moscow
+
+
+##### OOB #####
+units = {
+	##### Severno-Zapadnoe TVD (North West Theatre) -- Archangelsk #####				
+	# 1ya Strelkoviy Korpus			
+	division= {	# "18ya Riflemen"		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 9203
+		division_template = "Riflemen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "54ya Riflemen"		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 54
+		}
+		location = 142
+		division_template = "Riflemen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}			
+	division= {	# "16ya Kavaleriyskaya Diviziya"		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 11181
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	# Directly subordinate to TVD			
+	division= {	# "67ya Riflemen"		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 67
+		}
+		location = 3134
+		division_template = "Riflemen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}			
+
+
+	##### Zapadnye TVD (Western Theatre Militiary District) #####
+	#### Leningradskii Voennyii Okrug (Leningrad Militiary District) -- Leningrad ####
+	# 19ya Strelkoviy Korpus		
+	division= {	# "16ya 'Ul'yanovskaya' Strelk. Div."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 441
+		division_template = "Riflemen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}	
+	division= {	# "17ya Div."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 9466
+		division_template = "Riflemen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}	
+	division= {	# "56ya 'Moskva' Strelk. Div."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 11477
+		division_template = "Riflemen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}			
+	division= {	# "Ukrainian Militiamen"		
+		location = 9493
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {			
+		name = "Ukrainian Militiamen"		
+		location = 550
+		division_template = "Militia"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	
+	division= {			
+		name = "Ukrainian Militiamen"		
+		location = 476
+		division_template = "Militia"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	
+	division= {			
+		name = "Ukrainian Militiamen"		
+		location = 6557
+		division_template = "Militia"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	### Leningraskaya Gruppa Armiya (Leningrad Army Group) -- Leningrad ###
+	#  NKVD Leningradksii Korpus -- NKVD Border Guard and RR units	
+	division= {	# "Ukrainian Militiamen"		
+		location = 11490
+		division_template = "Militia"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}	
+	division= {	# "Ukrainian Militiamen"		
+		location = 11490
+		division_template = "Militia"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {	# "Ukrainian Militiamen"
+		location = 6480
+		division_template = "Militia"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}		
+	division= {	# "Ukrainian Militiamen"
+		location = 6480
+		division_template = "Militia"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "Ukrainian Militiamen"		
+		location = 9435
+		division_template = "Militia"		# 2x Mekh Bge, 1x Mot Bge
+		start_experience_factor = 0.3
+	}			
+	division= {			
+		name = "Ukrainian Militiamen"		
+		location = 9435
+		division_template = "Militia"		# 2x Mekh Bge, 1x Mot Bge
+		start_experience_factor = 0.3
+	}
+	# Subordinate to AG
+	division= {			
+		name = "Ukrainian Militiamen"		
+		location = 3757
+		division_template = "Militia"		# 2x Mekh Bge
+		start_experience_factor = 0.3
+	}
+	division= {			
+		name = "Ukrainian Militiamen"		
+		location = 3757
+		division_template = "Militia"		# 2x Mekh Bge
+		start_experience_factor = 0.3
+	}
+	division= {			
+		name = "Ukrainian Militiamen"		
+		location = 3575
+		division_template = "Militia"		# 2x Mekh Bge
+		start_experience_factor = 0.3
+	}
+	division= {			
+		name = "Ukrainian Militiamen"		
+		location = 3575
+		division_template = "Militia"		# 2x Mekh Bge
+		start_experience_factor = 0.3
+	}
+	division= {			
+		name = "Ukrainian Militiamen"		
+		location = 11703
+		division_template = "Militia"		# 2x Mekh Bge
+		start_experience_factor = 0.3
+	}
+	division= {			
+		name = "Ukrainian Militiamen"		
+		location = 11703
+		division_template = "Militia"		# 2x Mekh Bge
+		start_experience_factor = 0.3
+	}
+	#### Belorusskii Voennyii Okrug (Belorussian Militiary District) -- Velikie Luki, Minsk ####			
+	# 4ya Strelkoviy Korpus
+	division= {	# "27ya 'Omskaya' Strelk. Div."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 104
+		division_template = "Riflemen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}			
+	division= {	# "29ya  'Vyatskaya' Strelk. Div."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 29
+		}
+		location = 9408
+		division_template = "Riflemen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}			
+	division= {	# "33ya 'Belorusskaya' Strelk. Div."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 33
+		}
+		location = 9120
+		division_template = "Riflemen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}			
+	division= {			
+		name = "Ukrainian Militiamen"		
+		location = 126
+		division_template = "Militia"		# 3x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	# 5ya Strelkoviy Korpus
+	division= {	# "5ya 'Vitebskaya' Strelk. Div."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 415
+		division_template = "Riflemen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "48ya 'Kashino-Tver.' Strelk. Div."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 48
+		}
+		location = 3310
+		division_template = "Riflemen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}		
+}			
+
+
+		
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+	
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "SOV"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 50
+	}
+}
+	#####################

@@ -25,6 +25,8 @@
  ##Imperial Russia stuff
  SOV_IMPERIAL_TITLE:0 "Tsar of Russia"
  KIRILL_VLADIMIROVICH:0 "Kirill Vladimirovich Romanov"
+ SOV_FALLEN_GOV_TITLE:0 "Imperial State Duma"
+ SOV_FALLEN_GOV_DESC:0 "The Imperial State Duma is in disarray due to the asssassination of Tsar Kirill. Paranoia has set in due to insider `information being leaked to insurgents."
  ##Soviet Russia stuff
  
  ## Louisiana stuff
