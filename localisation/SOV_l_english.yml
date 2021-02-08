@@ -129,7 +129,7 @@
  SOV_riots_in_ukraine:0 "Riots in Ukraine"
  SOV_governate_autonomy_act:0 "The Governorate Autonomy Act of [GetYear]"
  SOV_governate_autonomy_act_desc:0 "WIP"
- SOV_kirill_warning:0 "§R"
+ SOV_kirill_warning:0 "§RThis will end in a catastrophe.§!"
  rus.1.title:0 "A Trip to Kiev?"
  rus.1.desc:0 "Over the past couple of weeks, Kirill has been bombarded with reports of civil unrest in Ukraine. Perhaps, Kirill could travel to Kiev and sort this issue out?"
  rus.1.a:0 "Plan the trip."
